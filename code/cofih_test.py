@@ -6,6 +6,7 @@
 
 """
 
+import nltk
 
 import cofih as c
 import numpy as np
@@ -21,8 +22,35 @@ import brisk
 
 #************************** Skeleton **************************#
 
-test_matrix = sp.csr.csr_matrix((90,100), dtype=int)
-cofih = c.CoFiH(test_matrix)
-query = []
-for value in cofih.get_aspects(query):
-	print(value)
+
+def main():
+	doc_string = load_document("../data/evil_a_Challenge_to_Philosophy_and_Theology.txt")
+	print(doc_string)
+
+	sent_tokenizer = nltk.sent_tokenize
+	doc_sentances = sent_tokenizer(text = doc_string)
+	print(doc_sentances)
+
+	return 1
+
+def load_document(filepath):
+	"""	
+		Description:Opens and loads the file specified by filepath as a raw txt string; assumes valid text file format.
+		Input: String -> filepath of file from current directory
+		Output: Entire contents of text file as a string
+
+	"""
+
+	assert(filepath.endswith(".txt")), "Function: Load Document -> File specificed by filepath is not of type .txt"
+	file = open(filepath, 'r')
+	file_string = file.read()
+	file.close()
+	
+	return file_string
+
+
+main()
+
+
+
+
