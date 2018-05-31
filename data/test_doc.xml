@@ -10,9 +10,40 @@
       <publicationStmt>
         <authority>Digital Ricoeur</authority>
         <availability status="restricted">
-          <p> Not for distribution .</p>
+          <p>Not for distribution.</p>
         </availability>
       </publicationStmt>
       <sourceDesc>
         <bibl>
-<p> the blue sky </p>
+The Symbolism of Evil. Translation by E. BUCHANAN. New York-Evanston-London: Harper and Row, <date subtype="this" type="publication" when="1967">1967</date>, xv-357 p. (bound). Beacon Paperbacks,  323.  Boston: Beacon\
+  Press,  1969,  362 p. First published in French in <date subtype="original" type="publication" when="1960">1960</date>.
+</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <textClass>
+        <catRef scheme="https://schema.digitalricoeur.org/taxonomy/type" target="https://schema.digitalricoeur.org/taxonomy/type#book"/>
+        <keywords scheme="https://schema.digitalricoeur.org/tools/tei-guess-paragraphs">
+          <term>done</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>THE SYMBOLISM</p>
+      <p>OF EVIL</p>
+      <p>PAUL RICOEUR</p>
+      <p>Translated from the French by Emerson Buchanan</p>
+      <p>BOSTON</p>
+      <p>BEACON PRESS</p>
+      <p>PUBLISHER’S NOTE</p>
+      <p>This Beacon paperback edition reprints Volume XVII of the Religious Perspectives Series which is planned and edited by Ruth Nanda Anshen Dr. Anshen's Epilogue to this reprint appears on page 358</p>
+      <p>Copyright {§)  1967 by Paul Ricoeur</p>
+      <p>First published as a Beacon Paperback in 1969 by arrangement with Harper &amp; Row, Publishers, Incorporated</p>
+      <p>Beacon Press books are published under the auspices of „ the Unitarian Universalist Association</p>
+      <p>All rights reserved. No part of this book may be used or reproduced in any manner whatsoever without written permission except in the case of brief quotations embodied in critical articles and reviews. For in\
+formation address Harper &amp; Row, Publishers, Incorporated, 49 East 33rd Street, New York, N. Y. 10016.</p>
+      <p>' Printed in the United States of America International Standard Book Number: O-8070-1567-9 9 8 7 6 5 4</p>
+      <p>Contents</p>
+      <p>PART I</p>
