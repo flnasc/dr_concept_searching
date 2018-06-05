@@ -1,5 +1,6 @@
 # A lazy implementation of CoFiH
-
+import sys
+sys.stdout.flush()
 import numpy as np
 import scipy.sparse as sp
 from scipy.stats import chi2
@@ -176,10 +177,11 @@ class CoFiH:
         """Applies CoFiH algorithm to find text documents where the 
         concept expressed in query is present.
         
-        query: numpy.ndarray or list or tuple
+        query: numpy.ndarray or list or tuple                           Louis: Term being in document as first way to express concept, 
+                                                                                get every one that contains word of interst
             Mask or indices of the documents assumed to contain the 
             concept of interest (typically because they contain the 
-            word associated with said concept).
+            word associated with said concept). 
         
         Yields
         ------
@@ -189,9 +191,13 @@ class CoFiH:
         """
         
         # Create partial matrix containing only query vectors
-        qmat = self.mat[query]
+        qmat = self.mat[query] #CSR_MATRIX -> every number in query, the respective row is added to qmat
+        
+
         # Remove empty attributes
         qmat = qmat.T[np.squeeze(np.asarray(qmat.sum(0)>0))].T
+      	
+
         
         # Get best k
         k = min(enumerate(fKTest(qmat)), key=itemgetter(1))[0]
@@ -203,6 +209,11 @@ class CoFiH:
         n_docs,n_terms = self.mat.shape
         
         for cidx in range(k):
+            print("CIDX = " + str(cidx))
+            print(km.labels_)
+            print((km.labels_==cidx))
+            print(query[km.labels_==cidx])
+            sys.stdout.flush()
             if sum(km.labels_==cidx) ==1 :
                 cg_index = query[km.labels_==cidx]
                 yield np.where(np.squeeze(cg_index))[-1]
@@ -228,7 +239,7 @@ class CoFiH:
             cmat = self.mat.T[list(topterms)].T
             
             # Get cluster vectors' global indices
-            cg_indices = query[km.labels_==cidx]
+            cg_indices = query[(km.labels_==cidx)]
             
             # Get what's needed to construct confidence intervals
             mu = cmat[cg_indices].mean(0)

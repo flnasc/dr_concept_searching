@@ -13,15 +13,16 @@
    	   
 """
 C_SIM_THRESHOLD = 0.2
+MIN_WORD_COUNT = 0
 import bs4 as Soup
 import nltk
 import sklearn
 from sklearn.feature_extraction.text import CountVectorizer
 import scipy
 import re
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import numpy as np
-import cofih
+import cofih as c
 
 
 
@@ -30,7 +31,7 @@ import cofih
 def main():
 
 	#get text data from file as a raw string, parse with bs4 and extract paragraph tags -> list of bs4.element.Tag objects
-	filepath = raw_input("Filepath to desired document: ")
+	filepath = input("Filepath to desired document: ")
 	print("DESIRED FILE: " + filepath)
 	doc_string = load_document(filepath)
 	doc_soup = Soup.BeautifulSoup(doc_string, 'xml') 
@@ -40,7 +41,7 @@ def main():
 	corpus = []
 	corpusWCS = []
 	for i in range(0, len(doc_para)):
-		print(doc_para[i].get_text())
+		#print(doc_para[i].get_text())
 		numbW = re.findall(r'\b\w+', doc_para[i].get_text())
 		corpus.append(doc_para[i].get_text())
 
@@ -55,7 +56,7 @@ def main():
 	vectorizer = CountVectorizer(stop_words = 'english', lowercase= True)
 	
 	#train vectorizer on corpus and topics
-	vectorizer.fit_transform(combinedCorpus)
+	vectorizer.fit_transform(corpus)
 
 	#get matrix for corpus and topics seperately
 	cmatrix = vectorizer.transform(corpus)
@@ -64,11 +65,31 @@ def main():
 	tmatrix = vectorizer.transform(topics)
 
 	#cofih code
-	query = "punishment"
-	print(vectorizer.get_feature_names())
+	query = input("query: ")
 	print(query)
-	print(intialSet(query, cmatrix, vectorizer.get_feature_names()))
+	querySet = getQuery(query, cmatrix, vectorizer.get_feature_names()) #segMap maps input segments to cmatrix segments by row
+	# print(getSegsInMap(segMap, corpus))
+	# print("_______INPUT________") 
+	# test_list = [0,0,0,0,0,1]
+	# print("test", test_list==0)
+	# print(type(query[test_list==0]))
+	# print("test")
+	# # print(vectorizer.get_feature_names())
+	# # print(cmatrix.todense())
+	# print("")
+	# print(querySet)
 
+	print("_______RUN COFIH________") 
+	cofih = c.CoFiH(cmatrix)
+	result = cofih.get_aspects(querySet)
+	print(result)
+	while True:
+		print("getting val")
+		print("result: " + str(next(result)))
+
+
+
+	
 
 	
 
@@ -173,23 +194,42 @@ def queryTopic(tVec, segMatrix):
 
 ############################# COFIH PREPROCESSING #############################
 
-def intialSet(query, cmatrix, vocabList):
+def getQuery(query, cmatrix, vocabList):
  	"""Retreieves set of segments containing the query str, as list of indecies in cmatrix"""
  	matchSet = []
  	#get index (col) of query in matrix via vocabList
  	qI = None
  	if query not in vocabList:
- 		print("INITAL SET ERROR: QUERY NOT IN VOCAB")
+ 		print("getQuery() ERROR: QUERY NOT IN VOCAB")
  		quit()
  	else:
  		qI = vocabList.index(query)
 
  	rows, cols = cmatrix.get_shape()
-
+ 	querySet = []
  	for i in range(0, rows):
- 		if cmatrix.getrow(i).getcol(qI).sum() > 0:
- 			matchSet.append(i)
- 	return matchSet
+ 		if cmatrix.getrow(i).getcol(qI).sum() > 0 and cmatrix.getrow(i).sum() > MIN_WORD_COUNT:
+ 			querySet.append(i)
+ 			
+ 	return querySet
+
+
+def getSegsInMap(segMap, corpus):
+	"""Returns a list of the full text segments in the corpus indicated by the segmap"""
+	textSegs = []
+	for i in range(0, len(segMap)):
+		textSegs.append(corpus[segMap[i]])
+
+	return textSegs
+
+def runCoFiH(segMap, cmatrix):
+	cofih = c.CoFiH(cmatrix)
+	result = cofih.get_aspects(segMap)
+	return result
+
+		
+
+
 
 
 
