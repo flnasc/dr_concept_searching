@@ -3,7 +3,7 @@
    Description: Parses am XML document, segmenting it into paragraphs
    Status: Implemented paragraph extraction and vectorization -> WIP
    ToDo: 
-       1.) Generate cofih input and MAP INPUT TO SEGMENTS
+       1.) Generate cofih input and check its validity
        2.) Get topic word frequencies
 
    NOTES:
@@ -35,9 +35,9 @@ def main():
 	print("DESIRED FILE: " + filepath)
 	doc_string = load_document(filepath)
 	doc_soup = Soup.BeautifulSoup(doc_string, 'xml') 
-	doc_para = doc_soup.find_all('p') #use beautiful soup to find all contents fo the para 
+	doc_para = doc_soup.find_all('p') #use beautiful soup to find all contents of the paragraph
 	
-	#get contents of each paragraph tag and add them to a list type 'corpus'
+	#get contents of each paragraph tag and add them to the list 'corpus'
 	corpus = []
 	corpusWCS = []
 	for i in range(0, len(doc_para)):
@@ -52,40 +52,29 @@ def main():
 	for i in range(0, len(topics)):
 		combinedCorpus.append(topics[i])
 
-  	#Use CountVectorizer to get sparse matrix with
+  	#Create CountVectorizer to get Document-Term matrix 
 	vectorizer = CountVectorizer(stop_words = 'english', lowercase= True)
 	
-	#train vectorizer on corpus and topics
+	#train vectorizer on corpus 
 	vectorizer.fit_transform(corpus)
 
-	#get matrix for corpus and topics seperately
+	#get matrix for corpus and matrix of topics 
 	cmatrix = vectorizer.transform(corpus)
 	cmatDense = cmatrix.todense()
 	rows, cols = cmatrix.get_shape()
 	tmatrix = vectorizer.transform(topics)
 
-	#cofih code
+	#generate query mask for cofih (list containing the row number of the document term matrix that contain the queried term)
 	query = input("query: ")
 	print(query)
-	querySet = getQuery(query, cmatrix, vectorizer.get_feature_names()) #segMap maps input segments to cmatrix segments by row
-	# print(getSegsInMap(segMap, corpus))
-	# print("_______INPUT________") 
-	# test_list = [0,0,0,0,0,1]
-	# print("test", test_list==0)
-	# print(type(query[test_list==0]))
-	# print("test")
-	# # print(vectorizer.get_feature_names())
-	# # print(cmatrix.todense())
-	# print("")
-	# print(querySet)
+	querySet = getQuery(query, cmatrix, vectorizer.get_feature_names()) #looks through the matrix and gets row number that have the query word
 
+	#create the cofih object with the Document-Term matrix and run the given query
 	print("_______RUN COFIH________") 
 	cofih = c.CoFiH(cmatrix)
 	result = cofih.get_aspects(querySet)
-	print(result)
 	while True:
-		print("getting val")
-		print("result: " + str(next(result)))
+		print("result: " + str(next(result))) 
 
 
 

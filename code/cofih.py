@@ -209,11 +209,6 @@ class CoFiH:
         n_docs,n_terms = self.mat.shape
         
         for cidx in range(k):
-            print("CIDX = " + str(cidx))
-            print(km.labels_)
-            print((km.labels_==cidx))
-            print(query[km.labels_==cidx])
-            sys.stdout.flush()
             if sum(km.labels_==cidx) ==1 :
                 cg_index = query[km.labels_==cidx]
                 yield np.where(np.squeeze(cg_index))[-1]
