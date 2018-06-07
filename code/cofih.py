@@ -170,7 +170,7 @@ class CoFiH:
         self.mat = matrix
         self.set_confidence_bound()
     
-    def set_confidence_bound(self, p = 0.95, df = 2):
+    def set_confidence_bound(self, p = 0.78, df = 2):
         self.chi22p = chi2.ppf(p,df=df)
     
     def get_aspects(self, query):
@@ -207,10 +207,17 @@ class CoFiH:
         
         self.kmeans_labels = km.labels_
         n_docs,n_terms = self.mat.shape
-        
+       
         for cidx in range(k):
-            if sum(km.labels_==cidx) ==1 :
-                cg_index = query[km.labels_==cidx]
+            if sum(km.labels_==cidx) ==1:
+                
+                
+                bool_list = km.labels_==cidx
+                for i in range(0,len(bool_list)):
+                    if bool_list[i]:
+                       index = i
+
+                cg_index = query[i]
                 yield np.where(np.squeeze(cg_index))[-1]
                 continue
             elif sum(km.labels_==cidx) == 0 :
@@ -233,16 +240,29 @@ class CoFiH:
             # Get reduced space
             cmat = self.mat.T[list(topterms)].T
             
+            
+
             # Get cluster vectors' global indices
-            cg_indices = query[(km.labels_==cidx)]
+            indices = []
+            bool_list = km.labels_==cidx
+            for i in range(0,len(bool_list)):
+                if bool_list[i]:
+                    indices.append(i)
+
+            cg_indices = query[indices]
             
             # Get what's needed to construct confidence intervals
-            mu = cmat[cg_indices].mean(0)
+            mu = cmat[cg_indices].mean(0) # mean of the cluster
+            
             Sigma = np.cov(cmat[cg_indices].todense().T)
-            print(np.linalg.det(Sigma))
-            invcov = np.linalg.inv(Sigma)
+
+            if np.linalg.det(Sigma) == 0.0:
+                invcov = Sigma
+            else:
+            	invcov = np.linalg.inv(Sigma)
             
             # Yield an iterator for all 
+            
             yield [ i for i, x in enumerate(cmat) \
                 if within_interval(x, mu, invcov, self.chi22p) ]
 

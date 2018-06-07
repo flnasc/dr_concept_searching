@@ -20,15 +20,17 @@ import sklearn
 from sklearn.feature_extraction.text import CountVectorizer
 import scipy
 import re
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 import cofih as c
+import os
 
 
 
 ############################# MAIN #############################
 
 def main():
+
 
 	#get text data from file as a raw string, parse with bs4 and extract paragraph tags -> list of bs4.element.Tag objects
 	filepath = input("Filepath to desired document: ")
@@ -39,8 +41,10 @@ def main():
 	
 	#get contents of each paragraph tag and add them to the list 'corpus'
 	corpus = []
+	lens = []
 	corpusWCS = []
 	for i in range(0, len(doc_para)):
+		#print("------PARA------")
 		#print(doc_para[i].get_text())
 		numbW = re.findall(r'\b\w+', doc_para[i].get_text())
 		corpus.append(doc_para[i].get_text())
@@ -64,25 +68,32 @@ def main():
 	rows, cols = cmatrix.get_shape()
 	tmatrix = vectorizer.transform(topics)
 
-	#generate query mask for cofih (list containing the row number of the document term matrix that contain the queried term)
-	query = input("query: ")
-	print(query)
-	querySet = getQuery(query, cmatrix, vectorizer.get_feature_names()) #looks through the matrix and gets row number that have the query word
-
-	#create the cofih object with the Document-Term matrix and run the given query
-	print("_______RUN COFIH________") 
 	cofih = c.CoFiH(cmatrix)
-	result = cofih.get_aspects(querySet)
+
 	while True:
-		print("result: " + str(next(result))) 
+		#generate query mask for cofih (list containing the row number of the document term matrix that contain the queried term)
+		query = input("Query: ")
+		print(query)
+		querySet = getQuery(query, cmatrix, vectorizer.get_feature_names())
+	 	#looks through the matrix and gets row number that have the query word
 
-
+		#create the cofih object with the Document-Term matrix and run the given query
+		print("_______RUN COFIH________") 
 
 	
-
-	
-
-
+		result = cofih.get_aspects(querySet)
+		indices = next(result)
+		end = True
+		while end:
+			try:
+				indices = np.append(indices, next(result))
+			except:
+				end = False
+		indices = np.unique(indices)
+		#printOriginalSegs(indices, corpus)
+		print("NUM SEGS= " + str(len(indices)))
+		if len(indices)<100:
+			print(indices)
 
 	return 0
 
@@ -200,7 +211,7 @@ def getQuery(query, cmatrix, vocabList):
  		if cmatrix.getrow(i).getcol(qI).sum() > 0 and cmatrix.getrow(i).sum() > MIN_WORD_COUNT:
  			querySet.append(i)
  			
- 	return querySet
+ 	return np.asarray(querySet)
 
 
 def getSegsInMap(segMap, corpus):
@@ -216,6 +227,11 @@ def runCoFiH(segMap, cmatrix):
 	result = cofih.get_aspects(segMap)
 	return result
 
+def printOriginalSegs(indices, corpus):
+	for i in range(0, len(indices)):
+		print("\n\n")
+		print("Paragraph " + str(i))
+		print(corpus[int(indices[i])])
 		
 
 
