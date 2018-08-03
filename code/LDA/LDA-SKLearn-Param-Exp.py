@@ -59,7 +59,7 @@ def main():
 		for num_topics in num_topics_list:
 			for max_df in max_df_list:
 				for min_df in min_df_list:
-					score, num_segs, num_features = get_score("../data/symbolism-of-evil.xml", min_word_count, num_topics, max_df, min_df)
+					score, num_segs, num_features = get_score("../../data/symbolism-of-evil.xml", min_word_count, num_topics, max_df, min_df)
 					combo = ([min_word_count, num_segs, num_features, num_topics, max_df, min_df],score)
 					data.append(combo)
 					print("finished", combo)
@@ -241,116 +241,6 @@ def get_score(filepath, min_word_count, num_topics, max_df_, min_df_):
 	return score, (num_segs, len(raw_corpus)), num_features   
 
 
-
-
-def write_output_file(query_list, topic_str_list, topicid_list, filepath, num_segs, seg_list, num_rel_segs):
-
-	query_name = "_".join(query_list)
-	new_f = open("../results/"+query_name +".txt", 'w+')
-
-	new_f.write("-------------- LDA Top-4 Results --------------\n")
-	new_f.write("Query: " +query_name + "\n")
-	new_f.write("Corpus: "+ filepath+ "\n")
-	new_f.write("Number of Segs: "+ str(num_segs) + "\n")
-	new_f.write("Number of Topics: "+ str(NUM_TOPICS)+ "\n")
-	new_f.write("Max DF: " +str(MAX_DF)+ "\n")
-	new_f.write("Min DF: " +str(MIN_DF)+ "\n")
-	new_f.write("Topic Pressence Threshold: " +str(TOPIC_PRESSENCE_THRESHOLD)+ "\n\n")
-
-	new_f.write("-------------- LDA Topics --------------\n")
-	for i in range(0, len(topic_str_list)):
-		new_f.write(topic_str_list[i]+ "\n")
-
-	new_f.write("Relevant Topics: " + str(topicid_list) + "\n\n")
-
-	new_f.write("-------------- Segments by Topic --------------\n")
-	new_f.write("Number of Relevant Segs: " + str(num_rel_segs) + "\n\n")
-
-
-	for i in range(0, len(seg_list)):
-		new_f.write("Topic: " +str(seg_list[i][0])+ "\n")
-
-		for j in range(0, len(seg_list[i][1])):
-			new_f.write("Seg: " +str(seg_list[i][1][j])+ "\n")
-
-def write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, num_segs, seg_list, num_rel_segs):
-	query_name = "_".join(query_list)
-
-	# Start from the first cell. Rows and columns are zero indexed.
-	row = 0
-	col = 0
-
-	# Create a workbook and add a worksheet.
-	workbook = xlsxwriter.Workbook('../results/'+query_name+'.xlsx')
-	worksheet = workbook.add_worksheet()
-	
-
-	cell_format = workbook.add_format()
-	cell_format.set_text_wrap()
-	worksheet.set_column(0,0, 100)
-
-	# write query
-	worksheet.write(row,col, "Query: " + query_name)
-	row +=1
-	worksheet.write(row, col,"Corpus: "+ filepath+ "\n")
-	row +=1
-	worksheet.write(row, col,"Number of Segs: "+ str(num_segs) + "\n")
-	row +=1
-	worksheet.write(row, col,"Number of Topics: "+ str(NUM_TOPICS)+ "\n")
-	row +=1
-	worksheet.write(row, col,"Max DF: " +str(MAX_DF)+ "\n")
-	row +=1
-	worksheet.write(row, col,"Min DF: " +str(MIN_DF)+ "\n")
-	row +=1
-	worksheet.write(row, col,"Topic Pressence Threshold: " +str(TOPIC_PRESSENCE_THRESHOLD)+ "\n\n")
-	row +=1
-	
-	#write topics
-	for i in range(0, len(topic_str_list)):
-		worksheet.write(row, col, topic_str_list[i])
-		row +=1
-	
-	#write segments header
-	row += 2
-	worksheet.write(row, col,"Segments Returned by Topic")
-	row += 1
-	worksheet.write(row, col, "Number of Segments Found: " + str(num_rel_segs))
-	row += 2
-
-	# Iterate over the data and write it out row by row.
-	for i in range(0, len(seg_list)):
-
-		#write topic header
-		worksheet.write(row, col, "Topic "+str(seg_list[i][0]))
-		row +=1
-		worksheet.write(row, col, "Segment")
-		col +=1
-		worksheet.write(row, col, "Score")
-		col = 0
-		row +=1
-
-		first_data_row = row + 1
-
-		#write segmets
-		for j in range(0,len(seg_list[i][1])):
-			worksheet.write(row, col, seg_list[i][1][j], cell_format)
-			row +=1
-
-		last_data_row = row 
-		print(first_data_row,last_data_row)
-
-
-	
-	# Write a total using a formula.
-	worksheet.write(row, 0, 'Total')
-	worksheet.write(row, 1, '=SUM(B' + str(first_data_row) + ":B" +str(last_data_row)+ ")")
-	
-	workbook.close()
-
-
-
-	
-
 ############################# SKLearn-LDA ############################# 
 
 def get_topic_prevelance(doc_topic_matrix, num_topics, total_num_docs):
@@ -438,7 +328,8 @@ def print_top_segs(top_segs, text_corpus):
 		for j in range(0, len(top_segs[i])):
 			print(text_corpus[top_segs[i][j]])
 
-s	"""Input is a document-term matrix of type csr_matrix.sparse. Sums up the number of tokens
+def get_num_tokens(dt_matrix):	
+	"""Input is a document-term matrix of type csr_matrix.sparse. Sums up the number of tokens
 	by adding the sum of all rows in the matrix"""
 
 	rows, cols = dt_matrix.get_shape()

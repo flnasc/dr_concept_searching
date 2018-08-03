@@ -14,17 +14,16 @@
    	   
    	   
 """
-TOPIC_PRESSENCE_THRESHOLD = 0.7
-C_SIM_THRESHOLD = 0.2
+TOPIC_PRESSENCE_THRESHOLD = 0.3
+REGEX_PATTERN = u'(?u)\\b\\w\\w\\w\\w+\\b'
 MIN_WORD_COUNT = 10
 NUM_TOPICS = 10
 TOP_N_SEGS=10
 TOP_N_WORDS=4
-C_SIZE = 250
 MIN_DF = 0.01
 MAX_DF = 0.95
 FILETYPE = 'xml'
-CONCEPTS_PATH = "../data/concepts.txt"
+CONCEPTS_PATH = "../../data/concepts.txt"
 import bs4 as Soup
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
@@ -44,7 +43,7 @@ class LemmaTokenizer(object):
      def __init__(self):
         self.wnl = WordNetLemmatizer()
      def __call__(self, doc):
-         return [self.wnl.lemmatize(t) for t in re.findall(u'(?u)\\b\\w\\w\\w+\\b', doc)]
+         return [self.wnl.lemmatize(t) for t in re.findall(REGEX_PATTERN, doc)]
 
 
 
@@ -59,7 +58,6 @@ def main():
 	concepts_raw = load_document(CONCEPTS_PATH)
 	concepts = parse_concepts(concepts_raw)
 	num_segs = len(text_corpus)
-	print(concepts)
 	print("MAX_DF: " + str(MAX_DF))
 	print("MIN_DF: " + str(MIN_DF))
 	print("Number of Segs: %d/%d" % (len(text_corpus), len(raw_corpus)))
@@ -83,7 +81,7 @@ def main():
 	doc_topic_matrix = lda.fit_transform(dt_matrix)
 	topic_term_matrix = lda.components_
 
-	print(doc_topic_matrix)
+	
 
 	print("Score: " + str(lda.score(dt_matrix)/get_num_tokens(dt_matrix)))
 
@@ -94,15 +92,15 @@ def main():
 	topic_str_list = print_topics(lda, feature_names, 10, topic_prev)
 
 	
-	# concepts = [['red']]
-	for i in range(0, len(concepts)):
+	
+	# for i in range(0, len(concepts)):
 
-		query_list = concepts[i]
+	# 	query_list = concepts[i]
 
-		topicid_list = get_topics_w_query(topic_term_matrix, TOP_N_WORDS, feature_names, query_list)
-		seg_list, num_rel_segs = get_segs_w_query(doc_topic_matrix, topicid_list, TOPIC_PRESSENCE_THRESHOLD, text_corpus, query_list)
-		if len(seg_list) > 0:
-			write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, num_segs, seg_list, num_rel_segs)
+	# 	topicid_list = get_topics_w_query(topic_term_matrix, TOP_N_WORDS, feature_names, query_list)
+	# 	seg_list, num_rel_segs = get_segs_w_query(doc_topic_matrix, topicid_list, TOPIC_PRESSENCE_THRESHOLD, text_corpus, query_list)
+	# 	if len(seg_list) > 0:
+	# 		write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, num_segs, seg_list, num_rel_segs)
 
 	
 
@@ -231,7 +229,7 @@ def load_corpus_txt(c_size):
 
 	return final
 
-############################# Top-Ten Approach ############################# 
+############################# Top-N Approach ############################# 
 
 def get_topics_w_query(topic_dist, topn, feature_names, query_list):
 	"""asks the user for a query, returns a list of topic numbers that contain the queried word in their top n
@@ -303,7 +301,7 @@ def get_segs_w_query(doc_topic_dist, topicid_list, threshold, text_corpus, query
 		for j in range(0, len(init_seg_list)):
 			for k in range(0, len(query_list)):
 
-				if query_list[k] in re.findall(u'(?u)\\b\\w\\w\\w+\\b',text_corpus[init_seg_list[j]]):
+				if query_list[k] in re.findall(REGEX_PATTERN,text_corpus[init_seg_list[j]]):
 					final_seg_list.append(text_corpus[init_seg_list[j]])
 					num_segs += 1
 					break
@@ -329,7 +327,7 @@ def get_kw_segs(kw_per_topic, top_segs, text_corpus):
 		for j in range(0, len(top_segs[i])):
 
 			#get list of all words in curr seg (i,j)
-			seg = re.findall(u'(?u)\\b\\w\\w\\w+\\b',text_corpus[top_segs[i][j]])
+			seg = re.findall(REGEX_PATTERN,text_corpus[top_segs[i][j]])
 
 			#count number of occurances of key words of topic i in the seg
 			count = 0
@@ -448,23 +446,6 @@ def write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, n
 	workbook.close()
 
 
-		
-
-	
-
-	
-
-
-
-
-
-
-
-
-
-
-	
-
 ############################# SKLearn-LDA ############################# 
 
 def get_topic_prevelance(doc_topic_matrix, num_topics, total_num_docs):
@@ -551,8 +532,6 @@ def print_top_segs(top_segs, text_corpus):
 		print("TOPIC %d" % (i))
 		for j in range(0, len(top_segs[i])):
 			print(text_corpus[top_segs[i][j]])
-
-
 
 def get_num_tokens(dt_matrix):
 	"""Input is a document-term matrix of type csr_matrix.sparse. Sums up the number of tokens

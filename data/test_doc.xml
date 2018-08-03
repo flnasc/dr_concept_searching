@@ -3,16 +3,15 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0" version="5.0">
   <teiHeader>
     <fileDesc>
+      <p> The symbol is blue </p>
+      <p> The symbol is blue </p>
+      <p> The symbol is blue </p>
+      <p> The symbol is blue. Evil is red </p>
+      <p> Evil is red. The symbol is blue </p>
+      <p> Evil is red </p>
+      <p> Evil is red </p>
+      <p> Evil is red </p>
+      <p> Evil is red </p>
       <titleStmt>
   <text>
     <body>
-    <p> blue blue </p>
-    <p> white </p>
-    <p> green green green </p>
-    <p> orange </p>
-    <p> red </p>
-    <p> pink </p>
-    <p> magenta </p>
-    <p> opal </p>
-    <p> purple </p>
-    <p> teal </p>
