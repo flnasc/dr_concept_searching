@@ -16,12 +16,12 @@
 """
 TOPIC_PRESSENCE_THRESHOLD = 0.3
 REGEX_PATTERN = u'(?u)\\b\\w\\w\\w\\w+\\b'
-MIN_WORD_COUNT = 10
+MIN_WORD_COUNT = 0
 NUM_TOPICS = 10
 TOP_N_SEGS=10
-TOP_N_WORDS=4
-MIN_DF = 0.01
-MAX_DF = 0.95
+TOP_N_WORDS=10
+MIN_DF = 0.00
+MAX_DF = 1.00
 FILETYPE = 'xml'
 CONCEPTS_PATH = "../../data/concepts.txt"
 import bs4 as Soup
@@ -81,26 +81,18 @@ def main():
 	doc_topic_matrix = lda.fit_transform(dt_matrix)
 	topic_term_matrix = lda.components_
 
-	
-
 	print("Score: " + str(lda.score(dt_matrix)/get_num_tokens(dt_matrix)))
 
-	#get freq of topics in corpus
-	topic_prev = get_topic_prevelance(doc_topic_matrix, NUM_TOPICS, len(text_corpus))
-
-	#print topics
-	topic_str_list = print_topics(lda, feature_names, 10, topic_prev)
-
+	#print topics, 10 is the number of words in the topic dist to display (e.g. top 10)
+	topic_str_list = print_topics(lda, feature_names, 10)	
 	
-	
-	# for i in range(0, len(concepts)):
+	for i in range(0, len(concepts)):
+		query_list = concepts[i]
+		topicid_list = get_topics_w_query(topic_term_matrix, TOP_N_WORDS, feature_names, query_list)
+		seg_list, num_rel_segs = get_segs_w_query(doc_topic_matrix, topicid_list, 10, query_list)
 
-	# 	query_list = concepts[i]
-
-	# 	topicid_list = get_topics_w_query(topic_term_matrix, TOP_N_WORDS, feature_names, query_list)
-	# 	seg_list, num_rel_segs = get_segs_w_query(doc_topic_matrix, topicid_list, TOPIC_PRESSENCE_THRESHOLD, text_corpus, query_list)
-	# 	if len(seg_list) > 0:
-	# 		write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, num_segs, seg_list, num_rel_segs)
+		if len(seg_list) > 0:
+			write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, num_segs, seg_list, num_rel_segs, text_corpus)
 
 	
 
@@ -128,9 +120,11 @@ def load_document(filepath):
 	return file_string
 
 def parse_concepts(concepts_raw):
-	concepts = concepts_raw.split('\n')
-	for i in range(0, len(concepts)):
-		concepts[i] = concepts[i].split()
+	lines = concepts_raw.split('\n')
+	concepts = []
+	for line in lines:
+		if len(line.split()) > 0:
+			concepts.append(line.split())
 	return concepts
 
 def load_corpus(v):
@@ -239,7 +233,6 @@ def get_topics_w_query(topic_dist, topn, feature_names, query_list):
 	#generate list
 	topicid_list = []
 
-	#get key words for each topic from user
 	for i in range(0, len(topic_dist)):
 
 		#convert topic_dist from ndarray to list
@@ -268,83 +261,49 @@ def get_topics_w_query(topic_dist, topn, feature_names, query_list):
 
 		if count == len(query_list):
 			topicid_list.append(i)
+
+
+
 				
+	return topicid_list	 
 
-		
-	return topicid_list	
+def get_segs_w_query(doc_topic_dist, topic_id_list, topn, query_list):
+	"""This function takes the document topic matrix, the list of relevant topics,
+	the top N segments to be returned from each topic, and the list of queried words.
+	It returns a list of tuples (topic_id, seg_id_list) which contain the topic id
+	and a list of the ids of the N most relevant segments to that topic."""
 
-		
-
-
-
-	return 
-
-def get_segs_w_query(doc_topic_dist, topicid_list, threshold, text_corpus, query_list):
-
-	#a 2d list where list i is a list of all the documents with the query from topic i
 	seg_list = [] 
 	num_segs = 0
-	#go through topics with the query
-	for i in range(0, len(topicid_list)):
 
-		#get topic dist among documents
-		topic_doc_dist =  doc_topic_dist[:,topicid_list[i]]
-		init_seg_list = []
+	#go through the relevant topics
+	for i in range(0, len(topic_id_list)):
+		
+		#get topic dist among documents (a collumn for the doc_topic_dist matrix)
+		topic_doc_dist =  list(doc_topic_dist[:,topic_id_list[i]])
 
-		#get row numbers of documents with a probability above the given threshold
+		#sort topic_doc_dist by the association of doc with topic
+		#change topic_doc_dist to tuples
 		for j in range(0, len(topic_doc_dist)):
-			if topic_doc_dist[j] > threshold:
-				init_seg_list.append(j)
+			topic_doc_dist[j] = (j, topic_doc_dist[j])
 
-		final_seg_list = []
-		#check if the document has the given query
-		for j in range(0, len(init_seg_list)):
-			for k in range(0, len(query_list)):
+		#sort the tuples of doc id, association val
+		topic_doc_dist = sorted(topic_doc_dist, key=itemgetter(1))
 
-				if query_list[k] in re.findall(REGEX_PATTERN,text_corpus[init_seg_list[j]]):
-					final_seg_list.append(text_corpus[init_seg_list[j]])
-					num_segs += 1
-					break
+		#get topn n ids of the sorted list of (doc_id, association_val)
+		topn = min(topn, len(topic_doc_dist))
+		seg_ids = [doc_tuple[0] for doc_tuple in topic_doc_dist[:topn]]
+		num_segs += len(seg_ids)
 
-		seg_list.append((topicid_list[i], final_seg_list))
+		seg_list.append((topic_id_list[i], seg_ids))
 
 	return seg_list, num_segs
 
-def get_kw_segs(kw_per_topic, top_segs, text_corpus):
-	"""Top segs, list of segs per topic, kw_per_topic, list of kw of each topic,
-	return a 2d list where list i are the segments of that topic with at least 3 of the key words"""
-
-
-	kw_segs = [] 
-	for i in range(0, len(top_segs)):
-		kw_segs.append([])
-
-	#iterate through topics
-	for i in range(0, len(top_segs)): 
-		
-
-		#iterate through segs in topic
-		for j in range(0, len(top_segs[i])):
-
-			#get list of all words in curr seg (i,j)
-			seg = re.findall(REGEX_PATTERN,text_corpus[top_segs[i][j]])
-
-			#count number of occurances of key words of topic i in the seg
-			count = 0
-			for k in range(0, len(kw_per_topic[i])):
-				
-				if kw_per_topic[i][k] in seg:
-					count += 1
-
-			if count > 2:
-				kw_segs[i].append(text_corpus[top_segs[i][j]])
-
-	return kw_segs
-
+############################# Write To File ############################# 
 def write_output_file(query_list, topic_str_list, topicid_list, filepath, num_segs, seg_list, num_rel_segs):
 
 	query_name = "_".join(query_list)
-	new_f = open("../results/"+query_name +".txt", 'w+')
+	new_f = open("../../results/"+query_name +"-test.txt", 'w+')
 
 	new_f.write("-------------- LDA Top-4 Results --------------\n")
 	new_f.write("Query: " +query_name + "\n")
@@ -369,9 +328,9 @@ def write_output_file(query_list, topic_str_list, topicid_list, filepath, num_se
 		new_f.write("Topic: " +str(seg_list[i][0])+ "\n")
 
 		for j in range(0, len(seg_list[i][1])):
-			new_f.write("Seg: " +str(seg_list[i][1][j])+ "\n")
+			new_f.write("Seg: " +str(seg_list[i][1][j][0]) + " AssociationValue: " + str(seg_list[i][1][j][1]) + "\n\n\n")
 
-def write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, num_segs, seg_list, num_rel_segs):
+def write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, num_segs, seg_list, num_rel_segs, text_corpus):
 	query_name = "_".join(query_list)
 
 	# Start from the first cell. Rows and columns are zero indexed.
@@ -379,7 +338,7 @@ def write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, n
 	col = 0
 
 	# Create a workbook and add a worksheet.
-	workbook = xlsxwriter.Workbook('../results/'+query_name+'.xlsx')
+	workbook = xlsxwriter.Workbook('../../results/'+query_name+'.xlsx')
 	worksheet = workbook.add_worksheet()
 	
 
@@ -421,7 +380,7 @@ def write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, n
 		#write topic header
 		worksheet.write(row, col, "Topic "+str(seg_list[i][0]))
 		row +=1
-		worksheet.write(row, col, "Segment")
+		worksheet.write(row, col, "Segments")
 		col +=1
 		worksheet.write(row, col, "Score")
 		col = 0
@@ -431,11 +390,10 @@ def write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, n
 
 		#write segmets
 		for j in range(0,len(seg_list[i][1])):
-			worksheet.write(row, col, seg_list[i][1][j], cell_format)
+			worksheet.write(row, col, text_corpus[seg_list[i][1][j]], cell_format)
 			row +=1
 
 		last_data_row = row 
-		print(first_data_row,last_data_row)
 
 
 	
@@ -448,33 +406,20 @@ def write_output_file_xlsx(query_list, topic_str_list, topicid_list, filepath, n
 
 ############################# SKLearn-LDA ############################# 
 
-def get_topic_prevelance(doc_topic_matrix, num_topics, total_num_docs):
-	"""Input: doc_topic_matrix, a numpy nd array where each row represents a doc, and each collumn is the assocication
-	of the doc with a topic. Num_topics and integer holding the number of topics. Total_num_docs is an int holding the 
-	number of docs in the corpus.
-	Output: a list where index i represents the prevelance of topic i within the corpus."""
-
-	topic_prev = [0] * num_topics
-	for i in range(0, num_topics):
-		topic_doc = doc_topic_matrix[:,i]
-		for j in range(0, len(topic_doc)):
-			if topic_doc[j] > TOPIC_PRESSENCE_THRESHOLD:
-				topic_prev[i] +=1
-		topic_prev[i] = topic_prev[i]/total_num_docs
-
-	return topic_prev
-
-def print_topics(model, feature_names, n_top_words, topic_prev):
+def print_topics(model, feature_names, n_top_words):
 	"""Prints the topic information. Takes the sklearn.decomposition.LatentDiricheltAllocation lda model, 
 	the names of all the features, the number of words to be printined per topic, a list holding the freq
 	of each topic in the corpus"""
-	i = 0
+
 	message_list =[]
+	
 	for topic_idx, topic in enumerate(model.components_):
-		message = "%f Topic #%d: " % (topic_prev[i],topic_idx)
-		i +=1
+		
+		message = "Topic #%d: " % (topic_idx)
+
 		list_feat = [feature_names[i]
 							for i in topic.argsort()[:-n_top_words - 1:-1]]
+		
 		feat_freq = sorted(topic, reverse=True)
 		for j in range(0, len(list_feat)):
 			list_feat[j] += " " + str(round(feat_freq[j], 3)) + ","
@@ -485,53 +430,6 @@ def print_topics(model, feature_names, n_top_words, topic_prev):
 	print()
 	return message_list
 
-def get_top_segments(num_topics, doc_topic_matrix, topn):
-	"""Takes the num_topics (int), the doc_topic_matrix (numpy.ndarray), and an it specifying the
-	number of segements per topic to be printed. Returns a list of lists, where list i has the top 
-	docs in the matrix for topic i."""
-
-	top_segs = [0] * num_topics
-	for i in range(0, num_topics):
-		topic_doc = doc_topic_matrix[:,i]
-		topic_dict = dict(enumerate(topic_doc))
-		topic_dict = OrderedDict(sorted(topic_dict.items(), key = itemgetter(1), reverse = True))
-		seg_list = topic_dict.keys()
-		top_segs[i] = list(seg_list)[:topn]
-
-
-
-
-	return top_segs
-
-def get_top_segs_threshold(num_topics, doc_topic_matrix, threshold):
-	"""Takes the num_topics (int), the doc_topic_matrix (numpy.ndarray), and an it specifying the
-	number of segements per topic to be printed. Returns a list of lists, where list i has the top 
-	docs in the matrix for topic i."""
-
-	top_segs = []
-	for i in range(0, num_topics):
-		top_segs.append([])
-	for i in range(0, num_topics):
-		topic_doc = doc_topic_matrix[:,i]
-		for j in range(0, len(topic_doc)):		
-			if topic_doc[j] > threshold:
-				top_segs[i].append(j)
-		
-		
-		
-
-
-
-
-	return top_segs
-
-def print_top_segs(top_segs, text_corpus):
-	"""Takes the list of top segs per topic, and prints the corresponding segments from the text corpus"""
-
-	for i in range(0, len(top_segs)):
-		print("TOPIC %d" % (i))
-		for j in range(0, len(top_segs[i])):
-			print(text_corpus[top_segs[i][j]])
 
 def get_num_tokens(dt_matrix):
 	"""Input is a document-term matrix of type csr_matrix.sparse. Sums up the number of tokens
@@ -544,10 +442,29 @@ def get_num_tokens(dt_matrix):
 
 	return num_tokens
 
+############################# Key Word Search ############################# 
 
+def key_word_search(text_corpus, query_list):
+	"""Thanks the full corpus of text and the list of words representing a 
+	concept query. Returns all the segments containing one of those words.
+	Segments are a tuple of """
+	segs = []
+	seg_ids = []
+	for i in range(len(text_corpus))
+		paragraph = text_corpus[i]
+		#get all the words in the paragraph
+		word_list = [word.lower() for word in word_tokenize(paragraph)]
 
-
-main()
+		#check if the query words are present
+		for word in query_list:
+			if word in word_list:
+				segs.append(paragraph)
+				seg_ids.append(i)
+				break
+				
+	return segs, seg_ids
+if __name__ == "__main__":
+	main()
 
 
        
