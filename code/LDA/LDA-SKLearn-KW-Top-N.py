@@ -16,10 +16,10 @@
 """
 TOPIC_PRESSENCE_THRESHOLD = 0.3
 REGEX_PATTERN = u'(?u)\\b\\w\\w\\w\\w+\\b'
-MIN_WORD_COUNT = 0
+MIN_WORD_COUNT = 10
 NUM_TOPICS = 10
 TOP_N_SEGS=10
-TOP_N_WORDS=10
+TOP_N_WORDS=0
 MIN_DF = 0.00
 MAX_DF = 1.00
 FILETYPE = 'xml'
@@ -38,6 +38,9 @@ from nltk.corpus import wordnet
 import string
 from collections import OrderedDict
 import xlsxwriter
+from elbow_criteria import threshold
+from elbow_criteria import limit_by_threshold
+import matplotlib.pyplot as plt
 
 class LemmaTokenizer(object):
      def __init__(self):
@@ -51,7 +54,7 @@ class LemmaTokenizer(object):
 
 def main():
 	print("\n-----LDA CONCEPT DETECITON-----")
-	text_corpus, raw_corpus, filepath = load_corpus('v')
+	text_corpus, text_corpus_ids, raw_corpus, raw_corpus_ids, filepath = load_corpus('v')
 
 	# text_corpus_lemma = lemmatize_corpus(text_corpus, 'v')
 
@@ -81,11 +84,14 @@ def main():
 	doc_topic_matrix = lda.fit_transform(dt_matrix)
 	topic_term_matrix = lda.components_
 
+	visualize(doc_topic_matrix)
+
 	print("Score: " + str(lda.score(dt_matrix)/get_num_tokens(dt_matrix)))
 
 	#print topics, 10 is the number of words in the topic dist to display (e.g. top 10)
-	topic_str_list = print_topics(lda, feature_names, 10)	
-	
+	topic_str_list = print_topics(lda, feature_names, 10)
+	run_elbow(lda,feature_names)	
+
 	for i in range(0, len(concepts)):
 		query_list = concepts[i]
 		topicid_list = get_topics_w_query(topic_term_matrix, TOP_N_WORDS, feature_names, query_list)
@@ -142,11 +148,14 @@ def load_corpus(v):
 	
 	#get contents of each paragraph tag and add them to the list 'corpus'
 	raw_corpus = []
+	raw_corpus_ids = []
 	cleaned_corpus = []
+	cleanded_corpus_ids = []
 	vectorizer = CountVectorizer(stop_words = 'english', lowercase= True)
 
 	for i in range(0, len(doc_para)):
 		raw_corpus.append(doc_para[i].get_text())
+		raw_corpus_ids = doc_para[i].get("ID")
 		#use vectorizer to count number of significant words in each paragraph
 		try:
 			vectorizer.fit_transform([doc_para[i].get_text()])
@@ -154,12 +163,13 @@ def load_corpus(v):
 
 			if matrix.sum() > MIN_WORD_COUNT:
 				cleaned_corpus.append(doc_para[i].get_text())
+				cleaned_corpus_ids = doc_para[i].get("ID")
 			else:
 				continue
 		except ValueError:
 			continue
 
-	return cleaned_corpus, raw_corpus, filepath
+	return cleaned_corpus, cleaned_corpus_ids, raw_corpus, raw_corpus_ids, filepath
 
 def lemmatize_corpus(text_corpus, v):
 	"""Takes the list of raw paragraph strings and returns a list of the same strings after lemmatization"""
@@ -410,24 +420,23 @@ def print_topics(model, feature_names, n_top_words):
 	"""Prints the topic information. Takes the sklearn.decomposition.LatentDiricheltAllocation lda model, 
 	the names of all the features, the number of words to be printined per topic, a list holding the freq
 	of each topic in the corpus"""
-
+	print("Top 10 words per topic")
 	message_list =[]
 	
 	for topic_idx, topic in enumerate(model.components_):
 		
 		message = "Topic #%d: " % (topic_idx)
-
 		list_feat = [feature_names[i]
 							for i in topic.argsort()[:-n_top_words - 1:-1]]
-		
+
 		feat_freq = sorted(topic, reverse=True)
 		for j in range(0, len(list_feat)):
-			list_feat[j] += " " + str(round(feat_freq[j], 3)) + ","
+			message += "%s: %s, " % (list_feat[j],str(round(feat_freq[j], 3)))
 
-		message += " ".join(list_feat)
 		message_list.append(message)
 		print(message)
 	print()
+
 	return message_list
 
 
@@ -450,7 +459,7 @@ def key_word_search(text_corpus, query_list):
 	Segments are a tuple of """
 	segs = []
 	seg_ids = []
-	for i in range(len(text_corpus))
+	for i in range(len(text_corpus)):
 		paragraph = text_corpus[i]
 		#get all the words in the paragraph
 		word_list = [word.lower() for word in word_tokenize(paragraph)]
@@ -463,8 +472,59 @@ def key_word_search(text_corpus, query_list):
 				break
 				
 	return segs, seg_ids
+
+############################# Test Elbow Algorithm ############################# 
+
+def run_elbow(model, feature_names):
+	"""Prints the topic information. Takes the sklearn.decomposition.LatentDiricheltAllocation lda model, 
+	the names of all the features, the number of words to be printined per topic, a list holding the freq
+	of each topic in the corpus"""
+	print("Elbow Limited Topics:")
+	message_list = []
+
+	for topic_idx, topic in enumerate(model.components_):
+		
+		message = "Topic #%d: " % (topic_idx)
+
+		#get the names of the features in sorted order -> argsort() return sorted indicies
+		list_feat = [feature_names[i]
+							for i in topic.argsort()[::-1]] #[::-1] reverses list
+		
+		#get the frequencis of the top words (limited by the threshold function)
+		feat_freq = sorted(topic, reverse=True)
+		cutoff = threshold(sorted(topic, reverse=True))
+		limited_freq = limit_by_threshold(feat_freq, cutoff)
+		
+		for j in range(len(limited_freq)):
+			message += "%s: %s, " % (str(list_feat[j]),str(limited_freq[j]))
+
+		message_list.append(message)
+		print(message)
+	print()
+	
+	return message_list
+
+############################# Test Elbow On Topic Doc Dist ############################# 
+
+def visualize(doc_topic_dist):
+	#go through each topic
+	for i in range(NUM_TOPICS):
+		f = plt.figure(i)
+		plt.plot(sorted(doc_topic_dist[:,i], reverse=True))
+		cutoff = threshold(sorted(doc_topic_dist[:,i]))
+		plt.plot(1,cutoff,'g', marker='o')
+		plt.ylabel("Association")
+		plt.xlabel("Document")
+		plt.title("Topic %d" % (i))
+		f.show()
+
+	input()
+
 if __name__ == "__main__":
 	main()
+
+
+
 
 
        
