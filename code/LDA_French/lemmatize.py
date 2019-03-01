@@ -17,22 +17,29 @@ BOOK = "symb-du-mal-full"
 
 def main():
     if len(sys.argv) < 3:
-        print("Please specify <source path> and <dest path> on commandline")
+        print("Usage: source_path dest_path")
         quit(1)
+
+    # load spacy model
     print("loading model...")
     nlp = spacy.load("fr_core_news_sm")
 
+    # load segments from csv (delimited with ("|")
     print("loading segments from " + sys.argv[1])
     segs = load_segs_from_csv(sys.argv[1])
 
+    # lemmatize each segment
     print("lemmatizing segs...")
     lemma_segs = []
 
     for i in range(len(segs)):
+
+        # analyze each segment and add it to the fully lemmatized set
         lemma_segs.append(analyze_seg(segs[i], nlp))
         sys.stdout.write("\r%i segments processed" % i)
         sys.stdout.flush()
 
+    # write to csv file
     print("\nwriting segs...")
     write_to_csv(sys.argv[2] , lemma_segs)
 
@@ -57,8 +64,9 @@ def analyze_seg(seg, nlp):
     :param nlp: spacy "fr_core_news_sm" model
     :return: lemmatized segment
     """
-
+    # get a list of the natural language (includeing POS) info for each word
     doc = nlp(seg)
+
     # create a new segment by joining all the lemmas
     new_doc = " ".join([word.lemma_ for word in doc])
     return new_doc
