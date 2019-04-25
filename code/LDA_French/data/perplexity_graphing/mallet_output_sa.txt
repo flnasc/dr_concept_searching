@@ -1,0 +1,452 @@
+/usr/local/bin/python3.6 /Users/DylanHR/dev/dr_concept_searching/code/LDA_French/gensim_topic_model.py
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/past/translation/__init__.py:35: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/scipy/sparse/sparsetools.py:21: DeprecationWarning: `scipy.sparse.sparsetools` is deprecated!
+scipy.sparse.sparsetools is a private module for scipy.sparse, and should not be used.
+  _deprecated()
+
+-----LDA CONCEPT DETECITON-----
+Mallet LDA: 13 topics, 4 topic bits, 1111 topic mask
+Data loaded.
+max tokens: 312
+total tokens: 58748
+<10> LL/token: -9.61825
+<20> LL/token: -9.1319
+<30> LL/token: -8.9427
+<40> LL/token: -8.82487
+
+0	3.84615	identité caractère ipséité narratif temps récit opposer personnage dialectique cas mêmeté trait fonction limite aporie donner Mais présent permanence reconnaître
+1	3.84615	pratique constituer action appeler théorie Aristote champ puissance kantien notion physique narratif commencement permettre définition modeler voir résulter procéder mouvement
+2	3.84615	chose référence ordre philosophie penser doute Cogito prédicat étude falloir sorte unité égard problème forcer vérité problématique apparaître sembler certitude
+3	3.84615	conscience thèse condition phénomène donner c'est-à-diree sollicitude porter général conception capacité différence lien situation vouloir choix universel celer croyance consister
+4	3.84615	principe moral autonomie loi droit respect sou critère volonté placer kant exemple maxime distinguer impératif pluralité liberté partie structure caractériser
+5	3.84615	règle part théorie attestation rapport terme point individu motif prendre sou plan impliquer concerner prise social aristotélicien trouver lieu vrai
+6	3.84615	vie idée justice plan éthique fin pratique conflit moral politique histoire fiction jugement raison précisément situation esprit estime interprétation sagesse
+7	3.84615	étude notion position Aristote série discussion réflexion relever égalité manière terme fort praxis fondamental œuvre mise mettre rôle philosophique précédent
+8	3.84615	acte éthique discours langage vue visée morale moment point renonciation viser jeu norme téléologique tou obligation violence niveau structure prétention
+9	3.84615	question agir terme expression homme chose cas humain description mesure signification réponse paradoxe promesse caractère rester vertu demander sorte mieux
+10	3.84615	action agent événement analyse intention raison notion base rapport question loin herméneutique auteur logique explication prendre attribution Pour ontologie arriver
+11	3.84615	propre corps altérité monde chair commun falloir responsabilité amitié système nature constitution déjà ontologie existence trouver objet passivité méditation souligner
+12	3.84615	concept Mais désigner venir dimension distinction côté temps monde place relation compte causalité ontologique ouvrir passer grand titre Dans Heidegger
+
+<50> LL/token: -8.78667
+<60> LL/token: -8.74725
+<70> LL/token: -8.71605
+<80> LL/token: -8.68686
+<90> LL/token: -8.66533
+
+0	3.84615	identité narratif caractère cas ipséité temps récit dialectique trait critère personnage mêmeté présent opposer reconnaître aporie expérience histoire personnel devenir
+1	3.84615	Aristote pratique appeler constituer falloir série mouvement sou fonction permettre notion relation champ physique commencement résulter définition modeler distinction définir
+2	3.84615	question chose philosophie penser référence problème poser doute Cogito problématique unité ordre ascription prédicat vérité herméneutique sembler certitude forcer sémantique
+3	3.84615	conscience donner idée thèse condition phénomène différence c'est-à-diree Mais mal concerner sollicitude général exister consister catégorie capacité conception distinct porter
+4	3.84615	principe moral autonomie loi droit respect volonté kant maxime institution impératif distinguer prendre épreuve liberté pluralité kantien responsabilité désir caractériser
+5	3.84615	règle théorie part plan attestation prendre rapport terme sou individu niveau paraître motif égalité lieu précisément opposition lier mesure considérer
+6	3.84615	vie justice éthique fin idée pratique moral situation conflit raison politique jugement plan discussion estime conviction critique interprétation esprit argument
+7	3.84615	étude manière relever notion mettre précédent aller position rôle phénoménologie réflexion fort praxis philosophique œuvre titre mode médiation Dans Mais
+8	3.84615	acte discours langage éthique point morale vue visée forme renonciation moment structure nom jeu promesse double venir entendre norme tou
+9	3.84615	terme agir homme expression humain description choix vertu mesure puissance égard importer paradoxe caractère question chose signification sorte compte demander
+10	3.84615	action agent événement analyse intention notion raison base rapport agir logique auteur explication question arriver sorte attribution type coup argument
+11	3.84615	propre corps altérité chair monde commun falloir amitié ontologie statut système trouver constitution signifier existence passivité nature méditation vouloir conscience
+12	3.84615	concept dimension place monde côté titre mettre Mais ontologique voir proposer rester désigner grand investigation passer venir causalité souci ouvrir
+
+<100> LL/token: -8.6671
+<110> LL/token: -8.67069
+<120> LL/token: -8.65294
+<130> LL/token: -8.64028
+<140> LL/token: -8.62361
+
+0	3.84615	identité caractère narratif ipséité cas récit trait temps histoire critère personnage mêmeté expérience devenir fiction Mais présent reconnaître limite personnel
+1	3.84615	Aristote notion pratique puissance relation sou constituer mouvement unité série définir champ rapport permettre appeler fonction falloir commencement définition distinction
+2	3.84615	question chose philosophie penser poser problème problématique doute Cogito prédicat référence ascription apparaître vérité attribution certitude cadre sémantique sorte psychique
+3	3.84615	conscience idée donner thèse condition Mais phénomène exister appeler c'est-à-diree mal sollicitude concerner consister différence opposer capacité vouloir rappeler admettre
+4	3.84615	principe moral autonomie loi droit respect volonté sou kant institution maxime impératif épreuve structure kantien liberté général pluralité forme ordre
+5	3.84615	règle part plan théorie attestation terme prendre niveau rapport individu précisément paraître idée égalité mesure lier appliquer opposition social impliquer
+6	3.84615	vie justice éthique fin pratique situation moral conflit raison politique argument discussion jugement conviction conception esprit interprétation plan Hegel sagesse
+7	3.84615	étude désigner manière agir précédent relever mettre titre rôle phénoménologie réflexion mode dialectique Mais ontologie tradition exercer grand aller position
+8	3.84615	acte discours langage point vue morale visée éthique renonciation moment nom jeu promesse venir compte catégorie forme placer norme violence
+9	3.84615	terme homme expression humain chose mesure vertu signification choix agir exemple égard marquer importer souligner caractère mieux évoquer public sorte
+10	3.84615	action agent événement analyse intention raison théorie description notion base logique auteur motif explication arriver agir exprimer entité type réponse
+11	3.84615	propre corps altérité falloir chair amitié statut trouver existence constitution passivité système objet commun méditation signifier vouloir jamais hypothèse sphère
+12	3.84615	monde concept mettre place dimension voir rester temps ontologique porter côté aller venir déjà proposer Dans causalité passer investigation souci
+
+<150> LL/token: -8.61115
+<160> LL/token: -8.61961
+<170> LL/token: -8.60688
+<180> LL/token: -8.61049
+<190> LL/token: -8.60374
+
+0	3.84615	identité caractère narratif ipséité temps cas trait récit histoire expérience personnage réponse mêmeté critère limite donner fiction personnel permanence dialectique
+1	3.84615	Aristote pratique notion puissance relation falloir sou sorte champ mouvement unité série permettre fonction définir appeler commencement définition praxis modeler
+2	3.84615	question chose philosophie poser problème référence problématique doute penser Cogito prédicat ascription vérité cadre attribution détermination certitude celer investigation sémantique
+3	3.84615	conscience donner thèse Mais condition idée phénomène appeler exister différence c'est-à-diree mal capacité titre devenir consister celer admettre voix livre
+4	3.84615	principe autonomie loi droit moral règle respect volonté kant institution maxime responsabilité impératif prendre épreuve liberté forme kantien pluralité général
+5	3.84615	justice part plan idée attestation rapport règle sou précisément niveau théorie mesure concerner individu point prendre égalité système appliquer position
+6	3.84615	vie éthique moral fin situation conflit raison pratique politique jugement discussion conviction choix argument lien critique interprétation esprit conception Hegel
+7	3.84615	étude manière mettre relever précédent Dans terme rôle phénoménologie réflexion agir herméneutique mode Mais dialectique désigner prendre philosophique susciter tour
+8	3.84615	acte discours langage éthique moment visée morale vue structure renonciation point estime paradoxe téléologique nom promesse catégorie norme violence placer
+9	3.84615	terme homme expression humain signification égard agir chose vertu exemple demander caractère mesure désigner importer cas marquer évoquer public souligner
+10	3.84615	action agent événement analyse intention théorie raison rapport notion base description logique auteur motif agir explication causalité arriver exprimer type
+11	3.84615	propre corps altérité falloir chair trouver constituer monde vouloir amitié objet existence constitution passivité loin méditation signifier nature sphère hypothèse
+12	3.84615	concept monde dimension paraître ontologique côté ontologie porter venir aller présent place rester passer voir Mais entier déjà souci mettre
+
+<200> LL/token: -8.59312
+<210> LL/token: -8.5932
+[beta: 0.03488]
+<220> LL/token: -8.52021
+<230> LL/token: -8.72026
+[beta: 0.04599]
+<240> LL/token: -8.72588
+
+0	2.78716	identité caractère narratif ipséité cas récit temps histoire personnage mêmeté fiction expérience critère donner permanence personnel Parfit trait maintien raconter
+1	3.13564	Aristote notion pratique agir puissance relation champ série sorte rapport permettre fonction unité mouvement commencement appeler définition modeler falloir praxis
+2	3.13008	question chose philosophie poser référence problématique doute penser Cogito ascription prédicat vérité rester problème attribution certitude ordre réponse sorte sémantique
+3	3.1099	conscience donner thèse condition Mais phénomène appeler c'est-à-diree mal idée point exister titre capacité celer chose opposer égard voix possibilité
+4	2.98076	principe règle autonomie droit moral loi respect volonté kant maxime responsabilité impératif pluralité idée liberté kantien général forme sou épreuve
+5	3.01947	justice part attestation idée institution individu sou système égalité rapport point vue concerner prendre position théorie social distribution problème appliquer
+6	3.11467	vie éthique moral pratique fin situation conflit morale politique raison jugement discussion conviction vouloir précisément esprit Hegel sagesse choix interprétation
+7	3.41445	étude plan Mais mettre dialectique précédent relever manière terme titre analyse herméneutique mode paraître grand Dans réflexion philosophique œuvre trait
+8	3.23715	acte discours langage structure visée rapport moment prendre renonciation sollicitude estime forme viser promesse nom venir éthique norme jeu tou
+9	3.15844	terme homme expression mesure signification humain chose égard exemple caractère vertu devenir cas falloir compte importer désigner souligner public évoquer
+10	3.18791	action agent événement théorie intention analyse notion raison description base motif auteur explication logique causalité arriver entité type agir causal
+11	2.90238	propre corps altérité chair falloir constituer amitié objet constitution passivité existence monde méditation trouver phénoménologie vouloir jamais loin hypothèse Husserl
+12	3.13438	monde aller concept dimension temps ontologie paraître mettre place voir ontologique passer rester souci porter Heidegger venir présent distinction côté
+
+<250> LL/token: -8.79025
+[beta: 0.05015]
+<260> LL/token: -8.7989
+<270> LL/token: -8.82112
+[beta: 0.05145]
+<280> LL/token: -8.81714
+<290> LL/token: -8.81269
+
+0	1.99244	identité narratif caractère ipséité récit cas temps fiction personnage mêmeté histoire thèse expérience critère donner personnel permanence Parfit raconter différence
+1	2.42862	Aristote agir humain puissance sorte champ série pratique concept permettre commencement modeler notion rapport concerner falloir mouvement unité praxis primitif
+2	2.5209	question chose poser doute problème réponse Cogito ascription penser problématique prédicat vérité ordre sorte attribution certitude connaître rester exister psychique
+3	2.3806	conscience attestation sou donner phénomène Mais point responsabilité voix appeler figure condition injonction reconnaissance inverse appel fort capacité faux reconnaître
+4	2.2604	règle autonomie idée droit loi principe moral respect raison volonté kant maxime impératif mal liberté pluralité fin kantien général épreuve
+5	2.33049	justice idée principe part institution plan théorie éthique point individu système égalité conception sou social déontologique niveau situation distribution contrat
+6	2.38762	vie éthique pratique moral conflit morale politique jugement situation fin discussion Hegel sagesse conviction esprit susciter argumentation précisément délibération choix
+7	2.96624	étude philosophie terme plan mettre dialectique Dans mesure précédent analyse forme relever herméneutique réflexion vrai philosophique titre prendre œuvre trait
+8	2.53998	acte discours langage désigner visée référence structure renonciation estime prendre propre nom promesse règle norme Mais rapport pragmatique énoncé paradoxe
+9	2.39635	terme homme expression signification cas falloir forcer manière chose tou importer autant devenir public égard vertu choix exemple caractère exprimer
+10	2.5598	action agent événement intention théorie analyse notion base description raison logique caractère auteur motif explication arriver rapport agir appartenir entité
+11	2.12465	corps propre altérité chair falloir amitié constitution donner trouver passivité existence méditation monde expérience penser jamais Husserl ego ami constituer
+12	2.47375	monde paraître ontologie dimension temps notion voir venir aller rapport Heidegger demander rester souci Mais place déjà ipséité ouvrir fondamental
+
+[beta: 0.05282]
+<300> LL/token: -8.80953
+<310> LL/token: -8.80112
+[beta: 0.05284]
+<320> LL/token: -8.78682
+<330> LL/token: -8.76929
+[beta: 0.05311]
+<340> LL/token: -8.76906
+
+0	1.17208	identité narratif caractère ipséité récit fiction personnage cas mêmeté temps permanence expérience critère thèse personnel histoire Parfit maintien intriguer différence
+1	1.58979	Aristote puissance pratique agir champ fin commencement permettre concept définition fonction série choix praxis notion point mouvement falloir humain Mais
+2	1.73361	question chose poser problème réponse penser doute Cogito sorte vérité exister attribution prédicat ordre problématique voir statut psychique certitude consister
+3	1.371	conscience attestation phénomène sou critique point esprit Hegel voix Mais injonction responsabilité figure appel reconnaissance opposer phénoménologie maître thème venir
+4	1.35487	règle moral autonomie respect loi idée volonté principe kant maxime mal condition estime impératif sollicitude liberté raison kantien droit pluralité
+5	1.35578	justice idée principe part institution égalité système social vertu point déontologique distribution contrat société individu théorie conception concept droit concerner
+6	1.49982	vie éthique pratique conflit moral politique jugement morale situation discussion visée plan sagesse précisément argumentation caractère susciter tragique lien histoire
+7	2.33924	étude terme philosophie plan rapport prendre appeler mesure dialectique relever analyse précédent sou mettre titre ontologique rôle investigation herméneutique venir
+8	1.66556	acte discours désigner référence chose langage propre renonciation nom théorie promesse Mais prendre expression paradoxe type pragmatique tou énoncé pronom
+9	1.54722	homme cas expression falloir signification terme devenir exemple importer public jeu partie autant compte forcer sou manière tou peut-être souffrir
+10	1.83074	action agent événement intention théorie analyse notion raison caractère description base rapport auteur motif compte explication ascription logique entité arriver
+11	1.22701	corps propre altérité chair amitié constitution falloir passivité expérience rapport ami Husserl constituer ego signifier existence penser étranger réduction trouver
+12	1.61772	paraître monde temps ontologie aller notion dimension rester ipséité agir humain problématique donner souci voir Heidegger ver catégorie distinction place
+
+<350> LL/token: -8.74618
+[beta: 0.0535]
+<360> LL/token: -8.74963
+<370> LL/token: -8.72888
+[beta: 0.05393]
+<380> LL/token: -8.72693
+<390> LL/token: -8.7073
+
+0	0.82064	identité narratif cas récit caractère temps personnage ipséité fiction mêmeté histoire permanence expérience personnel Parfit critère intriguer maintien littéraire croyance
+1	1.14459	Aristote puissance pratique fin idée vie principe série commencement choix homme notion agir praxis sorte point part mouvement acte permettre
+2	1.31113	question chose poser penser doute Cogito réponse sorte vérité problème voir problématique attribution exister ordre psychique loin égard Mais prédicat
+3	0.8936	conscience attestation altérité phénomène Hegel critique sou voix point esprit injonction donner phénoménologie opposer appel Lévinas figure Mais visage maître
+4	1.00448	règle autonomie moral respect loi principe volonté kant maxime mal raison estime sollicitude impératif pluralité idée kantien condition structure distinguer
+5	0.90988	justice idée principe part droit égalité institution social distribution système contrat société vertu individu théorie Rawls juridique relation sphère téléologique
+6	1.09781	vie éthique pratique conflit moral jugement politique situation morale discussion visée sagesse argumentation susciter conviction caractère précisément tragique argument phronèsi
+7	2.02083	étude plan terme philosophie mettre rapport appeler éthique mesure sou dialectique analyse paraître précédent trait grand prendre donner relever investigation
+8	1.17213	acte langage désigner référence chose discours expression renonciation terme propre théorie nom paradoxe tou pragmatique énoncé aporie pronom Mais individu
+9	1.02445	homme cas exemple partie devenir autant falloir mesure peut-être responsabilité compte jeu mort droit souffrir constitutif signification forcer manquer long
+10	1.45443	action agent événement intention analyse théorie notion caractère description raison compte terme logique auteur ascription motif explication base question thèse
+11	0.80335	corps propre chair amitié altérité constitution falloir ego passivité Husserl constituer commun penser étranger réduction méditation trouver ami sphère expérience
+12	1.24111	monde temps ipséité ontologie notion rester humain agir concept dimension donner Mais souci propre cadre paraître problématique fondamental caractère ontologique
+
+[beta: 0.05504]
+<400> LL/token: -8.70935
+<410> LL/token: -8.68908
+[beta: 0.05528]
+<420> LL/token: -8.67516
+<430> LL/token: -8.65689
+[beta: 0.05598]
+<440> LL/token: -8.65755
+
+0	0.46281	identité narratif récit ipséité cas caractère personnage mêmeté fiction temps histoire vie permanence Parfit maintien expérience intriguer personnel littéraire critère
+1	0.71032	pratique Aristote vie fin principe homme puissance action choix commencement notion idée chose praxis permettre part sorte définition mouvement interprétation
+2	0.91097	question poser réponse doute Cogito chose exister vérité rester penser sorte ordre problématique donner Mais consister falloir idée problème argument
+3	0.49408	conscience attestation altérité phénomène voix injonction Hegel critique appel Lévinas esprit visage phénoménologie mouvement métaphore figure opposer maître thème mauvais
+4	0.63808	règle autonomie respect moral loi kant raison maxime principe volonté impératif sollicitude mal idée kantien pluralité estime forme épreuve violence
+5	0.48208	justice principe idée part égalité institution droit social système distribution contrat société individu théorie point Rawls juridique sphère règle situation
+6	0.62822	pratique éthique vie moral conflit politique jugement situation discussion morale sagesse conviction argumentation prendre précisément niveau débat trajet histoire caractère
+7	1.65361	étude plan terme éthique philosophie rapport appeler paraître sou mettre mesure analyse porter Dans concept précédent dialectique relever prendre rôle
+8	0.71107	acte langage référence discours chose désigner expression renonciation propre nom théorie paradoxe terme prendre type rapport pragmatique énoncé aporie pronom
+9	0.51488	cas homme exemple droit responsabilité règle devenir signification mort tragédie falloir souffrir venir constitutif conséquence prendre autant peut-être long manquer
+10	0.99474	action agent événement intention théorie analyse question notion raison description caractère agir base rapport motif thèse explication logique arriver chose
+11	0.39202	corps propre chair amitié monde ego passivité falloir Husserl étranger altérité ami existence constitution expérience trouver penser sphère présupposer phénoménologie
+12	0.7687	agir temps ontologie notion humain ipséité monde caractère ontologique souci Heidegger rester concerner unité paraître manière propre fondamental donner Dasein
+
+<450> LL/token: -8.62835
+[beta: 0.05689]
+<460> LL/token: -8.62783
+<470> LL/token: -8.61906
+[beta: 0.0585]
+<480> LL/token: -8.60899
+<490> LL/token: -8.5816
+
+0	0.35402	identité narratif ipséité récit caractère cas personnage fiction mêmeté temps histoire permanence vie critère expérience Parfit raconter maintien intriguer personnel
+1	0.51966	action vie pratique Aristote homme fin choix principe commencement praxis concept définition notion exemple rapport livre champ jeu unité constitutif
+2	0.70145	question chose poser idée doute Cogito exister vérité penser argument ordre certitude réponse sorte sembler contrer vouloir falloir propre Descartes
+3	0.31352	conscience attestation altérité phénomène voix injonction Lévinas passivité Hegel critique responsabilité maître soupçon esprit visage métaphore point dette appel opposer
+4	0.45984	règle autonomie principe respect kant volonté maxime loi moral mal impératif idée raison kantien pluralité forme promesse sollicitude moralité liberté
+5	0.33078	justice part droit principe institution idée égalité distribution système contrat social société sphère théorie Rawls individu conception juridique donner règle
+6	0.42222	conflit éthique pratique moral jugement vie situation politique discussion sagesse morale argumentation conviction trajet histoire caractère Sittlichkeit phronèsi débat instance
+7	1.48756	étude plan éthique terme philosophie sou rapport mettre appeler Mais titre falloir paraître porter prendre analyse venir Dans donner moral
+8	0.48499	acte langage référence chose discours désigner renonciation expression théorie propre nom pragmatique paradoxe énoncé pronom individu tou identifiant monde point
+9	0.31435	homme souffrir droit tragédie mort évoquer responsabilité œuvre devenir exception tragique interaction falloir manquer cité Pour Antigone conséquence loin souffrance
+10	0.76786	action agent événement intention question théorie analyse notion raison terme base description ascription thèse rapport chose caractère logique agir motif
+11	0.26955	corps propre chair amitié ego constitution Husserl trouver altérité ami étranger passivité expérience existence phénoménologie monde falloir transfert penser réduction
+12	0.56069	agir notion ontologie temps monde humain ontologique puissance ipséité souci acte caractère paraître unité rester Heidegger concept manière fondamental Aristote
+
+[beta: 0.05875]
+<500> LL/token: -8.57951
+<510> LL/token: -8.56226
+[beta: 0.05896]
+<520> LL/token: -8.54002
+<530> LL/token: -8.53655
+[beta: 0.06061]
+<540> LL/token: -8.51183
+
+0	0.24681	identité narratif récit cas caractère ipséité personnage temps mêmeté fiction question permanence expérience Parfit personnel maintien critère histoire intriguer littéraire
+1	0.34183	vie action pratique fin homme Aristote principe choix commencement notion exemple unité mouvement auteur agent série texte délibération rapport fonction
+2	0.46492	Cogito doute idée penser chose exister vérité sembler question certitude poser attestation contrer loin ordre Mais argument c'est-à-diree propre Descartes
+3	0.17279	conscience attestation altérité voix injonction phénomène visage Lévinas phénoménologie responsabilité Heidegger soupçon critique Hegel maître ver appel thème extériorité dette
+4	0.29716	règle autonomie principe respect loi kant moral maxime volonté impératif mal raison kantien idée forme pluralité universel épreuve promesse norme
+5	0.22754	justice idée droit institution principe part égalité théorie social système distribution contrat société sphère Rawls individu juridique prendre liberté loi
+6	0.25889	conflit moral jugement pratique éthique politique situation discussion vie conviction sagesse morale argumentation trajet Sittlichkeit exigence raison débat cas domination
+7	1.30141	étude terme éthique plan rapport donner sou Mais appeler falloir mettre paraître philosophie question prendre titre porter mesure analyse point
+8	0.28427	acte chose langage discours renonciation référence expression désigner propre nom théorie énoncé pronom pragmatique identifiant référentiel énonciation tou individu locuteur
+9	0.13853	homme mort tragédie souffrir responsabilité Hegel devenir égard droit Antigone tragique œuvre conséquence cité protagoniste falloir souffrance Pour seuil esprit
+10	0.50883	action événement agent intention question analyse théorie raison chose caractère prédicat notion ascription description base thèse explication logique causalité motif
+11	0.16752	corps chair propre amitié expérience Husserl ego altérité passivité constitution ami falloir existence étranger monde trouver conscience réduction penser transfert
+12	0.34679	agir monde ontologie humain puissance acte temps Aristote ontologique notion souci concept distinction ouvrir ipséité permettre Heidegger Dasein problème aristotélicien
+
+<550> LL/token: -8.5117
+[beta: 0.06215]
+<560> LL/token: -8.49003
+<570> LL/token: -8.47855
+[beta: 0.06274]
+<580> LL/token: -8.47138
+<590> LL/token: -8.45384
+
+0	0.19974	identité narratif récit cas caractère personnage fiction question mêmeté ipséité temps histoire permanence critère Parfit personnel maintien intriguer raconter expérience
+1	0.26048	vie action pratique fin principe choix Aristote commencement homme agent unité auteur rapport notion exemple praxis modeler constitutif fonction interprétation
+2	0.34046	attestation doute Cogito chose vérité idée exister certitude penser sembler Descartes contrer Dieu Mais philosophie tou argument égard faux Nietzsche
+3	0.13236	conscience altérité voix phénomène injonction attestation Hegel Lévinas appel passivité responsabilité phénoménologie dette métaphore Heidegger visage esprit sou extériorité maître
+4	0.23911	règle autonomie principe moral loi respect maxime kant raison volonté impératif mal idée pluralité liberté kantien universel promesse universalisation violence
+5	0.19467	justice idée part principe égalité institution droit social distribution système contrat individu sphère Rawls théorie responsabilité société juridique situation public
+6	0.19092	conflit moral pratique jugement politique situation éthique conviction morale discussion vie droit sagesse argumentation trajet Sittlichkeit instance domination phronèsi forme
+7	1.22976	éthique étude terme Mais rapport plan question falloir mettre appeler point donner paraître mesure caractère analyse prendre titre venir propre
+8	0.1985	acte discours renonciation langage chose désigner théorie référence expression pragmatique nom énoncé identifiant pronom énonciation tou référentiel paradoxe individu aporie
+9	0.09372	tragédie homme souffrir tragique mort souffrance contrer Antigone Hegel cité chœur catharsis puissance égard Créon mortel sagesse instruction seuil esprit
+10	0.39279	action événement agent intention question analyse chose raison description ascription théorie notion prédicat base thèse causalité motif explication logique réponse
+11	0.11691	corps propre chair amitié ami ego monde Husserl expérience passivité constitution altérité trouver conscience étranger transfert phénoménologie existence chose objet
+12	0.25156	agir monde puissance ontologie humain acte notion Aristote temps souci ontologique Dasein primitif Heidegger concept aristotélicien terme mouvement cit concerner
+
+[beta: 0.06413]
+<600> LL/token: -8.44233
+<610> LL/token: -8.40793
+[beta: 0.06479]
+<620> LL/token: -8.41844
+<630> LL/token: -8.38764
+[beta: 0.06516]
+<640> LL/token: -8.38814
+
+0	0.15824	identité narratif récit cas ipséité caractère personnage mêmeté fiction temps critère permanence question expérience personnel Parfit maintien intriguer littéraire histoire
+1	0.1735	action vie pratique fin Aristote choix commencement principe homme agent exemple histoire auteur délibération unité praxis texte notion mettre plan
+2	0.21326	attestation Cogito doute chose vérité certitude idée Mais exister penser contrer Descartes Dieu philosophique ordre faux vouloir Nietzsche sorte intérieur
+3	0.09363	conscience altérité voix injonction attestation phénomène visage Lévinas dette phénoménologie responsabilité Heidegger passivité esprit extériorité Hegel critique figure séparation maître
+4	0.18116	règle autonomie principe loi respect maxime volonté impératif moral kant idée mal kantien raison fin violence forme promesse pluralité universalisation
+5	0.14868	justice idée droit principe institution égalité part social distribution contrat société juridique individu système Rawls sphère théorie situation liberté commun
+6	0.13952	conflit pratique politique éthique moral jugement situation vie discussion sagesse morale argumentation conviction Sittlichkeit niveau droit moralité domination trajet fin
+7	1.16969	question terme étude rapport éthique plan donner Mais point falloir prendre notion paraître mettre appeler philosophie mesure caractère titre égard
+8	0.1349	acte renonciation discours chose désigner référence langage expression paradoxe nom théorie monde pronom énoncé pragmatique référentiel énonciation identifiant individu propre
+9	0.05861	tragédie homme souffrir tragique mort Antigone souffrance instruction cité conflit chœur catharsis Hegel Créon mortel lien enseigner falloir ami protagoniste
+10	0.26769	action événement agent intention analyse question raison notion chose description ascription théorie explication motif causalité attribution série thèse prédicat base
+11	0.10125	corps propre chair amitié ego chose Husserl passivité conscience ami monde existence étranger penser constitution réduction méditation transfert sphère altérité
+12	0.13708	agir puissance monde Aristote ontologie acte humain temps ontologique Heidegger souci Dasein aristotélicien unité praxis mouvement substance concept cit qu’
+
+<650> LL/token: -8.37557
+[beta: 0.06572]
+<660> LL/token: -8.37048
+<670> LL/token: -8.36004
+[beta: 0.06592]
+<680> LL/token: -8.34345
+<690> LL/token: -8.34017
+
+0	0.14242	identité narratif récit cas personnage caractère ipséité temps fiction mêmeté question permanence histoire personnel Parfit critère thèse maintien intriguer raconter
+1	0.14483	vie action pratique fin Aristote principe commencement homme choix agent unité praxis auteur exemple notion rapport relation histoire iii constitutif
+2	0.1689	Cogito attestation doute vérité chose idée certitude exister contrer Descartes Dieu philosophie interprétation Mais ordre intérieur vrai Nietzsche soupçon faux
+3	0.08355	conscience altérité attestation injonction voix phénomène Lévinas passivité responsabilité visage phénoménologie Heidegger figure dette thème métaphore maître Vezin appel esprit
+4	0.1543	règle autonomie respect principe loi maxime moral volonté impératif kant mal raison kantien idée liberté violence promesse fin pluralité épreuve
+5	0.12366	justice principe idée institution part droit égalité social distribution contrat système théorie société sphère Rawls individu situation cas responsabilité juridique
+6	0.12247	conflit politique pratique jugement éthique moral situation vie discussion sagesse morale argumentation conviction chose Sittlichkeit droit esprit domination débat instance
+7	1.1181	terme question éthique étude Mais plan donner prendre point rapport falloir paraître mesure sou caractère mettre propre analyse égard appeler
+8	0.11586	acte chose renonciation discours référence langage désigner expression pronom énoncé pragmatique identifiant nom paradoxe référentiel énonciation monde individu propre réflexivité
+9	0.04936	tragédie mort tragique homme Antigone cité Hegel Paris chœur instruction Press Créon mortel catharsis épuiser grec University malheur lien puissance
+10	0.22208	action événement agent intention notion question analyse description théorie ascription explication raison chose motif causalité prédicat base série logique agir
+11	0.0903	corps chair propre amitié monde ego altérité Husserl ami constitution homme passivité ontologie méditation transfert phénoménologie souffrir étranger existence chose
+12	0.10668	puissance Aristote agir acte ontologie humain aristotélicien monde souci notion Dasein cit praxis mouvement Heidegger unité substance chose Yénergéia réappropriation
+
+[beta: 0.06668]
+<700> LL/token: -8.33421
+<710> LL/token: -8.32504
+[beta: 0.06697]
+<720> LL/token: -8.33008
+<730> LL/token: -8.31451
+[beta: 0.06671]
+<740> LL/token: -8.31752
+
+0	0.12562	identité narratif récit ipséité personnage cas mêmeté caractère fiction temps question permanence Parfit critère maintien intriguer littéraire thèse personnel croyance
+1	0.12541	action vie pratique fin principe commencement agent Aristote choix auteur exemple unité homme histoire interprétation fonction mettre permettre constitutif délibération
+2	0.12489	Cogito attestation doute idée vérité certitude chose exister Descartes contrer Dieu philosophie soupçon Nietzsche faux ordre intérieur vrai interprétation sembler
+3	0.07269	conscience altérité attestation voix injonction phénomène passivité Lévinas responsabilité visage Heidegger esprit dette Hegel moral extériorité maître phénoménologie appel figure
+4	0.13211	règle autonomie moral respect maxime loi impératif volonté principe kant idée mal raison kantien sollicitude promesse moralité pluralité liberté violence
+5	0.11248	justice principe droit égalité institution idée part social distribution contrat système société Rawls sphère théorie individu juridique situation loi liberté
+6	0.11107	conflit pratique éthique politique moral vie jugement situation sagesse morale discussion conviction argumentation Sittlichkeit phronèsi domination droit chose historique tragique
+7	1.04426	terme question Mais étude éthique donner rapport plan point appeler falloir propre sou caractère prendre notion mesure action mettre égard
+8	0.0963	acte langage renonciation chose référence discours désigner expression pronom monde identifiant énoncé théorie référentiel nom énonciation individu pragmatique prendre réflexivité
+9	0.03952	tragédie mort tragique homme Antigone Hegel instruction Press cité chœur catharsis Paris Créon mortel grec protagoniste enseigner épuiser lien University
+10	0.18194	action événement agent intention analyse question description chose ascription série notion explication théorie base raison motif causalité prédicat attribution thèse
+11	0.0797	corps chair propre amitié monde ego ami constitution existence Husserl chose conscience passivité étranger expérience transfert méditation phénoménologie souffrir penser
+12	0.08312	puissance agir Aristote acte ontologie humain aristotélicien monde Dasein praxis notion Heidegger cit concept souci ontologique analogique exemple chose Yénergéia
+
+<750> LL/token: -8.30815
+[beta: 0.06711]
+<760> LL/token: -8.30163
+<770> LL/token: -8.30235
+[beta: 0.06762]
+<780> LL/token: -8.29993
+<790> LL/token: -8.29283
+
+0	0.12557	identité narratif récit caractère personnage cas ipséité temps mêmeté fiction question permanence critère Parfit maintien personnel intriguer histoire raconter expérience
+1	0.1064	action vie pratique fin agent commencement principe Aristote choix homme unité auteur règle exemple délibération histoire notion série praxis constitutif
+2	0.10025	attestation Cogito doute vérité certitude exister idée Descartes philosophie Dieu contrer ordre intérieur penser interprétation Nietzsche soupçon argument méditation faux
+3	0.06765	conscience altérité injonction voix attestation phénomène responsabilité Lévinas passivité dette visage Heidegger maître phénoménologie esprit extériorité Dasein figure Vezin genre
+4	0.12277	règle autonomie respect moral loi maxime impératif volonté principe kant mal idée raison kantien sollicitude promesse fin épreuve forme moralité
+5	0.10456	justice principe idée institution part égalité social distribution contrat théorie société sphère système Rawls droit individu déontologique situation règle liberté
+6	0.10574	conflit pratique moral politique éthique jugement droit sagesse situation vie discussion morale argumentation Hegel Sittlichkeit phronèsi domination conviction instance homme
+7	1.01291	terme rapport question éthique Mais étude donner plan point chose prendre appeler falloir notion paraître action mesure propre sou mettre
+8	0.09662	acte discours renonciation référence désigner langage expression chose pronom identifiant pragmatique énonciation énoncé nom individu référentiel type locuteur réflexivité indicateur
+9	0.03833	tragédie tragique Antigone mort homme cité chœur instruction Press Créon mortel catharsis enseigner lien University Paris protagoniste malheur ami 1987
+10	0.16936	action événement intention agent analyse question description raison thèse théorie notion motif causalité explication base logique ascription attribution prédicat causal
+11	0.07027	corps chair propre amitié altérité monde ego ami falloir constitution Husserl passivité penser phénoménologie existence méditation conscience souffrir étranger transfert
+12	0.07474	puissance agir Aristote acte ontologie humain aristotélicien praxis ontologique souci notion Heidegger qu’ substance Dasein application mouvement cit homme Yénergéia
+
+[beta: 0.06761]
+<800> LL/token: -8.29952
+<810> LL/token: -8.29678
+[beta: 0.06722]
+<820> LL/token: -8.28457
+<830> LL/token: -8.28956
+[beta: 0.06771]
+<840> LL/token: -8.28089
+
+0	0.1169	identité narratif ipséité récit cas personnage caractère fiction mêmeté temps histoire permanence critère Parfit expérience maintien intriguer littéraire dialectique question
+1	0.09403	action vie pratique fin agent choix principe Aristote homme unité praxis exemple narratif délibération mettre auteur précepte constitutif règle texte
+2	0.08516	Cogito attestation doute vérité certitude idée Descartes exister Dieu contrer philosophie herméneutique Nietzsche vrai soupçon intérieur interprétation ordre faux philosophique
+3	0.06934	conscience altérité injonction attestation voix phénomène Lévinas responsabilité visage passivité Heidegger phénoménologie dette critique reconnaître esprit Hegel appel figure extériorité
+4	0.11004	règle autonomie loi respect principe maxime moral impératif volonté mal idée fin kant kantien raison pluralité forme moralité liberté promesse
+5	0.09704	justice idée principe égalité institution distribution part social contrat système société théorie droit Rawls individu juridique sphère situation déontologique règle
+6	0.09863	conflit pratique politique jugement moral éthique morale situation sagesse discussion droit vie argumentation conviction domination phronèsi Sittlichkeit instance principe Hegel
+7	0.97362	terme question Mais rapport étude éthique chose donner plan point prendre falloir appeler sou notion propre paraître monde analyse mettre
+8	0.09004	acte renonciation discours langage référence désigner chose expression pronom énoncé identifiant pragmatique énonciation nom individu référentiel théorie locuteur réflexivité indicateur
+9	0.03676	tragédie tragique homme mort Antigone Press cité chœur conflit instruction Créon mortel enseigner Paris grec University catharsis malheur Hegel épuiser
+10	0.15379	action événement agent intention question description ascription notion analyse raison motif explication causalité commencement série logique thèse attribution prédicat ontologie
+11	0.06319	corps chair propre amitié ego ontologie altérité ami Husserl constitution existence phénoménologie conscience penser monde objet transfert étranger expérience réduction
+12	0.07473	puissance Aristote acte agir humain aristotélicien ontologie unité souci praxis homme ontologique idée qu’ substance mouvement notion Heidegger Dasein cit
+
+<850> LL/token: -8.28029
+[beta: 0.0679]
+<860> LL/token: -8.28354
+<870> LL/token: -8.2716
+[beta: 0.06893]
+<880> LL/token: -8.29046
+<890> LL/token: -8.2801
+
+0	0.11551	identité narratif cas caractère ipséité mêmeté temps personnage fiction récit permanence Parfit critère question expérience maintien thèse personnel littéraire intriguer
+1	0.0917	action vie pratique narratif agent fin principe choix récit histoire unité Aristote praxis homme auteur théorie plan fonction exemple raconter
+2	0.07456	Cogito attestation doute certitude vérité idée Descartes Dieu philosophie contrer soupçon Nietzsche exister intérieur cartésien vrai ouvrage interprétation illusion Hume
+3	0.06887	conscience altérité attestation injonction voix phénomène Lévinas responsabilité Heidegger passivité visage dette sou métaphore phénoménologie dialectique critique maître appel extériorité
+4	0.10941	règle autonomie respect principe maxime moral kant impératif volonté loi idée mal raison fin norme promesse sollicitude forme moralité épreuve
+5	0.09429	justice principe idée égalité institution part droit distribution contrat société social système Rawls individu sphère théorie juridique conception déontologique téléologique
+6	0.09566	moral conflit pratique politique éthique jugement situation sagesse discussion morale droit argumentation vie conviction Sittlichkeit règle phronèsi débat thèse domination
+7	0.95209	terme question rapport Mais étude éthique donner falloir point plan chose prendre appeler propre notion mesure paraître sou mettre caractère
+8	0.08455	acte renonciation désigner référence langage expression chose discours théorie pronom énoncé identifiant pragmatique énonciation référentiel nom individu aporie locuteur réflexivité
+9	0.03665	tragédie mort tragique homme Antigone lien instruction cité chœur Hegel Press Créon mortel Paris conflit enseigner épuiser University ami protagoniste
+10	0.15108	action événement agent intention question analyse raison ascription théorie description notion série explication causalité motif logique base prédicat ontologie attribution
+11	0.06618	corps chair propre amitié ego monde conscience ami altérité constitution Husserl phénoménologie expérience méditation existence souffrir réduction transfert étranger passivité
+12	0.06779	agir puissance acte Aristote humain ontologie aristotélicien souci praxis homme Dasein ontologique part chose substance cit Heidegger qu’ mouvement unité
+
+[beta: 0.06881]
+<900> LL/token: -8.28641
+<910> LL/token: -8.27715
+[beta: 0.06856]
+<920> LL/token: -8.27877
+<930> LL/token: -8.28235
+[beta: 0.06814]
+<940> LL/token: -8.28515
+
+0	0.10493	identité cas narratif caractère ipséité mêmeté fiction personnage permanence temps récit personnel Parfit critère thèse maintien question croyance expérience cerveau
+1	0.09376	action vie pratique narratif récit agent principe choix fin histoire unité homme Aristote raconter plan praxis mettre exemple théorie modeler
+2	0.07683	attestation Cogito doute certitude vérité philosophie Descartes Dieu soupçon contrer Nietzsche ordre idée méditation exister vrai interprétation intérieur cartésien témoignage
+3	0.06653	conscience altérité voix injonction phénomène Heidegger attestation Lévinas visage passivité responsabilité dette phénoménologie appel maître extériorité mauvais éthique sou Vezin
+4	0.10561	règle autonomie principe respect moral maxime kant impératif loi volonté mal idée raison promesse fin pluralité kantien universalisation moralité liberté
+5	0.09218	justice idée principe part institution égalité droit distribution contrat social société système Rawls individu situation théorie sphère cas liberté loi
+6	0.10158	conflit moral pratique éthique politique jugement situation morale vie droit sagesse discussion argumentation conviction Sittlichkeit phronèsi raison domination Hegel fin
+7	0.91682	question terme rapport étude donner Mais chose falloir éthique point appeler prendre plan propre mesure sorte notion paraître action mettre
+8	0.07929	acte renonciation discours référence désigner théorie langage chose énoncé expression individu identifiant pragmatique pronom nom énonciation référentiel locuteur réflexivité indicateur
+9	0.03652	mort tragédie tragique Antigone instruction Press cité chœur Hegel Paris Créon mortel lien homme catharsis University grec égard 1987 ténébreux
+10	0.13973	action événement agent intention analyse question notion ascription description raison motif série causalité explication attribution théorie commencement agir thèse logique
+11	0.06469	corps chair propre amitié monde ego altérité ami constitution Husserl passivité ontologie existence conscience phénoménologie étranger trouver expérience réduction transfert
+12	0.06264	Aristote puissance agir acte ontologie qu’ humain aristotélicien homme notion idée cit souci Dasein praxis substance unité chose Tricot fondamental
+
+<950> LL/token: -8.27535
+[beta: 0.0683]
+<960> LL/token: -8.27099
+<970> LL/token: -8.2772
+[beta: 0.06827]
+<980> LL/token: -8.26926
+<990> LL/token: -8.28194
+
+0	0.10179	identité ipséité narratif cas caractère mêmeté temps question permanence Parfit personnel maintien critère thèse expérience fiction personnage cerveau dialectique trait
+1	0.09318	action vie pratique narratif récit agent principe personnage histoire choix fin raconter unité Aristote auteur praxis modeler fiction intriguer plan
+2	0.07405	Cogito attestation doute vérité certitude philosophie Descartes Dieu Nietzsche contrer idée penser ordre Mais soupçon vrai exister faux méditation cartésien
+3	0.05855	conscience altérité injonction voix phénomène attestation Heidegger Lévinas passivité responsabilité visage dette Dasein critique extériorité appel moral Hegel maître phénoménologie
+4	0.10777	règle autonomie principe respect maxime moral volonté impératif loi kant mal raison fin kantien idée pluralité promesse liberté forme sollicitude
+5	0.08907	justice idée part principe égalité institution droit social distribution contrat société système Rawls individu sphère responsabilité juridique théorie situation procédure
+6	0.09394	conflit pratique politique éthique moral jugement situation sagesse droit morale vie discussion argumentation conviction Sittlichkeit phronèsi thèse domination tragique public
+7	0.90238	terme rapport question étude Mais éthique chose plan point falloir donner notion propre prendre appeler sou égard mesure mettre paraître
+8	0.08384	acte renonciation référence langage discours désigner chose expression énoncé théorie identifiant pragmatique énonciation nom pronom référentiel locuteur situation individu réflexivité
+9	0.03819	tragédie mort Antigone cité tragique instruction Press homme chœur Créon lien Paris grec University mortel Hegel 1987 ténébreux ennemi protagoniste
+10	0.1338	action événement agent intention question analyse ascription raison notion explication motif série commencement description causalité attribution prédicat logique théorie phénomène
+11	0.06312	corps chair propre amitié monde ego ami Husserl altérité constitution conscience phénoménologie ontologie souffrir existence expérience étranger méditation sollicitude estime
+12	0.06634	Aristote puissance agir acte humain aristotélicien homme qu’ ontologie praxis cit mouvement idée chose livre Tricot substance souci Yénergéia réappropriation
+
+[beta: 0.06821]
+<1000> LL/token: -8.26198

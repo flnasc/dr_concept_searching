@@ -24,23 +24,13 @@ MIN_DF = 0.00
 MAX_DF = 1.00
 FILETYPE = 'xml'
 CONCEPTS_PATH = "../../data/concepts.txt"
-import pyLDAvis
-import pyLDAvis.gensim
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.decomposition import LatentDirichletAllocation
-import re
-import numpy as np
-import sys
-import random
 from operator import itemgetter
-from nltk import word_tokenize
-# from elbow_criteria import threshold
-# from elbow_criteria import limit_by_threshold
+from elbow_criteria import threshold
+from elbow_criteria import limit_by_threshold
 from gensim.models.wrappers import LdaMallet
 from gensim.corpora import Dictionary
-from gensim.models import CoherenceModel
-import gensim
-import matplotlib.pyplot as plt
+import numpy as np
 import csv
 
 
@@ -48,11 +38,11 @@ import csv
 
 def main():
     print("\n-----LDA CONCEPT DETECITON-----")
-    corpus = load_from_csv("../../data/lemmatized_segments/symb-du-mal-full-lemma.csv")
+    corpus = load_from_csv("data/lemmatized_segments/symb-du-mal-full-lemma.csv")
 
     # Create CountVectorizer to get Document-Term matrix
 
-    stop_words = load_stop_words("../../data/stopwords-fr.txt")
+    stop_words = load_stop_words("data/stopwords-fr.txt")
     vectorizer = CountVectorizer(lowercase=True, max_df=MAX_DF, min_df=MIN_DF, token_pattern=r"(?u)\b\w\w\w+\b")
 
     proc_corpus, proc_corpus_text_only = remove_short_segs(corpus, vectorizer)
@@ -75,9 +65,134 @@ def main():
     # initialize model
     path_to_mallet_binary = "Mallet/bin/mallet"
 
-    mallet_model = LdaMallet(path_to_mallet_binary, corpus=corp, num_topics=18, id2word=id2word, optimize_interval=20,
-                             random_seed=4, iterations=1000)
+    mallet_model = LdaMallet(path_to_mallet_binary, corpus=corp, num_topics=13, id2word=id2word, optimize_interval=20,
+                             random_seed=700, iterations=20000)
+
+    doc_topics = list(mallet_model.read_doctopics(mallet_model.fdoctopics(), renorm=False))
+    topic_word = TopicWord(mallet_model)
+    topic_word.get_topic_word()
+    topic_word.write_to_csv("output/topic_" +str(mallet_model.random_seed) +".csv")
+
+    topic_doc = TopicDoc(mallet_model)
+    topic_doc.get_topic_doc()
+    topic_doc.write_to_csv("output/topic_doc"+str(mallet_model.random_seed)+".csv")
+
     return 0
+
+
+class TopicWord:
+
+    def __init__(self, mallet_model):
+        self.model = mallet_model
+        self.topic_word = None
+
+    def get_topic_word(self):
+        topics = self.model.show_topics(num_topics=self.model.num_topics, formatted=False)
+        self.topic_word = topics
+
+    def write_to_csv(self, path):
+        with open(path, "w+") as csv_file:
+            writer = csv.writer(csv_file)
+            for topic in self.topic_word:
+                row = [topic[0]]
+                row.extend([word[0] for word in topic[1]])
+                writer.writerow(row)
+
+
+class TopicDoc:
+
+    def __init__(self, mallet_model):
+        self.model = mallet_model
+        self.topic_doc = None
+
+    def get_topic_doc(self):
+        doc_topic = list(self.model.read_doctopics(self.model.fdoctopics(), renorm=False))
+        topic_doc = [[] for i in range(self.model.num_topics)]
+        for i in range(len(doc_topic)):
+            doc = doc_topic[i]
+            for topic in doc:
+                topic_doc[topic[0]].append((i, topic[1]))
+
+        for topic in topic_doc:
+            topic = topic.sort(key=itemgetter(1), reverse=True)
+
+        self.topic_doc = topic_doc
+
+    def write_to_csv(self, path, num_docs=10):
+        #IDS RETURNED ARE LOCAL TO MALLET NO GLOBAL CORPUS NUMBERING
+        with open(path, "w+") as csv_file:
+            writer = csv.writer(csv_file)
+            count = 0
+            for topic in self.topic_doc:
+                row = [count]
+                row.extend([doc[0] for doc in topic[:num_docs]])
+                writer.writerow(row)
+                count += 1
+
+
+
+
+
+
+
+def write_concepts_csv(concepts):
+    with open("../../data/concepts_sm1.csv", "w+") as csv_file:
+        writer = csv.writer(csv_file)
+        for concept in concepts:
+            row = [concept[0]]
+            row.extend([seg[0] for seg in concept[1]])
+            writer.writerow(row)
+
+
+def get_topic_word(topics):
+    threshold_topic_word = []
+    topics = [[topic[0], topic[1]] for topic in topics]
+    # sort and reverse
+    for i in range(len(topics)):
+        freq = []
+        words = topics[i][1]
+        for word in words:
+            freq.append(word[1])
+        thresh = threshold(freq)
+        for j in range(len(words)):
+            if words[j][1] < thresh:
+                topics[i][1] = topics[i][1][:j]
+                break
+    return topics
+
+
+def get_topic_doc(doc_topics, num_topics, proc_corpus):
+    assert len(doc_topics) == len(proc_corpus), "output from mallet is of different length than input corpus"
+
+    topic_doc = {}
+
+    for i in range(num_topics):
+        topic_doc[i] = []
+
+    # each document
+    for i in range(len(doc_topics)):
+
+        # each topic in each document
+        for topic in doc_topics[i]:
+
+            if topic[0] in topic_doc:
+                topic_doc[topic[0]].append(
+                    (proc_corpus[i][0], topic[1]))  # append (the ID of the segment in the corpus, and the topic
+                # relevance to that segment)
+
+    for topic in topic_doc:
+
+        topic_doc[topic] = sorted(topic_doc[topic], key=(itemgetter(1)), reverse=True)
+        pseudocount_list = [seg[1] for seg in topic_doc[topic]]
+        thresh = threshold(pseudocount_list)
+        new_doc = []
+        for i in range(len(topic_doc[topic])):
+            if topic_doc[topic][i][1] > thresh:
+                new_doc.append(topic_doc[topic][i])
+
+        topic_doc[topic] = new_doc
+
+    return topic_doc
 
 
 ############################# LOAD DATA #############################
@@ -155,6 +270,7 @@ def load_corpus_txt(c_size):
 
     return final
 
+
 ############################# Test Elbow Algorithm #############################
 
 
@@ -186,7 +302,6 @@ def run_elbow(model, feature_names):
     print()
 
     return message_list
-
 
 
 if __name__ == "__main__":

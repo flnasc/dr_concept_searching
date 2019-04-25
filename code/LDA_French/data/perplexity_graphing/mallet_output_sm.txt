@@ -1,0 +1,554 @@
+/usr/local/bin/python3.6 /Users/DylanHR/dev/dr_concept_searching/code/LDA_French/gensim_topic_model.py
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/past/translation/__init__.py:35: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/scipy/sparse/sparsetools.py:21: DeprecationWarning: `scipy.sparse.sparsetools` is deprecated!
+scipy.sparse.sparsetools is a private module for scipy.sparse, and should not be used.
+  _deprecated()
+
+-----LDA CONCEPT DETECITON-----
+Mallet LDA: 18 topics, 5 topic bits, 11111 topic mask
+Data loaded.
+max tokens: 242
+total tokens: 48733
+<10> LL/token: -9.78857
+<20> LL/token: -9.32672
+<30> LL/token: -9.14061
+<40> LL/token: -9.03965
+
+0	2.77778	péché culpabilité mouvement justice confession expiation réflexion situation contrer mesure aveu coupable cesser peiner grandeur découvrir prophétique cité direction pécher
+1	2.77778	souillure symbolisme expérience événement symbolique signification travers caractère signifier chose limite déjà réalité expression constituer Mais viser croyance juridique cosmique
+2	2.77778	vie mort souffrance ordre punition venir idée malheur vieux Job existence souffrir faute possibilité schème rétribution mourir acte don mortel
+3	2.77778	conscience qu’ peuple impur monde côté lien exigence intention colère déjà essentiel créer tou infini malédiction commandement relation Par peur
+4	2.77778	mal dieu ver création drame mythe divin origine originaire originel roi thème Zeus historique théogonie primordial figure condition tendre homme
+5	2.77778	tragique grec théologie tragédie vision désigner grand point culture destin double éthique devenir exemple procéder naître spectacle entier présence spécifique
+6	2.77778	mythe histoire chute qu’ récit mythique rite monde structure passer aller Mais biblique totalité grand tou sang forme temps présent
+7	2.77778	liberté mauvais homme point prendre aspect partir sorte spéculation cœur choix dimension doute tou perdre falloir commencer reprise esprit foi
+8	2.77778	symbole falloir langage penser Mais comprendre interprétation qu’ critique fonction sacrer c’est-à-dire herméneutique moyen mythe compréhension mettre gnose propre histoire
+9	2.77778	âme corps qu’ chose vrai lieu pharisien Tôrâ trait jusqu’ revenir signe travail mal exil époque siècle naissance sembler opposer
+10	2.77778	faute représentation puissance qu’ degré chaos précisément juif notion antérieur principe contact chercher œuvre pourtant injustice ancien représenter porter servir
+11	2.77778	homme figure craindre moment adamique donner fils adam philosophique serpent exprimer religion répétition humanité figurer dépasser déjà proprement Adam mécher
+12	2.77778	humain qu’ type homme image paraître appartenir babylonien serviteur temps fournir rôle terrer Dionysos cycle politique nom ciel culte sauver
+13	2.77778	Dieu péché devenir pardon vouloir concept propre radical qu’ héros innocence hébreu Prométhée explication face grâce accusation égard texte méchant
+14	2.77778	mythe part philosophie Platon orphique origine raison tour Alliance rapport crime révéler appeler purification nature manière mémoire philosophe délivrance délivrer
+15	2.77778	rituel loin thème Jahvé action rester temps tradition salut Roi sentiment vérité Yahvé source constituer niveau eschatologique conduite conception accent
+16	2.77778	conscience homme voir religieux désir apparaître regard sou pénal porter simple peut-être forme concerner divine destiner annoncer actuel Dans continuer
+17	2.77778	loi péché éthique saint faute Paul expérience Israël prophète relation sou volonté celer coup intérieur partie captivité scrupule question terme
+
+<50> LL/token: -8.9657
+<60> LL/token: -8.92879
+<70> LL/token: -8.90743
+<80> LL/token: -8.87228
+<90> LL/token: -8.84847
+
+0	2.77778	péché culpabilité confession expiation contrer réflexion mesure aveu coupable pécheur découvrir situation peiner exprimer Mais cesser direction sang pécher opposer
+1	2.77778	souillure expérience symbolisme chose événement caractère symbolique signifier travers expression lier constituer paraître cosmique reprise signification puissance captivité rapport viser
+2	2.77778	vie mort souffrance ordre punition mal venir malheur falloir vieux Job schème souffrir moyen rétribution possibilité acte existence mourir par-delà
+3	2.77778	qu’ peuple conscience lien déjà impur côté désigner exigence jamais intention tou reprendre essentiel perdre procéder sentiment infini malédiction commandement
+4	2.77778	dieu mal ver création drame divin thème monde origine originaire puissance roi originel chaos Zeus théogonie primordial grand titan tendre
+5	2.77778	tragique devenir grec théologie point grand vision tragédie question éthique exemple propre culture héros destin naître spectacle engendrer finitude source
+6	2.77778	mythe histoire chute récit mythique qu’ rite forme structure vivre totalité biblique monde retrouver temps primitif myth fondamental passage imagination
+7	2.77778	mal liberté prendre mauvais homme peut-être partir cœur point commencer tou esprit choix Mais foi aspect spéculation appeler susciter acte
+8	2.77778	symbole comprendre qu’ langage penser falloir interprétation critique philosophique fonction déjà sacrer herméneutique donner croire symbolique compréhension gnose c’est-à-dire manière
+9	2.77778	âme corps qu’ vrai chose trait lieu mouvement Tôrâ idée pharisien sembler religion revenir double exil travail devenir signe orphisme
+10	2.77778	faute qu’ juif antérieur degré représentation entendre précisément montrer principe porter contact servir notion cité appartenir ancien injustice pourtant origine
+11	2.77778	homme figure craindre adamique moment donner adam fils serpent venir figurer humanité tenter proprement vue Adam pourtant limite femme suite
+12	2.77778	humain qu’ image type aller babylonien fournir serviteur contrer terrer rôle méchant politique Dans falloir extrême nom ciel paraître répondre
+13	2.77778	Dieu vouloir pardon apparaître radical concept celer jusqu’ chair hébreu innocence face Prométhée grâce accusation propre créer connaître péché égard
+14	2.77778	mythe part philosophie orphique Platon origine tour nature purification archaïque crime raison Mais auteur rester passion théogonique Dionysos mémoire philosophe
+15	2.77778	temps rituel loin Jahvé rester jour Roi trouver salut livre signification action niveau reconnaître vérité thème Yahvé constituer eschatologique conception
+16	2.77778	conscience voir religieux désir mettre sou fin regard divine pénal scrupuleux concerner destiner porter colère analyse absolu tou est-il individu
+17	2.77778	loi péché saint éthique Paul justice Israël existence volonté relation expérience coup sou terme intérieur moral prophète faute personnel appeler
+
+<100> LL/token: -8.82961
+<110> LL/token: -8.81703
+<120> LL/token: -8.81732
+<130> LL/token: -8.81932
+<140> LL/token: -8.80541
+
+0	2.77778	péché culpabilité confession expiation mesure exprimer aveu pécheur coupable peiner découvrir situation contrer acte sentiment sang pécher Mais prophétique direction
+1	2.77778	souillure expérience symbolisme événement chose symbolique déjà signifier constituer caractère lier impur symbole reprise thème cosmique captivité puissance tache présence
+2	2.77778	vie mort souffrance falloir ordre punition venir malheur Job pénal simple explication moyen rétribution devenir existence souffrir par-delà don mortel
+3	2.77778	qu’ lien relation déjà désigner exigence intention côté Alliance perdre essentiel jamais monde homme propre personnel interdiction éthique infini commandement
+4	2.77778	dieu mal création drame divin ver origine originaire puissance thème roi originel chaos Zeus théogonie primordial grand condition ennemi tendre
+5	2.77778	tragique grec théologie devenir point vision question tragédie liberté exemple destin limite héros culture naître sorte grand spectacle source accéder
+6	2.77778	mythe histoire chute récit mythique forme structure rite temps vivre retrouver biblique myth qu’ renvoyer signe imagination passage exégèse lumière
+7	2.77778	mal prendre mauvais peut-être qu’ appeler tou point cœur spéculation choix connaître mettre esprit représenter élaborer susciter aspect doute liberté
+8	2.77778	symbole qu’ penser langage comprendre Mais falloir philosophique sacrer critique réflexion fonction herméneutique croire donner compréhension gnose révéler symbolique manière
+9	2.77778	âme corps qu’ chose désir vrai interprétation mouvement idée lieu pharisien Tôrâ ver trait exil travail double consister devenir paraître
+10	2.77778	faute monde qu’ juif représentation antérieur porter cité montrer pourtant précisément trouver contact notion appartenir rôle principe ancien naissance meurtre
+11	2.77778	homme figure craindre adamique moment adam fils serpent donner humanité vue venir déjà Adam père femme suite tirer loin pourtant
+12	2.77778	qu’ humain type image aller contrer schème babylonien vieux fournir terrer méchant culte commettre Dans cycle serviteur nom politique ciel
+13	2.77778	Dieu vouloir apparaître pardon radical propre jusqu’ concept poser hébreu face Prométhée innocence celer chair réalité créer égard justification devenir
+14	2.77778	part philosophie origine Platon orphique tour mythe nature purification auteur archaïque raison passion rapport tradition rester Dionysos siècle mémoire philosophe
+15	2.77778	rituel histoire temps action Jahvé signification rester jour Roi salut loin niveau considérer vérité peuple ensemble Yahvé voir conception coup
+16	2.77778	conscience voir religieux tou fin sou regard scrupuleux absolu colère scrupule divine partie mettre analyse porter commencer mécher est-il individu
+17	2.77778	loi saint éthique Paul justice Israël prophète existence volonté moral sou historique terme intérieur foi grandeur peuple grand péché grâce
+
+<150> LL/token: -8.81059
+<160> LL/token: -8.80653
+<170> LL/token: -8.79483
+<180> LL/token: -8.78494
+<190> LL/token: -8.78186
+
+0	2.77778	péché culpabilité confession contrer acte exprimer mesure pécheur degré découvrir coupable expiation peiner sentiment situation accusation sang pécher prise prophétique
+1	2.77778	souillure expérience symbolisme symbole chose événement symbolique impur signifier caractère lier cosmique déjà reprise fondamental thème viser contact captivité aspect
+2	2.77778	vie mort souffrance monde punition malheur ordre falloir venir moyen Job simple pénal souffrir explication devenir rétribution possibilité serviteur existence
+3	2.77778	qu’ craindre relation homme éthique lien côté exigence désigner Alliance essentiel jamais intention cesser propre personnel interdiction infini commandement interdire
+4	2.77778	dieu création drame divin puissance ver thème mal origine roi originaire Zeus chaos ordre primordial théogonie ennemi monde théogonique violence
+5	2.77778	tragique grec théologie vision tragédie question liberté devenir limite exemple culture grand destin sorte héros montrer spectacle source fin naître
+6	2.77778	mythe chute histoire récit mythique Mais forme biblique structure monde qu’ gnose retrouver myth vivre adamique problème temps séparer exil
+7	2.77778	mal point prendre part falloir déjà appeler mauvais cœur peut-être tenter choix mettre spéculation doute représenter liberté susciter aspect commencer
+8	2.77778	symbole qu’ comprendre langage penser critique donner réflexion sacrer falloir herméneutique lieu élaborer rester compréhension c’est-à-dire croire signe symbolique dimension
+9	2.77778	âme corps qu’ chose mouvement désir interprétation vrai paraître pharisien Tôrâ idée celer lieu tradition ver sembler double contraire époque
+10	2.77778	faute humain porter tour juif représentation antérieur appartenir cité ancien précisément notion développer qu’ meurtre œuvre principe jugement involontaire expliciter
+11	2.77778	homme figure moment fils adam adamique serpent donner venir pourtant vieux humanité Adam mécher condition tirer père femme extrême idée
+12	2.77778	qu’ type image aller schème humain babylonien fournir annoncer méchant terrer politique culte cycle nom évoquer iniquité divine permettre ciel
+13	2.77778	Dieu vouloir pardon radical devenir apparaître propre concept partir esprit Mais innocence face hébreu Prométhée niveau jusqu’ revenir créer égard
+14	2.77778	philosophie origine Platon orphique nature purification raison part auteur philosophique crime titan religion situation archaïque constituer rapport orphisme Dionysos siècle
+15	2.77778	histoire rituel peuple loin temps Jahvé jour action Roi signification salut rite procéder vérité entendre Yahvé concerner finalement eschatologique conception
+16	2.77778	conscience voir tou Mais religieux fin sou colère regard connaître scrupuleux jusqu’ trait scrupule mettre analyse grandeur échec vain absolu
+17	2.77778	loi saint Paul justice éthique Israël prophète volonté existence intérieur péché terme sou foi historique révéler grâce moral grand juridique
+
+<200> LL/token: -8.77972
+<210> LL/token: -8.76901
+[beta: 0.02834]
+<220> LL/token: -8.70713
+<230> LL/token: -8.8981
+[beta: 0.03626]
+<240> LL/token: -8.91002
+
+0	2.21167	péché culpabilité confession contrer mesure degré coupable peiner pécheur découvrir exprimer situation constituer acte accusation personnel action sentiment iniquité double
+1	2.29687	souillure expérience symbole symbolisme chose symbolique impur caractère signifier lier cosmique thème reprise contact intention viser signification idée captivité tache
+2	2.08188	vie mort souffrance monde ordre punition expiation Job souffrir malheur serviteur rétribution devenir simple don par-delà peur explication moyen mourir
+3	2.22024	éthique craindre relation qu’ homme existence lien exigence côté Alliance pourtant déjà dialectique désigner interdiction commandement propre interdire infini reprendre
+4	2.06365	dieu drame création divin puissance thème mal ver roi monde Zeus chaos Prométhée théogonie originel origine antérieur originaire ennemi violence
+5	2.0582	tragique grec théologie tragédie vision point liberté culture héros naître destin devenir question sorte exemple spectacle source accéder fin crime
+6	2.35947	mythe histoire chute récit mythique adamique qu’ forme ver biblique structure origine gnose totalité Mais myth temps événement spéculation fonction
+7	2.39153	mal falloir mauvais point part appeler peut-être tenter serpent déjà esprit liberté choix aspect mettre poser événement acte expérience commencer
+8	2.40605	symbole qu’ comprendre langage penser falloir réflexion philosophique philosophie critique sacrer herméneutique aveu c’est-à-dire expression signe rester croire compréhension croyance
+9	1.93021	âme corps qu’ chose désir interprétation vrai paraître mouvement Tôrâ tradition idée grand sembler étranger pharisien vivant compte servir instruction
+10	2.1889	faute humain juif qu’ tour cité porter précisément représentation cas notion pénal jugement distinction involontaire appartenir meurtre expliciter référence série
+11	2.18047	homme figure fils adam vieux venir humanité rôle Adam donner entier père tou image terme céleste Paul humain Genèse qu’
+12	2.09849	qu’ type image aller moment schème terrer babylonien fournir celer cycle délivrance vouloir politique Dans nom culte maladie autant ciel
+13	2.30965	Dieu devenir radical concept vouloir apparaître Mais niveau revenir hébreu jusqu’ innocence limite malédiction face créer proprement lumière créateur paradoxe
+14	1.9932	Platon orphique origine nature religion philosophie purification part titan raison archaïque donner orphisme Dionysos siècle naissance mémoire expliquer tardif situation
+15	2.26176	rituel histoire Jahvé temps rite voir peuple loin jour pardon Roi signification salut vérité tension concerner Yahvé sang action répéter
+16	2.2233	conscience Mais voir propre moral connaître religieux prendre regard jusqu’ scrupuleux colère fin grandeur absolu scrupule tou cœur qu’ analyse
+17	2.07098	loi saint Israël justice éthique Paul volonté sou tou prophète péché foi intérieur grâce cesser donner historique grand vivre question
+
+<250> LL/token: -8.96279
+[beta: 0.03946]
+<260> LL/token: -8.96698
+<270> LL/token: -8.98374
+[beta: 0.04055]
+<280> LL/token: -8.97087
+<290> LL/token: -8.96483
+
+0	1.77719	péché culpabilité faute confession désigner mesure situation degré pécheur acte coupable devenir accusation personnel exprimer lien homme malédiction sentiment susciter
+1	1.905	souillure symbole expérience symbolisme chose symbolique signification impur signifier représentation lier signe thème reprise idée captivité viser aspect tache purification
+2	1.51449	mort vie souffrance punition ordre Job souffrir monde rétribution peiner falloir mourir malheur serviteur don par-delà simple peur moyen châtiment
+3	1.64392	éthique craindre relation qu’ prophète exigence moment lien cœur rester interdiction infini commandement Alliance jamais déjà interdire dialectique procéder existence
+4	1.51425	dieu création drame divin puissance roi chaos ordre primordial ver contrer thème Mais ennemi violence lutte monde originaire Mardouk babylonien
+5	1.48555	tragique grec tragédie vision théologie culture destin héros Prométhée point liberté question fin source mécher exemple spectacle Zeus finitude sorte
+6	1.85562	mythe chute histoire récit mythique adamique qu’ origine forme événement biblique temps gnose vivre donner monde originel moyen totalité myth
+7	1.99379	mal peut-être déjà mauvais expérience part appeler point tenter liberté serpent falloir propre côté choix commencer ver origine partir poser
+8	1.98525	symbole qu’ comprendre langage penser falloir philosophie critique interprétation Mais herméneutique croire compréhension philosophique lieu aveu c’est-à-dire monde partir réflexion
+9	1.33209	âme corps désir existence ver chose Tôrâ lieu qu’ vrai idée mouvement interprétation mauvais contraire constituer inverse engendrer vertige injustice
+10	1.58942	humain faute qu’ pénal cité précisément crime réflexion malheur jugement principe trouver notion falloir cas juif porter involontaire volontaire entendre
+11	1.77008	homme figure qu’ fils venir adam humain vieux humanité Adam tou grand père saint porter donner entier céleste tradition paraître
+12	1.4865	qu’ type aller image Dans schème fournir celer terrer cycle autant commettre jusqu’ cesser conception babylonien texte vouloir pays possession
+13	1.78616	Dieu devenir hébreu radical apparaître prendre vouloir rapport innocence limite loin annoncer égard concept celer créer jusqu’ image Mais homme
+14	1.28789	orphique Platon origine philosophie titan religion nature archaïque raison orphisme Dionysos siècle situation théogonie purification part auteur passion tardif civilisation
+15	1.7155	histoire peuple voir rituel pardon rite historique temps Jahvé mettre fin Roi expiation jour sang Israël Yahvé répéter action salut
+16	1.63503	conscience qu’ religieux tou voir regard Mais scrupuleux grandeur mouvement scrupule trait propre moral moment jusqu’ réduire révélation échec relation
+17	1.57681	loi saint justice Paul qu’ volonté éthique pharisien grand chair foi Israël grâce donner sou justification vie juif existence vouloir
+
+[beta: 0.04074]
+<300> LL/token: -8.94407
+<310> LL/token: -8.95027
+[beta: 0.04106]
+<320> LL/token: -8.92355
+<330> LL/token: -8.89849
+[beta: 0.04119]
+<340> LL/token: -8.88803
+
+0	1.30441	péché culpabilité faute conscience confession expérience désigner lien coupable situation mesure contrer degré pécheur pécher prendre exprimer point personnel malédiction
+1	1.30284	souillure symbolisme symbole expérience symbolique impur chose signifier temps déjà signe représentation relation intention thème comprendre reprise lier qu’ captivité
+2	0.87125	mort vie souffrance punition craindre ordre monde Job éthique falloir rétribution malheur peiner souffrir mourir peur venir vengeance victime devenir
+3	0.91879	éthique prophète moment exigence Alliance conscience infini craindre interdire dialectique côté procéder interdiction code accusation doute existence finir distance tension
+4	0.87684	dieu drame création divin roi puissance ver thème chaos ordre ennemi originaire grand violence babylonien originel eau lutte Mardouk contrer
+5	0.81328	tragique tragédie grec théologie vision liberté Prométhée culture héros spectacle mécher divin destin face pourtant Eschyle colère source Zeus point
+6	1.33888	mythe histoire chute qu’ mythique adamique récit origine événement forme monde biblique gnose création spéculation vivre myth condition moyen exégèse
+7	1.45256	mal homme humain peut-être déjà appeler serpent liberté question mauvais origine expérience radical acte limite concept sou aspect poser falloir
+8	1.47861	symbole qu’ penser falloir langage Mais comprendre philosophie critique philosophique réflexion donner part herméneutique rester partir interprétation aveu signification lieu
+9	0.68446	âme corps désir ver idée existence Platon mouvement paraître orphique mauvais chose lieu vrai apparaître injustice qu’ vertige sembler exilé
+10	0.73992	cité pénal faute juif notion crime involontaire droit malheur distinction aveuglement volontaire cas simple précisément tribunal consister grec porter humain
+11	1.12338	homme figure fils adam qu’ venir humanité donner serviteur tou saint grand vieux Adam père Paul terme trait don image
+12	0.82661	type qu’ aller fournir Dans celer jusqu’ image conception tour maladie cesser vouloir rester pays couple commettre mauvais possession schème
+13	1.20958	Dieu homme devenir qu’ image chose rapport entendre apparaître égard hébreu caractère créer vouloir idée celer innocence divine ancien événement
+14	0.62451	orphique Platon titan philosophie religion orphisme Dionysos nature archaïque purification siècle mémoire origine situation tardif auteur mouvement époque anthropogonie théogonie
+15	1.06906	peuple histoire rituel Israël historique voir rite pardon Jahvé expiation jour action salut temps sang mettre fin délivrance théologie concerner
+16	1.02415	conscience Dieu propre moral qu’ regard religieux scrupuleux tou connaître scrupule grandeur absolu relation cœur voir mouvement trait devenir passer
+17	0.98454	loi qu’ saint Paul justice pharisien chair Tôrâ volonté Mais grâce vouloir grand justification vie foi livre éthique sou Loi
+
+<350> LL/token: -8.87541
+[beta: 0.04188]
+<360> LL/token: -8.86933
+<370> LL/token: -8.8542
+[beta: 0.04222]
+<380> LL/token: -8.83346
+<390> LL/token: -8.82361
+
+0	1.0972	péché expérience culpabilité conscience faute qu’ confession situation point mesure degré désigner homme contrer devenir part pécher personnel pécheur venir
+1	0.94525	souillure symbolisme symbole qu’ symbolique impur représentation signe expérience rite temps signifier contact reprise thème caractère chose lien intention lier
+2	0.61299	mort vie souffrance craindre punition ordre Job éthique monde rétribution peiner mourir peur malheur prendre vision châtiment mortel vengeance mal
+3	0.61171	éthique exigence prophète déjà moment dialectique côté infini Alliance accusation justice qu’ code essentiel loi cœur procéder interdire tension au-delà
+4	0.56858	dieu drame création roi puissance ordre ennemi babylonien chaos violence grand Mardouk originel terrer eau lutte cosmique Tiamat déluge originaire
+5	0.53882	tragique divin tragédie théologie héros dieu Prométhée destin liberté grec fin thème vision spectacle mécher Zeus sorte face colère Eschyle
+6	1.05497	mythe chute histoire récit qu’ adamique mythique mal origine événement création monde forme drame originaire antérieur myth loin spéculation gnose
+7	1.08427	mal homme humain déjà liberté mauvais serpent radical question aspect origine appeler peut-être choix poser concept limite acte innocence tenter
+8	1.26073	symbole qu’ falloir penser comprendre Mais philosophie langage philosophique interprétation donner lieu rester critique réflexion herméneutique point partir part signification
+9	0.40921	âme corps désir ver mauvais apparaître Platon existence vrai injustice idée lieu chose corporel exilé mouvement sembler orphique mal vertige
+10	0.44825	cité pénal faute humain crime involontaire malheur juridique volontaire notion tribunal distinction réflexion direction jugement jeu juge droit tantôt précisément
+11	0.77302	homme figure qu’ fils adam ver serviteur venir grand image Adam eschatologique tou temps donner père humanité Roi saint céleste
+12	0.56497	type qu’ dieu aller celer image Dans cycle schème répondre commettre maladie lumière porter déesse pénitent démon demander jusqu’ nommer
+13	0.85894	Dieu homme devenir grec chose existence image idée hébreu culture tou humain égard voir relation faute rapport qu’ divine contrer
+14	0.39195	orphique titan Platon origine orphisme Dionysos siècle théogonie dieu religion grand mémoire ver archaïque tardif thème mouvement situation culturel nature
+15	0.71636	histoire peuple historique Israël rituel pardon expiation jour voir Jahvé sang salut Yahvé événement délivrance théologie vie fin loin cultuel
+16	0.72406	conscience Dieu propre relation regard scrupuleux moral sou devenir cesser scrupule grandeur religieux absolu connaître paraître échec révélation jusqu’ bouillir
+17	0.65273	loi saint qu’ Paul volonté pharisien Tôrâ vie vouloir chair éthique justice grand esprit Mais justification moyen interprétation Loi grâce
+
+[beta: 0.04304]
+<400> LL/token: -8.79917
+<410> LL/token: -8.78592
+[beta: 0.04387]
+<420> LL/token: -8.77185
+<430> LL/token: -8.77034
+[beta: 0.04489]
+<440> LL/token: -8.74871
+
+0	0.80016	péché culpabilité conscience expérience faute homme qu’ confession point Dieu prendre religieux lien idée constituer situation désigner juif mesure contrer
+1	0.55402	souillure symbolisme symbole symbolique impur qu’ signe signifier chose rite représentation cosmique voir purification thème reprise tache temps action puissance
+2	0.37883	craindre souffrance punition mort ordre éthique Job mal vie monde rétribution vision peiner par-delà peur châtiment vengeance expiation interdire moment
+3	0.31387	exigence éthique loi infini naître prophète dialectique code côté procéder Alliance tension rester accusation moment conscience justice livre Amos vieux
+4	0.28063	dieu drame création roi divin puissance ennemi babylonien Mais Mardouk chaos eau violence ordre Roi Tiamat grand originaire terrer ciel
+5	0.30252	tragique tragédie divin théologie dieu grec Prométhée héros liberté Zeus destin spectacle vision mécher colère Eschyle face qu’ fin malheur
+6	0.75591	mythe chute histoire mal récit origine mythique qu’ adamique monde événement création temps expérience forme gnose spéculation originaire falloir originel
+7	0.67911	mal homme humain déjà mauvais liberté serpent origine peut-être radical limite aspect concept poser question tour choix part acte figurer
+8	0.88061	symbole qu’ penser Mais philosophie langage comprendre falloir philosophique part entendre critique lieu c’est-à-dire réflexion donner herméneutique interprétation rester point
+9	0.23189	âme corps désir vie Platon mauvais existence idée chose ver orphique mortel exilé contraire vertige injustice corporel mouvement lieu compte
+10	0.19993	pénal cité faute involontaire crime juridique tribunal volontaire malheur réflexion tantôt désigner humain criminel degré justice notion direction injustice distinction
+11	0.45584	homme figure fils adam qu’ ver venir serviteur thème Adam eschatologique saint image tou vieux type donner humanité prendre Roi
+12	0.28469	type dieu qu’ Dans forme possession babylonien doute ver acte déesse fournir titre aller maladie autant répondre lier représentation Gilgamesh
+13	0.53121	Dieu homme grec image qu’ devenir culture relation existence hébreu voir tou chose contrer rapport apparaître dieu source humain égard
+14	0.20862	orphique Platon titan orphisme Dionysos qu’ siècle tardif archaïque auteur époque anthropogonie purification allusion dieu nature passion part associer partie
+15	0.40916	histoire peuple Israël pardon historique rituel expiation Jahvé jour grand salut sang qu’ Yahvé vie prophète délivrance voir mettre Dieu
+16	0.40169	conscience Dieu propre regard scrupuleux grandeur devenir éthique scrupule relation moral absolu révélation sou analyse comprendre commandement cesser connaître mouvement
+17	0.38837	loi saint Paul mort vie qu’ pharisien Tôrâ vouloir falloir volonté chair justification justice sou tou Loi donner grand éthique
+
+<450> LL/token: -8.73916
+[beta: 0.04553]
+<460> LL/token: -8.72599
+<470> LL/token: -8.69804
+[beta: 0.04594]
+<480> LL/token: -8.68768
+<490> LL/token: -8.66894
+
+0	0.68012	péché conscience culpabilité expérience faute qu’ homme confession point religieux prendre Mais apparaître moment contrer porter déjà vue sentiment situation
+1	0.4164	souillure symbolisme symbole symbolique qu’ impur chose rite puissance signifier signe voir action représentation caractère tache sacrer reprise lier cosmique
+2	0.26221	craindre souffrance punition mort ordre Job éthique rétribution monde vengeance moment peur malheur vision peiner interdire châtiment expiation doute venir
+3	0.17714	éthique exigence loi infini justice accusation code Alliance prophète livre perfection naître par-delà Dieu dialectique commandement distance temps Amos tension
+4	0.20118	dieu drame roi création puissance ordre ennemi violence eau Mardouk cosmique principe déluge Mais Tiamat terrer ciel babylonien combat chaos
+5	0.21998	tragique dieu tragédie divin théologie héros Prométhée liberté vision destin Zeus grec spectacle mécher face colère fin Eschyle ver thème
+6	0.62123	mythe histoire mal chute récit mythique qu’ origine adamique création monde événement temps forme aller gnose comprendre expérience originaire drame
+7	0.53484	mal homme humain mauvais qu’ serpent liberté déjà radical question choix aspect appeler poser origine acte propre cœur peut-être devenir
+8	0.69821	symbole qu’ penser langage comprendre falloir philosophie Mais rester chose philosophique partir réflexion critique point herméneutique interprétation croire entendre compréhension
+9	0.16816	âme corps vie désir Platon mort mal existence idée orphique ver lieu injustice devenir mortel exilé vrai immortalité corporel degré
+10	0.13609	pénal cité crime involontaire juridique tribunal volontaire malheur analyse désigner humain distinction jugement peiner droit faute tantôt justice interprétation volonté
+11	0.30909	homme figure fils adam ver serviteur saint Roi venir eschatologique type qu’ père Adam image thème Paul tou pardon donner
+12	0.17145	type dieu babylonien Dans aller celer possession maladie déesse schème mauvais démon Gilgamesh illustrer inconnu répondre image nommer corps vrai
+13	0.40779	Dieu homme grec relation devenir image tou hébreu source égard qu’ juif contrer culture ancien moral vrai Colère vanité vouloir
+14	0.13919	orphique titan Platon Dionysos orphisme siècle dieu archaïque ver tardif donner purification anthropogonie nature passion partie situation philosophie origine classique
+15	0.30391	peuple qu’ histoire Israël historique pardon expiation rituel jour prophète sang Jahvé vie théologie délivrer voir Dieu Yahvé jusqu’ grand
+16	0.27401	conscience devenir scrupuleux regard propre Dieu scrupule sou grandeur absolu échec relation conséquent connaître révélation éthique cœur hétéronomie moral cesser
+17	0.26683	loi saint vie Paul mort pharisien chair volonté Tôrâ qu’ falloir donner vouloir tou esprit sou Loi justification justice vivant
+
+[beta: 0.04645]
+<500> LL/token: -8.66055
+<510> LL/token: -8.65067
+[beta: 0.04732]
+<520> LL/token: -8.65445
+<530> LL/token: -8.63154
+[beta: 0.04792]
+<540> LL/token: -8.63039
+
+0	0.54224	péché conscience culpabilité expérience faute homme qu’ confession déjà point falloir moment langage religieux prendre constituer lien contrer apparaître fin
+1	0.26362	souillure symbole symbolisme symbolique qu’ action impur représentation chose rite signifier signe intention sacrer tache purification arbitre donner primaire rituel
+2	0.16728	souffrance craindre punition ordre éthique Job rétribution conscience vengeance mort peiner peur monde souillure châtiment impur qu’ souffrir amour interdire
+3	0.11985	éthique exigence loi infini prophète Dieu Alliance code accusation commandement justice prophétique radical dialectique naître Amos tension prescription distance indignation
+4	0.15679	dieu drame création roi Mais ordre ennemi puissance eau Mardouk chaos Roi terrer violence déluge babylonien divin grand qu’ homme
+5	0.15869	tragique dieu tragédie divin vision théologie Prométhée héros destin grec Zeus liberté mécher spectacle Eschyle face colère sorte peut-être malheur
+6	0.44445	mythe histoire chute origine mythique récit qu’ mal adamique homme type création expérience temps événement monde biblique comprendre aller originaire
+7	0.40034	mal homme humain qu’ liberté mauvais figure serpent devenir innocence origine déjà peut-être radical choix Dieu aspect chose poser propre
+8	0.49649	symbole qu’ penser comprendre falloir rester philosophie part Mais langage réflexion philosophique question interprétation critique herméneutique donner niveau signification chose
+9	0.12772	âme corps vie mort désir mal existence qu’ Platon ver chose idée injustice mortel monde corporel mauvais mouvement vieux contraire
+10	0.09183	cité pénal crime involontaire juridique volontaire faute tribunal tantôt humain malheur droit criminel injustice jugement précisément public loi méditation porter
+11	0.17745	homme figure fils adam serviteur ver venir eschatologique temps image humanité Roi Adam qu’ saint céleste procès Paul don thème
+12	0.08834	dieu type Dans babylonien possession déesse maladie vrai corps schème commettre Gilgamesh nommer inconnu démon connaître aller fournir phénoménologique demander
+13	0.25824	Dieu homme grec image devenir qu’ culture tou relation hébreu thème source contrer juif voir appartenir égard existence élaborer initiative
+14	0.09393	orphique Platon titan orphisme Dionysos siècle archaïque anthropogonie époque nature purification donner partie tardif classique situation théogonie auteur expliquer philosophie
+15	0.21357	peuple Israël histoire pardon rituel Jahvé historique expiation Dieu jour sang vie Yahvé qu’ prophète entier événement juif psaume grand
+16	0.14742	conscience Dieu scrupuleux regard scrupule grandeur justice relation propre révélation sou comprendre absolu placer hétéronomie justifier échec éthique signe observance
+17	0.17797	loi saint Paul mort vie qu’ pharisien Tôrâ chair tou volonté Loi justice donner tradition grâce écrit grand Judaïsme vivant
+
+<550> LL/token: -8.61603
+[beta: 0.04825]
+<560> LL/token: -8.61086
+<570> LL/token: -8.58862
+[beta: 0.04876]
+<580> LL/token: -8.58844
+<590> LL/token: -8.5791
+
+0	0.46878	péché conscience culpabilité qu’ expérience faute homme confession point déjà Dieu lien religieux souillure prendre devenir apparaître idée langage désigner
+1	0.21812	souillure symbolisme symbole symbolique impur chose rite qu’ signifier action signe représentation purification tache contact puissance voir viser arbitre rituel
+2	0.13793	souffrance craindre punition ordre Job éthique mal rétribution monde peiner conscience mort peur vision vengeance moment schème châtiment amour physique
+3	0.08792	éthique loi exigence Dieu prophète justice code infini commandement Alliance Amos religion accusation tension indignation prophétique procéder dialectique prophétisme prescription
+4	0.12815	dieu drame création roi homme ordre puissance ennemi babylonien Mardouk chaos Roi cosmique violence qu’ Tiamat terrer eau mal vaincre
+5	0.12923	tragique dieu tragédie divin théologie Prométhée héros vision grec spectacle Zeus sorte thème destin fin mécher liberté Eschyle drame face
+6	0.41641	mythe histoire chute qu’ mal mythique récit adamique homme type origine création monde événement forme expérience biblique gnose donner comprendre
+7	0.3339	mal homme humain qu’ liberté serpent mauvais devenir radical chose origine déjà choix poser innocence cœur part figure Dieu aspect
+8	0.40544	symbole qu’ penser falloir philosophie langage Mais comprendre philosophique critique entendre herméneutique signification symbolique partir réflexion croire rester compréhension chose
+9	0.10703	âme corps vie désir mort existence falloir orphique ver Platon mauvais mouvement chose idée mortel injustice philosophie exilé qu’ corporel
+10	0.06956	pénal cité involontaire crime humain faute juridique volontaire réflexion tribunal droit porter volonté Œdipe loi malheur distinction criminel jugement précisément
+11	0.12343	homme figure adam fils serviteur image eschatologique saint ver Paul venir temps Roi thème céleste souffrir procès individu pardon cosmique
+12	0.06601	dieu Dans mauvais déesse babylonien maladie schème Gilgamesh corps possession fournir type commettre nommer inconnu plante écart démon supplier phénoménologique
+13	0.19783	Dieu homme grec devenir relation image culture tou mémoire source hébreu rapport qu’ Colère vanité juif sembler appartenir place vrai
+14	0.07025	mythe orphique titan Platon orphisme Dionysos siècle dieu qu’ anthropogonie théogonie nature archaïque purification allusion tradition Zeus auteur ver tardif
+15	0.17906	peuple Israël pardon histoire grand Jahvé expiation rituel Dieu historique qu’ prophète événement Yahvé jour sang cultuel sacrifice voir délivrer
+16	0.1162	conscience regard scrupuleux scrupule Dieu grandeur propre justice comprendre éthique absolu connaître révélation échec limite hétéronomie relation mouvement sou obéissance
+17	0.14879	loi vie saint mort Paul homme pharisien qu’ Tôrâ chair volonté tou sou justice falloir donner Loi écrit éthique Judaïsme
+
+[beta: 0.04946]
+<600> LL/token: -8.57362
+<610> LL/token: -8.57995
+[beta: 0.05064]
+<620> LL/token: -8.57799
+<630> LL/token: -8.56543
+[beta: 0.05147]
+<640> LL/token: -8.55935
+
+0	0.42587	péché conscience qu’ culpabilité expérience faute homme Dieu confession point religieux devenir lien falloir mesure pécheur prendre déjà appeler apparaître
+1	0.16323	souillure symbole symbolisme symbolique impur rite chose action représentation signe qu’ purification tache signifier contact cosmique arbitre rituel intention lier
+2	0.11425	souffrance craindre punition ordre Job éthique rétribution monde conscience peur châtiment moment souillure vengeance amour mort impur interdire déjà anticiper
+3	0.06366	loi exigence éthique code prophète infini justice dialectique commandement prophétique Amos radical accusation moral Dieu tension prescription religion prophétisme indignation
+4	0.10688	dieu drame roi création qu’ ennemi Roi puissance Mardouk divin violence chaos terrer grand Mais ordre cosmique originaire Tiamat eau
+5	0.1121	tragique dieu tragédie théologie divin Prométhée vision héros grec homme liberté Zeus mécher spectacle destin face sorte fin thème Eschyle
+6	0.37253	mythe qu’ histoire chute type homme mythique origine récit adamique mal création événement donner expérience ver forme temps symbole drame
+7	0.25448	mal homme humain chose serpent liberté Dieu déjà radical mauvais peut-être choix poser côté figure acte cœur aspect question devenir
+8	0.28728	symbole qu’ penser philosophie falloir langage comprendre critique Mais philosophique réflexion point herméneutique question part compréhension symbolique rester croire lieu
+9	0.0927	âme corps vie mort désir mal Platon qu’ idée mauvais orphique lieu existence devenir injustice chose exilé mortel vrai ver
+10	0.05812	cité pénal crime involontaire droit juridique volontaire tantôt malheur volonté notion tribunal distinction simple porter humain pénalité Œdipe public criminel
+11	0.08807	homme figure adam fils serviteur eschatologique saint image temps Paul céleste don souffrir Christ Roi ver terrestre Jésus christologie Adam
+12	0.0375	dieu babylonien déluge déesse maladie Enlil mort Dans possession Gilgamesh démon mortel sumérien nommer commettre Lagrange plante arbre corps Ciel
+13	0.14125	Dieu homme grec devenir culture image tou relation hébreu rapport qu’ humain Colère Jahvé vanité culturel mémoire vrai Bible passer
+14	0.06031	mythe orphique titan orphisme Dionysos siècle Platon dieu archaïque nature anthropogonie théogonie partie purification époque tardif origine situation Zeus pythagoricien
+15	0.13381	peuple Israël pardon expiation Dieu historique jour histoire voir Jahvé prophète sang Yahvé délivrer vie rituel délivrance théologie mettre Exode
+16	0.07477	conscience scrupuleux Dieu scrupule regard grandeur éthique justice propre tradition hétéronomie connaître révélation absolu saint devenir observance commandement échec mettre
+17	0.1223	loi qu’ Paul saint mort vie pharisien chair Tôrâ volonté tou Loi vouloir justice esprit donner vivant écrit pratique grâce
+
+<650> LL/token: -8.54991
+[beta: 0.05123]
+<660> LL/token: -8.55365
+<670> LL/token: -8.54253
+[beta: 0.05075]
+<680> LL/token: -8.53338
+<690> LL/token: -8.53841
+
+0	0.40464	péché culpabilité qu’ conscience homme Dieu expérience faute confession point devenir contrer lien situation relation mouvement religieux falloir comprendre Mais
+1	0.15206	souillure symbole symbolisme symbolique impur rite chose qu’ action contact représentation signe tache arbitre signifier purification voir sacrer idée caractère
+2	0.10287	souffrance craindre punition ordre éthique Job rétribution conscience monde mal peur vision vengeance mort moment souillure déjà châtiment malheur impur
+3	0.05891	loi exigence éthique prophète code justice infini Alliance temps malédiction distance commandement accusation prescription histoire perfection tension côté document radical
+4	0.0944	dieu drame création roi puissance figure Roi ordre mal Mardouk ennemi violence cosmique terrer originaire homme chaos Tiamat qu’ Mais
+5	0.10637	tragique dieu tragédie divin Prométhée héros grec théologie vision homme Zeus destin spectacle mécher Eschyle sorte face fin ver thème
+6	0.3548	mythe qu’ histoire chute type mythique origine homme mal adamique récit création événement monde forme expérience donner tour symbole signification
+7	0.22981	mal homme humain liberté serpent déjà mauvais radical innocence qu’ devenir chose poser choix appeler acte part aspect limite appartenir
+8	0.24225	symbole qu’ penser philosophie langage falloir Mais critique point philosophique herméneutique réflexion question comprendre rester lieu symbolique compréhension croyance donner
+9	0.08558	âme corps vie désir mort mal falloir qu’ idée mauvais Platon chose injustice punition vrai devenir corporel apparaître existence exilé
+10	0.04537	cité pénal involontaire crime faute tribunal volontaire malheur tantôt droit issu volonté criminel injustice distinction précisément pénalité psychologique désigner sacrer
+11	0.07292	homme figure adam fils saint serviteur eschatologique Paul image ver temps pardon donner céleste voir Adam souffrir thème individu Roi
+12	0.03539	dieu babylonien déluge déesse mort maladie mauvais Gilgamesh Dans Enlil mortel sumérien pays possession démon celer Lagrange inconnu corps vouloir
+13	0.11437	Dieu grec image homme culture hébreu qu’ relation mémoire source rencontre voir devenir culturel tou Bible symbole initial absence juif
+14	0.05725	mythe orphique titan orphisme Dionysos Platon siècle archaïque origine nature dieu théogonie auteur anthropogonie allusion ver époque λόγος mouvement situation
+15	0.12479	peuple Israël pardon Dieu histoire historique expiation Jahvé jour prophète vie Yahvé sang qu’ événement rituel délivrance mettre délivrer théologie
+16	0.06141	conscience scrupuleux scrupule grandeur regard propre révélation justice commandement éthique devenir hétéronomie absolu moral échec vrai saint relation conséquent ritualisation
+17	0.11748	loi mort qu’ Paul saint vie Tôrâ chair pharisien grand sou volonté Dieu chose tou interprétation vouloir justice donner Loi
+
+[beta: 0.05148]
+<700> LL/token: -8.5325
+<710> LL/token: -8.52304
+[beta: 0.0518]
+<720> LL/token: -8.53149
+<730> LL/token: -8.52519
+[beta: 0.05246]
+<740> LL/token: -8.5313
+
+0	0.39456	péché conscience qu’ Dieu homme culpabilité expérience faute devenir confession falloir point situation contrer éthique lien apparaître part idée relation
+1	0.13746	souillure symbole symbolisme symbolique impur qu’ rite action représentation purification tache contact arbitre cosmique signe chose caractère lier signifier reprise
+2	0.09657	souffrance craindre punition ordre Job rétribution mal éthique conscience mort chose peur interdire vengeance souillure vision peiner monde moment humain
+3	0.05503	exigence loi éthique code prophète infini accusation Alliance dialectique commandement côté tension indignation morale distance justice radical prophétisme moral prescription
+4	0.09324	dieu drame création roi mal monde ordre qu’ Mardouk ennemi puissance Roi chaos babylonien cosmique histoire Tiamat lutte violence eau
+5	0.10117	tragique dieu tragédie divin théologie Prométhée grec héros vision homme Zeus liberté mécher spectacle Eschyle destin face aveuglement divine sorte
+6	0.32971	mythe homme histoire qu’ mal chute type récit origine mythique adamique création expérience ver événement symbole biblique forme figure Mais
+7	0.2013	mal homme humain qu’ liberté serpent chose radical innocence mauvais limite déjà principe devenir peut-être poser côté tentation fruit finitude
+8	0.19705	symbole qu’ penser philosophie langage falloir critique herméneutique philosophique donner réflexion Mais point comprendre question compréhension part lieu chose croire
+9	0.07282	âme corps vie désir mort qu’ Platon injustice falloir existence idée chose mauvais ver orphique punition passion vrai devenir mal
+10	0.04272	cité pénal crime faute involontaire malheur tribunal volontaire juridique humain public criminel tantôt précisément désigner porter pénalité Œdipe jeu volonté
+11	0.06524	homme figure adam fils saint eschatologique Paul image serviteur pardon venir céleste Roi souffrir Christ texte procès ver temps Jésus
+12	0.03217	dieu babylonien déluge déesse Enlil possession mauvais démon maladie Gilgamesh corps mortel mort commettre déjà sumérien Dans Lagrange plante pays
+13	0.10721	grec Dieu homme image culture relation hébreu égard humain source vanité appartenir mémoire juif rapport Colère culturel errance Bible grand
+14	0.05098	mythe orphique titan Platon Dionysos qu’ origine orphisme siècle dieu auteur anthropogonie archaïque théogonie purification tardif part classique situation allusion
+15	0.11614	peuple Israël pardon Dieu expiation histoire historique prophète vie jour grand Yahvé sang rituel Jahvé jusqu’ délivrer événement délivrance sacrifice
+16	0.0491	conscience scrupuleux scrupule grandeur révélation propre hétéronomie commandement observance moral échec trait révéler ritualisation consentir bouillir pharisien circonstance exactitude obéissance
+17	0.10125	loi mort saint Paul Tôrâ qu’ pharisien chair vie chose tou Loi volonté Judaïsme pratique sou instruction écrit donner Mais
+
+<750> LL/token: -8.53135
+[beta: 0.05246]
+<760> LL/token: -8.49865
+<770> LL/token: -8.51478
+[beta: 0.05277]
+<780> LL/token: -8.50719
+<790> LL/token: -8.50788
+
+0	0.39986	péché homme conscience culpabilité qu’ Dieu expérience faute devenir confession point situation prendre éthique Mais justice falloir déjà relation lien
+1	0.13596	souillure symbole symbolisme symbolique qu’ chose impur rite représentation contact rituel action signe purification tache arbitre reprise voir cosmique intention
+2	0.08532	souffrance craindre punition ordre Job mal monde rétribution éthique conscience souillure peur peiner Dieu impur vision chose châtiment interdire vengeance
+3	0.05362	exigence loi infini éthique prophète code radical accusation dialectique commandement côté prescription document distance prophétique tension indignation Alliance pôle livre
+4	0.09588	dieu drame création roi chaos ennemi Mardouk violence puissance cosmique histoire Roi monde originaire mal Tiamat terrer eau thème divin
+5	0.09653	tragique dieu tragédie divin Prométhée théologie héros grec destin Zeus vision spectacle liberté Eschyle mécher sorte fin thème homme théogonie
+6	0.32184	mythe qu’ homme histoire chute mal type récit mythique adamique origine ver événement falloir expérience temps création forme donner interprétation
+7	0.17532	mal homme humain qu’ serpent liberté mauvais chose innocence radical figure appeler côté poser limite déjà Dieu méchant propre cœur
+8	0.18687	symbole penser langage philosophie qu’ critique philosophique réflexion herméneutique falloir comprendre lieu Mais compréhension question symbolique point fonction mettre donner
+9	0.07	corps âme vie désir mort Platon qu’ mal existence injustice idée lieu orphique mortel punition vrai mauvais corporel mouvement sembler
+10	0.04369	cité pénal faute involontaire crime volontaire porter tribunal juridique malheur désigner humain criminel injustice tantôt droit public jeu notion volonté
+11	0.06586	homme figure adam fils saint Paul serviteur eschatologique image Roi vie venir pardon céleste ver individu procès Christ Adam Jésus
+12	0.03004	dieu babylonien mort déluge déesse maladie Dans mauvais Gilgamesh Enlil sumérien possession corps mortel démon commettre Lagrange pays vouloir Utnapishtim
+13	0.09106	grec culture image hébreu devenir Dieu relation homme égard tou existence source qu’ vanité culturel rapport appartenir mémoire errance juif
+14	0.04777	mythe orphique titan Dionysos orphisme Platon dieu nature origine anthropogonie théogonie archaïque siècle tardif purification allusion auteur ère λόγος passion
+15	0.11044	peuple Dieu Israël vie pardon histoire historique homme Jahvé sang Yahvé jour expiation prophète théologie mettre délivrer divine nation isaïe
+16	0.04569	conscience scrupuleux scrupule grandeur pharisien hétéronomie commandement propre séparation mouvement conséquent justice faux ritualisation observance comprendre lutte réaliser bouillir relation
+17	0.0961	loi qu’ saint Paul mort Tôrâ chair vie pharisien Dieu volonté grand Loi vouloir falloir foi Mais révélation écrit tou
+
+[beta: 0.05365]
+<800> LL/token: -8.51895
+<810> LL/token: -8.51577
+[beta: 0.05325]
+<820> LL/token: -8.50834
+<830> LL/token: -8.50137
+[beta: 0.05353]
+<840> LL/token: -8.50093
+
+0	0.39512	péché conscience qu’ homme Dieu culpabilité expérience faute devenir confession falloir justice éthique Mais situation relation apparaître moment point religieux
+1	0.12511	souillure symbole symbolisme symbolique impur chose rite représentation qu’ action purification contact rituel idée tache arbitre lier signifier thème cosmique
+2	0.08177	souffrance craindre punition Job ordre souillure rétribution mal conscience éthique qu’ peur Dieu vision mort peiner impur monde châtiment vengeance
+3	0.04439	exigence loi infini éthique code commandement radical prophète Alliance dialectique côté pôle indignation prescription distance moral prophétique finir histoire malédiction
+4	0.0961	dieu création drame roi qu’ ordre histoire mal Roi type puissance ennemi chaos divin monde Mardouk figure violence cosmique originaire
+5	0.08644	tragique dieu tragédie théologie divin Prométhée héros grec homme Zeus liberté spectacle destin vision mécher Eschyle monde aveuglement colère fin
+6	0.3144	mythe homme histoire mal chute qu’ récit mythique adamique origine type événement humain forme symbole temps expérience ver création mettre
+7	0.15898	mal homme humain liberté serpent radical qu’ innocence mauvais chose poser limite déjà choix figurer côté principe concept appartenir tentation
+8	0.17063	symbole qu’ penser philosophie langage philosophique falloir herméneutique critique Mais réflexion comprendre donner conscience symbolique rester croire compréhension point chose
+9	0.07161	corps âme vie mort désir Platon mauvais qu’ mal lieu orphique chose injustice punition falloir devenir idée existence mouvement penser
+10	0.04149	cité pénal faute crime involontaire tribunal volontaire droit porter humain injustice tantôt réflexion notion public criminel malheur désigner éthico pénalité
+11	0.06705	homme figure saint adam Paul fils serviteur image eschatologique temps vie souffrir justification ver donner pardon Roi Christ Adam terrestre
+12	0.03102	dieu babylonien déluge possession mort déesse Enlil mortel maladie Gilgamesh eau démon sumérien mauvais douloureux immortalité plante pays nommer nom
+13	0.08716	grec image culture homme existence devenir mémoire hébreu Dieu source vanité qu’ appartenir égard relation Bible errance propre humain culturel
+14	0.04453	mythe orphique titan orphisme Dionysos Platon dieu nature siècle anthropogonie archaïque qu’ auteur λόγος ver philosophie théogonie passion origine époque
+15	0.10726	peuple Dieu Israël Jahvé histoire pardon qu’ vie prophète expiation historique jour sang homme jusqu’ Yahvé grand mettre événement isaïe
+16	0.03197	scrupuleux scrupule conscience grandeur hétéronomie pharisien propre rituel ritualisation conséquent prophète observance ajouter hypocrisie consentir obligation circonstance cultuel exactitude bouillir
+17	0.08814	loi qu’ mort Tôrâ saint Paul chair volonté pharisien vie Loi existence vouloir interprétation Judaïsme grâce écrit tradition vivant pratique
+
+<850> LL/token: -8.48917
+[beta: 0.05321]
+<860> LL/token: -8.48436
+<870> LL/token: -8.4962
+[beta: 0.05381]
+<880> LL/token: -8.49638
+<890> LL/token: -8.49396
+
+0	0.39947	péché conscience Dieu homme qu’ culpabilité faute expérience devenir point falloir confession relation Mais voir éthique situation apparaître contrer justice
+1	0.12055	souillure symbolisme symbole symbolique rite impur qu’ chose représentation action expiation tache rituel contact purification arbitre reprise idée lier signe
+2	0.08024	souffrance craindre punition ordre Job monde souillure rétribution éthique impur peur qu’ mal vengeance peiner conscience moment rapport interdire vision
+3	0.05074	exigence loi éthique infini code prophète côté dialectique commandement Alliance accusation tension moral distance pôle prophétisme indignation impératif direction prescription
+4	0.08525	dieu drame création roi puissance mal ennemi Mardouk cosmique ordre figure histoire terrer babylonien monde homme chaos Tiamat lutte divin
+5	0.08587	tragique dieu tragédie divin homme théologie Prométhée héros spectacle vision liberté Zeus grec thème destin mécher sorte Eschyle face figure
+6	0.3159	mythe qu’ mal histoire homme chute récit expérience mythique adamique origine type symbole création ver forme événement temps tour aller
+7	0.1417	mal homme humain serpent liberté radical choix innocence limite chose qu’ concept mauvais déjà fruit poser aspect créer femme finitude
+8	0.15781	symbole penser philosophie qu’ langage philosophique herméneutique critique falloir réflexion comprendre donner rester croire symbolique chose Mais signification compréhension raison
+9	0.06974	corps âme vie mort désir Platon mauvais mal idée injustice punition vrai ver falloir philosophie lieu orphique passion existence geôle
+10	0.04153	pénal cité faute crime involontaire tribunal volontaire loi humain juridique malheur précisément porter notion Œdipe public jugement sacrer mesurer volonté
+11	0.06596	homme figure saint Paul adam fils serviteur eschatologique image Roi donner pardon céleste souffrir Adam Christ justification ver terrestre don
+12	0.03133	dieu déluge babylonien possession Enlil déesse mortel mort maladie Gilgamesh mauvais sumérien corps immortalité plante démon supplier commettre Ciel Utnapishtim
+13	0.07928	grec image culture qu’ symbole mémoire hébreu homme culturel appartenir rencontre relation vouloir source vanité existence errance néer Grecs juif
+14	0.04703	orphique mythe titan Platon orphisme Dionysos qu’ dieu siècle archaïque anthropogonie homme tardif philosophie Zeus ver nature auteur théogonie ère
+15	0.10931	Dieu peuple Israël histoire pardon Jahvé jusqu’ homme historique qu’ prophète jour grand mettre sang Yahvé vie tou événement contrer
+16	0.02975	scrupuleux conscience scrupule grandeur hétéronomie ritualisation sacrifice ajouter vrai rituel observance exactitude bouillir hypocrisie exact consentir pharisien circonstance commandement type
+17	0.08292	loi mort qu’ Tôrâ vie pharisien chair Paul falloir volonté tou éthique trouver Judaïsme Loi saint instruction révélation écrit mérite
+
+[beta: 0.054]
+<900> LL/token: -8.50283
+<910> LL/token: -8.49542
+[beta: 0.05498]
+<920> LL/token: -8.49763
+<930> LL/token: -8.4918
+[beta: 0.05425]
+<940> LL/token: -8.5106
+
+0	0.40031	péché conscience homme Dieu qu’ culpabilité faute expérience devenir voir éthique confession relation point falloir situation religieux Mais propre contrer
+1	0.11567	souillure symbolisme symbole symbolique rite impur qu’ rituel expiation action représentation purification tache péché chose contact arbitre idée signe signifier
+2	0.07606	souffrance craindre punition Job ordre souillure rétribution mal éthique mort peur peiner monde impur vengeance homme déjà châtiment moment qu’
+3	0.05253	exigence loi éthique infini prophète code justice dialectique commandement moral prescription distance tension accusation finir perfection indignation Alliance pôle prophétisme
+4	0.08916	dieu drame création roi puissance chaos ordre homme Roi type cosmique ennemi originaire Mardouk violence histoire divin Mais Tiamat terrer
+5	0.08527	tragique dieu tragédie divin Prométhée théologie héros grec vision liberté Zeus mécher destin spectacle homme Eschyle sorte qu’ colère fin
+6	0.32779	mythe qu’ mal histoire homme chute adamique mythique expérience type récit origine événement monde symbole temps ver création falloir aller
+7	0.12995	mal homme humain liberté serpent radical innocence mauvais choix poser concept limite déjà fruit chose finitude question qu’ figurer femme
+8	0.1544	symbole langage qu’ penser philosophie falloir critique herméneutique philosophique Mais donner réflexion chose comprendre question compréhension conscience aveu fonction part
+9	0.06394	corps âme vie désir mort Platon mal qu’ orphique chose devenir injustice mauvais idée punition ver lieu monde existence falloir
+10	0.04117	pénal cité faute involontaire crime tribunal volontaire réflexion juridique volonté désigner malheur tantôt porter pénalité public criminel loi souillure notion
+11	0.06165	homme figure saint adam fils Paul serviteur eschatologique image Adam pardon don Christ venir souffrir Roi vie christologie terrestre céleste
+12	0.03085	dieu babylonien déluge mort déesse mortel Enlil maladie Dans possession Gilgamesh nommer sumérien corps supplier mauvais sommeil pays transgression démon
+13	0.06683	grec image culture mémoire hébreu vanité source Bible relation culturel oubli rencontre symbole Dieu néer appartenir néant Grecs existence orienter
+14	0.05086	mythe orphique titan orphisme Dionysos Platon nature dieu archaïque qu’ siècle origine homme anthropogonie purification époque tardif philosophie théogonie auteur
+15	0.10618	peuple Dieu Israël qu’ historique histoire jour vie Jahvé prophète pardon Yahvé grand homme tou mettre sang entier jusqu’ juif
+16	0.03218	scrupule scrupuleux grandeur hétéronomie commandement conscience observance ritualisation bouillir signe tradition hypocrisie consentir exactitude obéissance sacrifice ajouter échec conséquent propre
+17	0.07669	loi mort Tôrâ pharisien Paul qu’ chair saint Loi volonté vie Judaïsme révélation écrit chose instruction existence précepte éthique mérite
+
+<950> LL/token: -8.48847
+[beta: 0.05455]
+<960> LL/token: -8.492
+<970> LL/token: -8.473
+[beta: 0.0539]
+<980> LL/token: -8.46788
+<990> LL/token: -8.47591
+
+0	0.40674	péché conscience Dieu qu’ homme culpabilité expérience faute devenir falloir point éthique confession Mais justice situation apparaître religieux voir propre
+1	0.11285	souillure symbolisme symbole symbolique péché impur qu’ rite rituel action expiation chose représentation purification tache contact idée arbitre cosmique signifier
+2	0.07565	souffrance craindre punition Job mal ordre souillure rétribution éthique peur monde conscience vengeance vision peiner impur mort qu’ interdire déjà
+3	0.04639	loi exigence éthique infini code prophète commandement radical accusation distance tension religion dialectique indignation prescription Alliance pôle prophétisme Amos impératif
+4	0.08861	dieu drame création roi mal puissance Roi monde thème histoire ennemi chaos divin ordre cosmique originaire type qu’ Mais Mardouk
+5	0.08578	tragique tragédie dieu divin théologie Prométhée héros liberté grec homme vision destin Zeus spectacle mécher Eschyle sorte fin thème face
+6	0.32337	mythe homme qu’ histoire chute mal mythique expérience adamique récit origine symbole type événement interprétation donner forme comprendre ver temps
+7	0.13373	mal homme humain serpent liberté radical innocence mauvais chose limite poser concept finitude fruit choix déjà méchant femme question acte
+8	0.14831	symbole qu’ penser philosophie langage falloir herméneutique réflexion critique chose philosophique croire point question compréhension comprendre signification philosophe croyance part
+9	0.06339	âme corps vie mort désir mal Platon mauvais qu’ falloir idée injustice lieu orphique existence devenir penser philosophie corporel vrai
+10	0.03836	cité pénal faute crime involontaire tribunal juridique volontaire désigner tantôt porter volonté loi malheur précisément public criminel injustice droit humain
+11	0.05504	homme figure saint Paul adam fils serviteur eschatologique image venir pardon don Christ souffrir Adam céleste individu texte souffrance terrestre
+12	0.0327	dieu déluge babylonien mort Enlil déesse Dans mortel maladie mauvais Gilgamesh nommer possession corps sumérien voir source homme violence immortalité
+13	0.06347	grec culture tou image mémoire hébreu culturel néer vanité relation errance Bible rencontre initiative source concept appartenir Grecs initial juif
+14	0.04793	mythe orphique titan orphisme Dionysos dieu Platon homme archaïque nature siècle humain anthropogonie purification théogonie origine philosophie λόγος auteur Zeus
+15	0.10331	Dieu peuple Israël Jahvé histoire prophète historique jour vie pardon Yahvé contrer sang mettre théologie événement homme jusqu’ Exode colère
+16	0.02676	scrupule scrupuleux hétéronomie grandeur conscience ritualisation consentir sacrifice observance exactitude hypocrisie bouillir exact praxis cultuel obéissance règle échec impur archaïsme
+17	0.07283	loi qu’ pharisien Tôrâ mort saint Paul chair vie volonté Loi écrit tou chose Judaïsme grand instruction existence tradition mérite
+
+[beta: 0.05349]
+<1000> LL/token: -8.46552
+
+Total time: 36 seconds
