@@ -1,9 +1,7 @@
 """
    Author: Dylan Hayton-Ruffner
    Description: Runs lda on the given corpus, prints out resulting topics and queries every concept from the concept file.
-
-            Query: If the concept-word exsists in the top 4 words of a topic, all the paragraphs associated with that topic and have
-            the concept word are returned
+            Usage: change the CORPUS path variable to specify a corpus. Run from commandline with: python3 gensim_topic_model.py
 
             After each successful query, the results are formated into an excel file and written to the results folder.
 
@@ -16,29 +14,30 @@
 """
 TOPIC_PRESSENCE_THRESHOLD = 0.3
 REGEX_PATTERN = u'(?u)\\b\\w\\w\\w\\w+\\b'
-MIN_WORD_COUNT = 10
+MIN_WORD_COUNT = 100
 NUM_TOPICS = 7
 TOP_N_SEGS = 10
 TOP_N_WORDS = 0
 MIN_DF = 0.00
 MAX_DF = 1.00
-FILETYPE = 'xml'
-CONCEPTS_PATH = "../../data/concepts.txt"
+CORPUS_PATH = "data/lemmatized_segments/symb-du-mal-full-lemma.csv"
+import csv
+import sys
 from sklearn.feature_extraction.text import CountVectorizer
 from operator import itemgetter
 from elbow_criteria import threshold
 from elbow_criteria import limit_by_threshold
 from gensim.models.wrappers import LdaMallet
 from gensim.corpora import Dictionary
-import numpy as np
-import csv
+
+
 
 
 ############################# MAIN #############################
 
 def main():
     print("\n-----LDA CONCEPT DETECITON-----")
-    corpus = load_from_csv("data/lemmatized_segments/symb-du-mal-full-lemma.csv")
+    corpus = load_from_csv(CORPUS_PATH)
 
     # Create CountVectorizer to get Document-Term matrix
 
@@ -65,17 +64,17 @@ def main():
     # initialize model
     path_to_mallet_binary = "Mallet/bin/mallet"
 
-    mallet_model = LdaMallet(path_to_mallet_binary, corpus=corp, num_topics=13, id2word=id2word, optimize_interval=20,
-                             random_seed=700, iterations=20000)
+    mallet_model = LdaMallet(path_to_mallet_binary, corpus=corp, num_topics=32, id2word=id2word, optimize_interval=20,
+                             random_seed=3, iterations=200000)
 
     doc_topics = list(mallet_model.read_doctopics(mallet_model.fdoctopics(), renorm=False))
     topic_word = TopicWord(mallet_model)
     topic_word.get_topic_word()
-    topic_word.write_to_csv("output/topic_" +str(mallet_model.random_seed) +".csv")
+    topic_word.write_to_csv("output/topic_" +str(mallet_model.random_seed) + "_" + str(mallet_model.iterations) + "_" + str(mallet_model.num_topics) + ".csv")
 
     topic_doc = TopicDoc(mallet_model)
     topic_doc.get_topic_doc()
-    topic_doc.write_to_csv("output/topic_doc"+str(mallet_model.random_seed)+".csv")
+    topic_doc.write_to_csv("output/topic_doc"+str(mallet_model.random_seed)+ "_" + str(mallet_model.iterations)+ "_" + str(mallet_model.num_topics) + ".csv", num_docs=50)
 
     return 0
 
