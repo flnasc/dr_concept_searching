@@ -60,7 +60,7 @@ def main():
 
     # initialize model
     # print("initialize model")
-    for i in range(5, 10):
+    for i in range(1, 5):
         print("____Running_" + str(i) + "_Topics___")
         for j in range(0, 3):
             lda = LatentDirichletAllocation(n_components=i, max_iter=400,

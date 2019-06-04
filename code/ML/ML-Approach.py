@@ -48,7 +48,7 @@ from sklearn.model_selection import cross_val_score, cross_val_predict
 from sklearn.metrics import confusion_matrix, recall_score, precision_score, f1_score, precision_recall_curve, roc_curve, roc_auc_score
 import matplotlib
 import matplotlib.pyplot as plt
-import time
+import t
 
 class LemmaTokenizer(object):
      def __init__(self):
@@ -336,7 +336,7 @@ def contains_query(para,query, nlp):
 	return False
 def search_corpus(text_corpus, query, nlp):
 	"""	
-		Description:Searchess the given list of text segments (paragraphs) for intances in which a segment contains the query in subject form..
+		Description:Searches the given list of text segments (paragraphs) for intances in which a segment contains the query in subject form..
 		Input: text_corpus (list of strings) -> a list of the paragraph in the text
 			   query (list) ->  list of words in the concept query
 			   nlp -> the nlp processing information ("en_core_web_sm") for spacy

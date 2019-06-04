@@ -1,0 +1,118 @@
+######################### Header #########################
+Title: Elbow algorithm limitation applied to topics
+
+Description: Used elbow algorithm to find the most
+relevant words to topic. 
+
+Format: 3 trials, each trial has the top 10 words per
+topic and then the words limited by the threshold
+found by the elbow algorithm.
+
+######################### Data #########################
+
+Trial 1:
+-----LDA CONCEPT DETECITON-----
+Filepath to corpus: ../../data/symbolism-of-evil.xml
+LOADING FILE: ../../data/symbolism-of-evil.xml
+MAX_DF: 1.0
+MIN_DF: 0.0
+Number of Segs: 1189/1912
+Number of Features: 8568
+Score: -8.346141811022095
+
+Top 10 words per topic
+Topic #0: myth: 575.703, evil: 202.329, symbol: 184.788, tragic: 107.344, experience: 94.047, body: 90.849, soul: 86.935, adamic: 80.772, time: 71.062, history: 66.825, 
+Topic #1: symbol: 111.388, meaning: 74.965, symbolism: 69.54, pardon: 53.055, return: 44.159, life: 42.969, shall: 40.618, expiation: 37.332, torah: 34.655, body: 32.67, 
+Topic #2: death: 33.86, life: 29.955, guilt: 28.882, fault: 27.412, fall: 24.957, tragic: 24.749, conscience: 23.157, shall: 22.785, question: 22.654, order: 22.347, 
+Topic #3: evil: 46.52, yahweh: 43.47, history: 43.202, israel: 42.331, consciousness: 41.054, people: 36.247, prophet: 34.163, flesh: 28.849, salvation: 28.28, moment: 28.278, 
+Topic #4: suffering: 87.015, tragic: 54.386, tragedy: 40.77, god: 33.499, fear: 26.232, greek: 25.096, divine: 24.475, fault: 23.288, retribution: 21.471, paris: 20.898, 
+Topic #5: evil: 129.581, adam: 75.691, figure: 51.24, symbol: 38.392, good: 36.055, second: 34.792, experience: 32.916, serpent: 27.901, order: 24.204, paul: 22.155, 
+Topic #6: myth: 97.071, creation: 96.457, drama: 74.902, titan: 58.049, dionysos: 45.988, type: 44.25, god: 41.642, prometheus: 37.18, orphic: 32.036, primordial: 30.741, 
+Topic #7: life: 24.685, death: 22.772, conscience: 21.346, guilt: 19.574, divine: 12.09, relation: 11.652, flood: 10.951, punishment: 10.557, shall: 10.53, experience: 10.509, 
+Topic #8: soul: 105.737, body: 53.742, image: 24.677, figure: 23.04, idea: 19.922, myth: 18.461, fall: 17.982, divine: 15.82, doe: 15.503, interpretation: 13.488, 
+Topic #9: defilement: 131.646, evil: 80.901, king: 55.971, consciousness: 54.645, order: 46.596, guilt: 44.615, experience: 42.994, impure: 42.221, shall: 36.413, figure: 36.131, 
+
+Elbow Limited Topics:
+Topic #0: myth: 575.702955024749, 
+Topic #1: symbol: 111.38791033641319, 
+Topic #2: death: 33.860467972137165, life: 29.95534800176218, guilt: 28.881555608390862, fault: 27.412372600907904, 
+Topic #3: evil: 46.52020652648058, yahweh: 43.47031065402001, history: 43.20161743629104, israel: 42.33054159118077, consciousness: 41.05429333725794, 
+Topic #4: suffering: 87.0148813406291, 
+Topic #5: evil: 129.5812330406061, 
+Topic #6: myth: 97.07083843393158, creation: 96.45744524513606, 
+Topic #7: life: 24.684993847849682, death: 22.771564373385367, conscience: 21.345685801989244, 
+Topic #8: soul: 105.73668694339968, 
+Topic #9: defilement: 131.64630285451457, 
+
+
+
+Trial 2:
+-----LDA CONCEPT DETECITON-----
+Filepath to corpus: ../../data/symbolism-of-evil.xml
+LOADING FILE: ../../data/symbolism-of-evil.xml
+MAX_DF: 1.0
+MIN_DF: 0.0
+Number of Segs: 1189/1912
+Number of Features: 8568
+Score: -8.346301366291707
+
+Top 10 words per topic
+Topic #0: creation: 104.89, soul: 69.953, drama: 69.432, evil: 69.181, god: 69.059, myth: 62.848, king: 60.852, titan: 54.447, dionysos: 50.79, life: 48.125, 
+Topic #1: israel: 25.988, psalm: 25.618, king: 22.421, conscience: 21.799, ritual: 20.574, time: 20.206, prophet: 18.906, blood: 16.054, historical: 14.651, book: 14.476, 
+Topic #2: wrath: 17.832, language: 16.612, philosophy: 15.707, city: 14.675, confession: 13.118, thought: 12.408, greek: 11.463, demand: 11.133, discourse: 10.904, symbol: 10.765, 
+Topic #3: tragic: 210.1, suffering: 86.219, tragedy: 74.634, human: 52.178, theology: 47.832, divine: 45.976, prometheus: 42.826, fault: 40.912, freedom: 40.868, ethical: 39.208, 
+Topic #4: evil: 67.64, symbol: 51.287, story: 24.544, serpent: 22.762, fault: 22.721, greek: 22.543, thing: 20.573, interpretation: 19.384, doe: 18.524, meaning: 17.834, 
+Topic #5: myth: 508.208, evil: 264.775, symbol: 246.448, experience: 120.896, body: 99.147, soul: 83.262, adamic: 78.056, time: 75.404, fall: 61.771, history: 59.901, 
+Topic #6: expiation: 28.588, punishment: 28.283, sacrifice: 23.643, defilement: 21.903, vanity: 21.892, consciousness: 19.609, image: 18.862, soul: 17.077, moment: 15.898, nothingness: 15.613, 
+Topic #7: myth: 112.933, figure: 81.025, defilement: 72.661, experience: 48.342, symbolism: 43.597, adam: 36.28, time: 33.865, history: 33.721, evil: 32.638, shall: 30.891, 
+Topic #8: meaning: 40.233, fear: 38.653, defilement: 37.57, order: 33.527, consciousness: 31.035, evil: 26.789, impure: 26.374, word: 26.16, symbol: 25.753, suffering: 22.765, 
+Topic #9: guilt: 52.727, conscience: 44.389, life: 44.218, death: 40.81, torah: 38.131, shall: 35.828, consciousness: 35.282, sense: 32.762, religious: 31.014, good: 30.887, 
+
+Elbow Limited Topics:
+Topic #0: creation: 104.8896375446797, 
+Topic #1: israel: 25.98764603549104, psalm: 25.617528240020306, king: 22.42149621739592, conscience: 21.798540826231946, ritual: 20.574423693742155, time: 20.20610911792881, 
+Topic #2: wrath: 17.831637509342443, language: 16.61226727337858, philosophy: 15.707293173522489, city: 14.674747984198833, 
+Topic #3: tragic: 210.0999252902825, 
+Topic #4: evil: 67.64031077472023, 
+Topic #5: myth: 508.2083078357432, 
+Topic #6: expiation: 28.587780219192457, punishment: 28.28290354965468, 
+Topic #7: myth: 112.93277823282922, 
+Topic #8: meaning: 40.232771012436466, fear: 38.65285166089461, defilement: 37.56971285552468, 
+Topic #9: guilt: 52.727286540545975, conscience: 44.389274481990846, life: 44.21772728047647, death: 40.81017349075688,
+
+
+Trail 3:
+-----LDA CONCEPT DETECITON-----
+Filepath to corpus: ../../data/symbolism-of-evil.xml
+LOADING FILE: ../../data/symbolism-of-evil.xml
+MAX_DF: 1.0
+MIN_DF: 0.0
+Number of Segs: 1189/1912
+Number of Features: 8568
+Score: -8.317451712796974
+
+Top 10 words per topic
+Topic #0: life: 68.096, death: 33.337, soul: 26.785, body: 25.495, order: 20.163, meaning: 20.154, sense: 15.807, idea: 15.628, punishment: 15.132, thing: 15.094, 
+Topic #1: history: 73.35, yahweh: 68.621, historical: 66.413, israel: 58.926, people: 52.237, shall: 48.237, prophet: 45.858, meaning: 39.017, suffering: 38.645, king: 37.908, 
+Topic #2: soul: 137.947, body: 107.462, evil: 85.873, god: 38.226, divine: 35.735, fall: 27.559, punishment: 27.06, thing: 24.099, desire: 24.076, plato: 23.02, 
+Topic #3: conscience: 43.922, god: 38.798, torah: 37.897, evil: 36.872, scrupulous: 29.482, divine: 28.019, king: 25.512, scrupulousness: 23.047, body: 22.892, ritual: 22.686, 
+Topic #4: myth: 543.136, evil: 236.187, figure: 127.857, creation: 94.201, fall: 92.992, adamic: 85.654, adam: 82.97, type: 79.922, human: 76.501, origin: 70.482, 
+Topic #5: defilement: 129.553, consciousness: 82.567, guilt: 63.231, ethical: 57.593, fear: 51.165, fault: 48.722, word: 43.79, confession: 43.425, evil: 38.913, sense: 35.268, 
+Topic #6: tragic: 180.988, tragedy: 72.442, evil: 40.411, theology: 38.151, hero: 35.729, suffering: 34.821, human: 30.934, freedom: 29.8, vision: 27.372, action: 24.199, 
+Topic #7: myth: 60.38, blood: 17.06, allegory: 16.453, symbolism: 15.247, symbol: 14.562, expiation: 13.214, world: 12.882, life: 12.034, dynamic: 11.1, meaning: 11.049, 
+Topic #8: pardon: 13.841, flood: 11.1, fault: 10.773, punishment: 10.017, body: 9.335, psalm: 8.931, just: 8.906, greek: 8.618, god: 8.476, place: 8.381, 
+Topic #9: symbol: 288.749, experience: 129.314, symbolism: 125.874, evil: 77.26, myth: 76.987, language: 67.061, defilement: 66.215, meaning: 60.368, image: 57.445, symbolic: 49.985, 
+
+Elbow Limited Topics:
+Topic #0: life: 68.09591685387412, 
+Topic #1: history: 73.34990083736918, yahweh: 68.62077984557601, historical: 66.41292266483282, 
+Topic #2: soul: 137.9471608733863, 
+Topic #3: conscience: 43.922300524782436, god: 38.79778105568283, torah: 37.89697706168934, evil: 36.87241239598703, 
+Topic #4: myth: 543.1364770010405, 
+Topic #5: defilement: 129.5527781713168, 
+Topic #6: tragic: 180.98772280912564, 
+Topic #7: myth: 60.380007050483094, 
+Topic #8: pardon: 13.840715035908632, flood: 11.1000839277374, fault: 10.772699752272509, punishment: 10.016645119879875, body: 9.334535978170102, psalm: 8.930928190164277, just: 8.905796605324483, greek: 8.61786718622688, god: 8.476474456952372, place: 8.380866742853295, death: 8.302173518723077, babylonian: 8.257499137278955, sense: 7.899225984802758, justice: 7.83462724459313, 
+Topic #9: symbol: 288.7491234980801, 
+
+

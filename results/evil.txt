@@ -1,0 +1,26 @@
+-------------- LDA Top-4 Results --------------
+Query: evil
+Corpus: ../../data/test_Doc.xml
+Number of Segs: 9
+Number of Topics: 10
+Max DF: 1.0
+Min DF: 0.0
+Topic Pressence Threshold: 0.3
+
+-------------- LDA Topics --------------
+Topic #0: evil 0.1, symbol 0.1, blue 0.1,
+Topic #1: evil 0.1, symbol 0.1, blue 0.1,
+Topic #2: evil 6.1, symbol 0.1, blue 0.1,
+Topic #3: evil 0.1, symbol 0.1, blue 0.1,
+Topic #4: evil 0.1, symbol 0.1, blue 0.1,
+Topic #5: evil 0.1, symbol 0.1, blue 0.1,
+Topic #6: evil 0.1, symbol 0.1, blue 0.1,
+Topic #7: symbol 5.1, blue 5.1, evil 0.1,
+Topic #8: evil 0.1, symbol 0.1, blue 0.1,
+Topic #9: evil 0.1, symbol 0.1, blue 0.1,
+Relevant Topics: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+-------------- Segments by Topic --------------
+Number of Relevant Segs: 90
+
+Topic: 0

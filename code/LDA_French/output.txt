@@ -1,0 +1,46 @@
+Mallet LDA: 13 topics, 4 topic bits, 1111 topic mask
+Data loaded.
+max tokens: 242
+total tokens: 48733
+<10> LL/token: -9.64853
+<20> LL/token: -9.20646
+<30> LL/token: -9.02671
+<40> LL/token: -8.92559
+
+0	3.84615	mythe homme donner chute récit mythique adamique mal interprétation événement adam mauvais signifier forme tenter qu’ aller aspect Mais structure
+1	3.84615	symbole qu’ comprendre symbolique histoire langage temps Mais lien partir critique vrai trait mythe c’est-à-dire travers dimension manière falloir constituer
+2	3.84615	éthique Dieu contrer vision cœur grand exigence moment moral vouloir mettre existence chair essentiel tou humanité pénal peiner annoncer procéder
+3	3.84615	dieu mal création type drame origine ver mythe monde Dans originel orphique babylonien divine chaos devenir innocence héros condition Roi
+4	3.84615	péché conscience souillure expérience culpabilité déjà impur relation confession mal représentation radical susciter cité reprise spéculation pécheur mauvais sentiment acte
+5	3.84615	tragique humain théologie thème peut-être signification chose homme cosmique hébreu monde divin colère roi destin symbolisme sorte Zeus puissance sembler
+6	3.84615	Dieu loi saint peuple Paul justice historique Israël rapport loin histoire prophète volonté biblique esprit révéler salut entier conscience scrupuleux
+7	3.84615	qu’ image idée symbolisme situation rituel pardon expiation voir action caractère fils jour porter religion Alliance Jahvé lier tou exprimer
+8	3.84615	penser point grec philosophie part humain réflexion philosophique rester commencer origine falloir divin fonction appartenir culture Tôrâ principe herméneutique compréhension
+9	3.84615	homme figure souffrance craindre venir punition mort religieux fin vivre sacrer souffrir croire serviteur rétribution possibilité moyen acte apparaître appel
+10	3.84615	qu’ mal liberté falloir homme devenir désir limite connaître poser réalité pourtant originaire apparaître concept naître absolu question appeler figurer
+11	3.84615	faute ordre tour signe prendre double raison nature qu’ ancien précisément vue simple rite choix mesure ensemble puissance paraître voir
+12	3.84615	âme corps vie mort mouvement Platon sou tragédie appeler Job regard lieu chose aveu cesser devenir injustice purification mourir comprendre
+
+<50> LL/token: -8.8811
+<60> LL/token: -8.84267
+<70> LL/token: -8.83502
+<80> LL/token: -8.82273
+<90> LL/token: -8.78116
+
+0	3.84615	mythe chute mal récit mythique adamique homme donner forme aspect adam événement structure interprétation biblique tenter origine rapport problème reconnaître
+1	3.84615	symbole qu’ histoire symbolique langage comprendre penser Mais lien travers falloir manière critique trait herméneutique croire temps c’est-à-dire élaborer dimension
+2	3.84615	Dieu éthique contrer vision moment cœur propre homme exigence vouloir mettre jusqu’ coup regard essentiel moral humanité face annoncer existence
+3	3.84615	dieu création type drame ver origine ordre orphique monde nature Dans mal originel babylonien divine salut chaos représenter aller titan
+4	3.84615	péché conscience souillure expérience culpabilité faute impur confession relation représentation situation aveu acte susciter Alliance pécheur radical reprise contact sentiment
+5	3.84615	tragique humain thème théologie divin puissance grand peut-être chose tragédie cosmique fin colère sorte roi destin monde Zeus Prométhée niveau
+6	3.84615	loi saint peuple Paul justice historique loin Israël prophète Dieu révéler volonté histoire temps esprit tou côté scrupuleux foi entier
+7	3.84615	symbolisme image qu’ idée signification rituel pardon expiation tou action Jahvé jour schème purification voir lier exprimer prendre entendre livre
+8	3.84615	qu’ point part grec philosophie partir réflexion falloir philosophique rester humain culture fonction porter voir pharisien Tôrâ principe Mais chose
+9	3.84615	homme figure souffrance craindre venir punition fils vivre sacrer Job religieux souffrir cité doute rétribution totalité serviteur possibilité titre fin
+10	3.84615	mal qu’ devenir homme déjà liberté connaître désir pourtant celer originaire apparaître chose limite intention réalité poser naître question figurer
+11	3.84615	faute qu’ caractère raison tour donner signe expression prendre rite sou désigner mesure ancien choix passer archaïque simple constituer propre
+12	3.84615	âme corps vie mort mouvement Platon mauvais lieu falloir appeler existence monde reprendre cesser sou tendre comprendre interprétation mortel direction
+
+<100> LL/token: -8.76081
+
+Total time: 4 seconds

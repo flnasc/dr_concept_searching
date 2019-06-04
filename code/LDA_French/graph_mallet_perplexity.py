@@ -37,7 +37,7 @@ if __name__ == '__main__':
         graph_iters.append(int(iteration))
         graph_perplex.append(float(perplexity))
 
-    plt.plot(graph_iters, graph_perplex, 'gs-')
+    plt.plot(graph_iters, graph_perplex, 'g-')
     plt.title("Likelihood Per Token vs Iterations on SM with 18 Topics")
     plt.ylabel("Likelihood Per Token")
     plt.xlabel("Iterations")

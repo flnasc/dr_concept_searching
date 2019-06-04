@@ -8,8 +8,6 @@
             After each successful query, the results are formated into an excel file and written to the results folder.
    
    Status: Finished
-   ToDo: N/A
-
    NOTES: Concept path and results path are hard-coded
 
 
@@ -48,12 +46,61 @@ class LemmaTokenizer(object):
 
 def main():
     print("\n-----LDA CONCEPT DETECITON-----")
-    text_corpus, text_corpus_ids, raw_corpus, raw_corpus_ids, filepath = load_corpus('v')
-    print(len(text_corpus_ids))
-    with open("paragraphs_soe.csv", "w+") as csvfile:
-        writer = csv.writer(csvfile, delimiter="@")
-        for i in range(len(text_corpus)):
-            writer.writerow([text_corpus_ids[i], text_corpus[i].strip().replace("\n", "")])
+    # text_corpus, text_corpus_ids, raw_corpus, raw_corpus_ids, filepath = load_corpus('v')
+    #print(len(text_corpus_ids))
+    file = open("../../data/soi_meme9.txt", 'r')
+    raw = []
+    processed = []
+    for line in file:
+        if '\f' in line:
+            raw.append("page_break.")
+        if line.strip() == "":
+            continue
+        if (not line.strip()[0].isdigit()) and line.split()[0] != "SOLMÊME" and line.split()[0] != "SOEMÊME" and line.split()[0] != "SOI-MÊME":
+            raw.append(line.replace("\n", ""))
+
+    i = 0;
+    while i < len(raw):
+        if (raw[i].strip().endswith("?") or raw[i].strip().endswith(".") or raw[i].strip().endswith("!")) and raw[i] != "page_break." :
+            processed.append(raw[i].strip())
+            i += 1
+        else:
+            # split line
+            if i + 1 < len(raw) and i + 2 < len(raw) and raw[i + 1] == "page_break.":
+                print("combined:",raw[i])
+                print("with:",raw[i+2])
+                processed.append((raw[i] + raw[i+2]).strip())
+                i += 3
+            else:
+                if raw[i] != "page_break.":
+                    processed.append(raw[i].strip())
+                    i += 1
+                else:
+                    i += 1
+    for line in processed:
+        print(line)
+
+
+    with open("soi_meme9.csv", "w+") as csvfile:
+        writer = csv.writer(csvfile, delimiter="|")
+        for i in range(len(processed)):
+            writer.writerow([i, processed[i]])
+
+
+
+    # for i in range(0, 80000):
+    #     charac = file.read(1)
+    #     print(charac, end="")
+    #     if charac == '\n':
+    #         print(charac)
+    #         print("line break")
+
+
+    # print(len(text_corpus))
+    # with open("paragraphs_soe.csv", "w+") as csvfile:
+    #     writer = csv.writer(csvfile, delimiter="@")
+    #     for i in range(len(text_corpus)):
+    #         writer.writerow([text_corpus_ids[i], text_corpus[i].strip().replace("\n", "")])
 
     return 0
 
@@ -82,7 +129,7 @@ def load_corpus(v):
 
     #get text data from file as a raw string, parse with bs4 and extract paragraph tags -> list of bs4.element.Tag objects
     # filepath = input("Filepath to corpus: ")
-    filepath = "../../data/symbolism-of-evil.xml"
+    filepath = "../../data/oneself_as_another.xml"
     if v:
         print("LOADING FILE: " + filepath)
 

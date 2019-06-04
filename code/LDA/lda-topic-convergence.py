@@ -79,7 +79,7 @@ def main():
     num_iter = 200
     #initialize model
     lda = LatentDirichletAllocation(n_components=NUM_TOPICS, max_iter=num_iter,
-                                learning_method='batch', verbose=1, random_state=55)
+                                learning_method='batch', verbose=1, random_state=55, evaluate_every=5)
 
     #train the model on the corpus and get a document topic matrix for the corpus
     doc_topic_matrix = lda.fit_transform(dt_matrix)
