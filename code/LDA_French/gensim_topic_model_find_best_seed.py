@@ -20,16 +20,20 @@ TOP_N_SEGS = 10
 TOP_N_WORDS = 0
 MIN_DF = 0.00
 MAX_DF = 1.00
-CORPUS_PATH = "data/lemmatized_segments/symb-du-mal-full-lemma.csv"
+#CORPUS_PATH = "data/lemmatized_segments/symb-du-mal-full-lemma.csv"
+CORPUS_PATH = "data/lemmatized_segments/soi-meme-full-lemma.csv"
+
 import csv
 import sys
+import gensim
 from sklearn.feature_extraction.text import CountVectorizer
 from operator import itemgetter
 from elbow_criteria import threshold
 from elbow_criteria import limit_by_threshold
 from gensim.models.wrappers import LdaMallet
 from gensim.corpora import Dictionary
-
+from gensim.models import CoherenceModel
+from statistics import mean, median, stdev
 
 
 
@@ -62,19 +66,45 @@ def main():
     # print("Number of Features: " + str(len(feature_names)))
 
     # initialize model
-    path_to_mallet_binary = "Mallet/bin/mallet"
+    path_to_mallet_binary = "/Users/fnascime/Dev/mallet/mallet-2.0.8/bin/mallet"
 
-    mallet_model = LdaMallet(path_to_mallet_binary, corpus=corp, num_topics=14, id2word=id2word, optimize_interval=20,
-                             random_seed=9, iterations=5000)
+    coherence_values = []
 
-    doc_topics = list(mallet_model.read_doctopics(mallet_model.fdoctopics(), renorm=False))
-    topic_word = TopicWord(mallet_model)
-    topic_word.get_topic_word()
-    topic_word.write_to_csv("output/topic_" +str(mallet_model.random_seed) + "_" + str(mallet_model.iterations) + "_" + str(mallet_model.num_topics) + ".csv")
+    for seed in range(20):
 
-    topic_doc = TopicDoc(mallet_model)
-    topic_doc.get_topic_doc()
-    topic_doc.write_to_csv("output/topic_doc"+str(mallet_model.random_seed)+ "_" + str(mallet_model.iterations)+ "_" + str(mallet_model.num_topics) + ".csv", num_docs=50)
+        mallet_model = LdaMallet(path_to_mallet_binary, corpus=corp, num_topics=16, id2word=id2word, optimize_interval=20,
+                                 random_seed=seed, iterations=1000)
+
+        gensim_model = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(mallet_model)
+        coherencemodel = CoherenceModel(model=gensim_model, texts=proc_stop_words, dictionary=id2word, coherence='c_v')
+        coherence_values.append(coherencemodel.get_coherence())
+
+
+    max = 0
+    best_seed = 999
+    for index, coherence in enumerate(coherence_values) :
+
+        print ("Seed: ", index, " -> Coherence: ", coherence)
+        if coherence > max:
+            max = coherence
+            best_seed = index
+
+    print (" *** Summary ***")
+    print (" Best Seed     : ", best_seed)
+    print ("Best coherence : ", max)
+    print ("Median         : ", median(coherence_values))
+    print ("Mean           : ", mean(coherence_values))
+    print ("Stdev          : ", stdev(coherence_values))
+
+
+    #doc_topics = list(mallet_model.read_doctopics(mallet_model.fdoctopics(), renorm=False))
+    #topic_word = TopicWord(mallet_model)
+    #topic_word.get_topic_word()
+    #topic_word.write_to_csv("output/topic_" +str(mallet_model.random_seed) + "_" + str(mallet_model.iterations) + "_" + str(mallet_model.num_topics) + ".csv")
+
+    #topic_doc = TopicDoc(mallet_model)
+    #topic_doc.get_topic_doc()
+    #topic_doc.write_to_csv("output/topic_doc"+str(mallet_model.random_seed)+ "_" + str(mallet_model.iterations)+ "_" + str(mallet_model.num_topics) + ".csv", num_docs=50)
 
     return 0
 
