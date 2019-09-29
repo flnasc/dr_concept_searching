@@ -6,7 +6,6 @@ from multiprocessing import Pool
 import csv
 import time
 import sys
-import tqdm
 from ast import literal_eval
 """
 Description: This function builds a list of all the possible combinations of the parameters in w, k, and n
