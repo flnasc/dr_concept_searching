@@ -6,6 +6,7 @@ from multiprocessing import Pool
 import csv
 import time
 import sys
+import tqdm
 from ast import literal_eval
 """
 Description: This function builds a list of all the possible combinations of the parameters in w, k, and n
@@ -18,7 +19,7 @@ number identifying that param combination. Generated as a hash of the tuple (w, 
 """
 def get_param_sets(w_range, k_range, n_range):
     param_sets = []
-    for w in range(w_range[0], w_range[1]):
+    for w in tqdm.tqdm(range(w_range[0], w_range[1])):
         for k in range(k_range[0], k_range[1]):
             for n in range(n_range[0], n_range[1]):
                 param_set = (w, k, n)
@@ -55,20 +56,19 @@ Description: Explores the parameter space of the given ranges of w, k and n. Use
 :param: num_workers - int: the number of worker threads to use.
 """
 def explore_param_space(w_range, k_range, n_range, num_workers=5):
-    s = time.time()
+    print('Generating parameter sets:')
+    sys.stdout.flush()
     param_sets = get_param_sets(w_range, k_range, n_range)
-    e = time.time()
-    print(f'Generation took {e - s} seconds')
     pool = Pool(num_workers)
-    res = pool.map(run_model, param_sets)
+    print('Running models:')
+    sys.stdout.flush()
+    res = tqdm.tqdm(pool.map(run_model, param_sets))
     with open('results.csv', 'w+') as csvfile:
         label = ['id', 'w', 'k', 'n']
         writer = csv.writer(csvfile)
         writer.writerow(label)
         for row in res:
             writer.writerow(row)
-    e = time.time()
-    print(f'Entire job took {e - s} seconds')
 
 
 
