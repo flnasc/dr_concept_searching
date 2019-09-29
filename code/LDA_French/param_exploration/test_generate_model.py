@@ -1,5 +1,5 @@
 import unittest
-from generate_models import get_param_sets
+from explore_param_space import get_param_sets
 class TestStringMethods(unittest.TestCase):
 
     def test_simple(self):

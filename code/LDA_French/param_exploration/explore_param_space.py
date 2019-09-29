@@ -1,3 +1,7 @@
+"""
+Description: This file contains the tools necessary for exploring the parameter space of the LDA model on the HPC.
+"""
+
 from multiprocessing import Pool
 import csv
 """
