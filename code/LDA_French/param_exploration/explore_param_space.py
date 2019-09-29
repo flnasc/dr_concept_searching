@@ -4,6 +4,8 @@ Description: This file contains the tools necessary for exploring the parameter 
 
 from multiprocessing import Pool
 import csv
+import time
+import sys
 """
 Description: This function builds a list of all the possible combinations of the parameters in w, k, and n
 within the specified range. Each combination is represented as a tuple of (id, w, k, n). Id is a unique
@@ -52,14 +54,18 @@ Description: Explores the parameter space of the given ranges of w, k and n. Use
 :param: num_workers - int: the number of worker threads to use.
 """
 def explore_param_space(w_range, k_range, n_range, num_workers=5):
+    s = time.time()
     param_sets = get_param_sets(w_range, k_range, n_range)
+    e = time.time()
+    print(f'Generation took {e - s} seconds')
     pool = Pool(num_workers)
     res = pool.map(run_model, param_sets)
     with open('results.csv', 'w+') as csvfile:
         writer = csv.writer(csvfile)
         for row in res:
             writer.writerow(row)
-
+    e = time.time()
+    print(f'Entire job took {e - s} seconds')
 
 
 
@@ -74,4 +80,7 @@ def run_model(param_set):
     return param_set
 
 if __name__ == '__main__':
-    explore_param_space((0,2), (0,2), (0,2), 1)
+    if len(sys.argv) != 2:
+        print('Usage [num_workers]')
+        exit(1)
+    explore_param_space((0,1000), (0,1000), (0,2), num_workers=sys.argv[1])
