@@ -56,9 +56,9 @@ def explore_param_space(w_range, k_range, n_range, num_workers=5):
     pool = Pool(num_workers)
     res = pool.map(run_model, param_sets)
     with open('results.csv', 'w+') as csvfile:
-        writer = csv.Writer(csvfile)
+        writer = csv.writer(csvfile)
         for row in res:
-            writer.write(res)
+            writer.writerow(row)
 
 
 
@@ -74,4 +74,4 @@ def run_model(param_set):
     return param_set
 
 if __name__ == '__main__':
-    explore_param_space((0,1), (0,1), (0,1), 1)
+    explore_param_space((0,2), (0,2), (0,2), 1)
