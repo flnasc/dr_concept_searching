@@ -19,11 +19,15 @@ number identifying that param combination. Generated as a hash of the tuple (w, 
 """
 def get_param_sets(w_range, k_range, n_range):
     param_sets = []
-    for w in tqdm.tqdm(range(w_range[0], w_range[1])):
+    count = 0
+    for w in range(w_range[0], w_range[1]):
+        print(f'w: {w} - ({w_range[0]}, {w_range[1]})')
         for k in range(k_range[0], k_range[1]):
             for n in range(n_range[0], n_range[1]):
                 param_set = (w, k, n)
                 param_sets.append((hash(param_set), w, k, n))
+                count += 1
+    print()
     return param_sets
 
 
@@ -56,19 +60,22 @@ Description: Explores the parameter space of the given ranges of w, k and n. Use
 :param: num_workers - int: the number of worker threads to use.
 """
 def explore_param_space(w_range, k_range, n_range, num_workers=5):
-    print('Generating parameter sets:')
-    sys.stdout.flush()
+    s = time.time()
+    print('Generating sets...')
     param_sets = get_param_sets(w_range, k_range, n_range)
+    e = time.time()
+    print(f'Generation took {e - s} seconds')
+    print('Running models...')
     pool = Pool(num_workers)
-    print('Running models:')
-    sys.stdout.flush()
-    res = tqdm.tqdm(pool.map(run_model, param_sets))
+    res = pool.map(run_model, param_sets)
     with open('results.csv', 'w+') as csvfile:
         label = ['id', 'w', 'k', 'n']
         writer = csv.writer(csvfile)
         writer.writerow(label)
         for row in res:
             writer.writerow(row)
+    e = time.time()
+    print(f'Entire job took {e - s} seconds')
 
 
 
