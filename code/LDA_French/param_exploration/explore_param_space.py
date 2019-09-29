@@ -6,6 +6,7 @@ from multiprocessing import Pool
 import csv
 import time
 import sys
+from ast import literal_eval
 """
 Description: This function builds a list of all the possible combinations of the parameters in w, k, and n
 within the specified range. Each combination is represented as a tuple of (id, w, k, n). Id is a unique
@@ -61,7 +62,9 @@ def explore_param_space(w_range, k_range, n_range, num_workers=5):
     pool = Pool(num_workers)
     res = pool.map(run_model, param_sets)
     with open('results.csv', 'w+') as csvfile:
+        label = ['id', 'w', 'k', 'n']
         writer = csv.writer(csvfile)
+        writer.writerow(label)
         for row in res:
             writer.writerow(row)
     e = time.time()
@@ -80,7 +83,11 @@ def run_model(param_set):
     return param_set
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print('Usage [num_workers]')
+    if len(sys.argv) != 5:
+        print('Usage [w_range] [k_range] [n_range] [num_workers]')
         exit(1)
-    explore_param_space((0,1000), (0,1000), (0,2), num_workers=sys.argv[1])
+    w_range = literal_eval(sys.argv[1])
+    k_range = literal_eval(sys.argv[2])
+    n_range = literal_eval(sys.argv[3])
+    num_workers = int(sys.argv[4])
+    explore_param_space(w_range, k_range, n_range, num_workers=num_workers)
