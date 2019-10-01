@@ -66,15 +66,16 @@ def explore_param_space(w_range, k_range, n_range, num_workers=5):
     print(f'Generation took {e - s} seconds')
     print('Running models...')
     pool = Pool(num_workers)
+    s = time.time()
     res = pool.map(run_model, param_sets)
+    e = time.time()
+    print(f'Entire job took {e - s} seconds')
     with open('results.csv', 'w+') as csvfile:
         label = ['id', 'w', 'k', 'n']
         writer = csv.writer(csvfile)
         writer.writerow(label)
         for row in res:
             writer.writerow(row)
-    e = time.time()
-    print(f'Entire job took {e - s} seconds')
 
 
 
