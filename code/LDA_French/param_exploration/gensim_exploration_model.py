@@ -23,6 +23,7 @@ def topic_model(W, K, N):
     :return:
     """
     print("\n-----LDA CONCEPT DETECITON-----")
+    print('MODEL:', hash((W,K,N)), W, K, N)
     corpus = load_from_csv(CORPUS_PATH)
 
     # Create CountVectorizer to get Document-Term matrix
@@ -41,7 +42,7 @@ def topic_model(W, K, N):
                 proc_stop_words[i].append(proc_corpus_text_only[i][j])
 
     # train vectorizer on corpus
-    print(len(proc_stop_words))
+    print('Corpus Size:', len(proc_stop_words))
     id2word = Dictionary(proc_stop_words)
     corp = [id2word.doc2bow(text) for text in proc_stop_words]
 
