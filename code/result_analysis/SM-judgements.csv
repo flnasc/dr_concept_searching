@@ -1,0 +1,316 @@
+,0,1,2,3
+910-Mythe,Relates to,Not related,Not related,Not related
+910-Symbole,Relates to,Not related,Not related,Relates to
+910-Homme,Sub concept,Relates to,Not related,Not related
+911-Mythe,Defines,Relates to,Not related,Not related
+911-Symbole,Defines,Relates to,Not related,Relates to
+911-Homme,Sub concept,Relates to,Not related,Not related
+912-Mythe,Sub concept,Relates to,Relates to,Not related
+912-Symbole,Defines,Defines,Relates to,Relates to
+912-Homme,Not related,Relates to,Not related,Not related
+913-Mythe,Relates to,Relates to,Not related,Not related
+913-Symbole,Defines,Defines,Relates to,Relates to
+913-Homme,Not related,Not related,Not related,Not related
+914-Mythe,Defines,Relates to,Relates to,Not related
+914-Symbole,Sub concept,Sub concept,Relates to,Relates to
+914-Homme,Not related,Relates to,Not related,Not related
+915-Mythe,Relates to,Not related,Not related,Not related
+915-Symbole,Defines,Sub concept,Relates to,Relates to
+915-Homme,Not related,Not related,Not related,Not related
+916-Mythe,Sub concept,Not related,Not related,Not related
+916-Symbole,Defines,Relates to,Relates to,Relates to
+916-Homme,Not related,Not related,Not related,Relates to
+917-Mythe,Relates to,Relates to,Not related,Not related
+917-Symbole,Sub concept,Relates to,Not related,Not related
+917-Homme,Defines,Relates to,Not related,Relates to
+918-Mythe,Sub concept,Not related,Relates to,Not related
+918-Symbole,Defines,Not related,Not related,Not related
+918-Homme,Relates to,Relates to,Not related,Not related
+919-Mythe,Relates to,Relates to,Not related,Not related
+919-Symbole,Defines,Sub concept,Relates to,Relates to
+919-Homme,Not related,Not related,Not related,Not related
+920-Mythe,Sub concept,Relates to,Not related,Not related
+920-Symbole,Defines,Relates to,Relates to,Relates to
+920-Homme,Relates to,Not related,Not related,Not related
+921-Mythe,Relates to,Relates to,Not related,Not related
+921-Symbole,Defines,Relates to,Relates to,Relates to
+921-Homme,Sub concept,Not related,Not related,Not related
+922-Mythe,Sub concept,Relates to,Relates to,Relates to
+922-Symbole,Defines,Defines,Defines,Relates to
+922-Homme,Defines,Relates to,Not related,Not related
+923-Mythe,Relates to,Relates to,Not related,Not related
+923-Symbole,Sub concept,Sub concept,Relates to,Relates to
+923-Homme,Defines,Not related,Not related,Defines
+924-Mythe,Sub concept,Relates to,Not related,Not related
+924-Symbole,Sub concept,Relates to,Relates to,Relates to
+924-Homme,Defines,Not related,Not related,Not related
+925-Mythe,Sub concept,Relates to,Not related,Not related
+925-Symbole,Defines,Sub concept,Relates to,Relates to
+925-Homme,Relates to,Not related,Not related,Not related
+926-Mythe,Sub concept,Relates to,Not related,Not related
+926-Symbole,Defines,Relates to,Not related,Sub concept
+926-Homme,Relates to,Not related,Not related,Not related
+927-Mythe,Defines,Sub concept,Sub concept,Relates to
+927-Symbole,Defines,Relates to,Relates to,Relates to
+927-Homme,Not related,Not related,Not related,Not related
+928-Mythe,Sub concept,Not related,Not related,Not related
+928-Symbole,Sub concept,Not related,Not related,Not related
+928-Homme,Sub concept,Not related,Not related,Not related
+929-Mythe,Sub concept,Relates to,Not related,Not related
+929-Symbole,Defines,Defines,Sub concept,Relates to
+929-Homme,Not related,Not related,Not related,Not related
+930-Mythe,Sub concept,Relates to,Relates to,Not related
+930-Symbole,Defines,Sub concept,Relates to,Relates to
+930-Homme,Relates to,Not related,Not related,Not related
+931-Mythe,Sub concept,Relates to,Not related,Not related
+931-Symbole,Defines,Sub concept,Relates to,Relates to
+931-Homme,Relates to,Not related,Not related,Not related
+932-Mythe,Defines,Not related,Relates to,Relates to
+932-Symbole,Defines,Defines,Defines,Relates to
+932-Homme,Relates to,Not related,Not related,Not related
+933-Mythe,Sub concept,Relates to,Sub concept,Relates to
+933-Symbole,Sub concept,Relates to,Not related,Sub concept
+933-Homme,Not related,Not related,Not related,Not related
+934-Mythe,Defines,Relates to,Relates to,Relates to
+934-Symbole,Relates to,Not related,Not related,Not related
+934-Homme,Not related,Not related,Not related,Not related
+935-Mythe,Sub concept,Not related,Not related,Not related
+935-Symbole,Defines,Defines,Relates to,Relates to
+935-Homme,Relates to,Not related,Not related,Not related
+936-Mythe,Relates to,Not related,Not related,Not related
+936-Symbole,Sub concept,Not related,Not related,Not related
+936-Homme,Not related,Not related,Not related,Not related
+937-Mythe,Not related,Not related,Not related,Not related
+937-Symbole,Sub concept,Relates to,Relates to,Relates to
+937-Homme,Defines,Not related,Relates to,Relates to
+938-Mythe,Sub concept,Relates to,Not related,Relates to
+938-Symbole,Defines,Defines,Relates to,Relates to
+938-Homme,Relates to,Sub concept,Relates to,Sub concept
+939-Mythe,Relates to,Relates to,Not related,Not related
+939-Symbole,Defines,Sub concept,Defines,Relates to
+939-Homme,Defines,Not related,Not related,Relates to
+940-Mythe,Defines,Not related,Relates to,Relates to
+940-Symbole,Sub concept,Sub concept,Relates to,Relates to
+940-Homme,Sub concept,Sub concept,Relates to,Defines
+941-Mythe,Sub concept,Not related,Not related,Not related
+941-Symbole,Defines,Relates to,Relates to,Not related
+941-Homme,Not related,Not related,Not related,Sub concept
+942-Mythe,Defines,Not related,Not related,Not related
+942-Symbole,Sub concept,Not related,Not related,Not related
+942-Homme,Relates to,Not related,Not related,Not related
+943-Mythe,Sub concept,Not related,Not related,Not related
+943-Symbole,Defines,Defines,Relates to,Relates to
+943-Homme,Relates to,Not related,Relates to,Not related
+944-Mythe,Relates to,Not related,Not related,Not related
+944-Symbole,Defines,Not related,Not related,Not related
+944-Homme,Relates to,Not related,Not related,Not related
+397-Mythe,Sub concept,Not related,Not related,Not related
+397-Symbole,Defines,Relates to,Relates to,Relates to
+397-Homme,Not related,Not related,Not related,Not related
+398-Mythe,Sub concept,Relates to,Relates to,Sub concept
+398-Symbole,Sub concept,Relates to,Sub concept,Sub concept
+398-Homme,Defines,Not related,Not related,Not related
+399-Mythe,Relates to,Not related,Not related,Not related
+399-Symbole,Sub concept,Sub concept,Defines,Sub concept
+399-Homme,Defines,Not related,Not related,Not related
+400-Mythe,Sub concept,Not related,Not related,Not related
+400-Symbole,Defines,Relates to,Relates to,Sub concept
+400-Homme,Relates to,Not related,Not related,Not related
+401-Mythe,Defines,Not related,Not related,Not related
+401-Symbole,Sub concept,Relates to,Sub concept,Sub concept
+401-Homme,Sub concept,Not related,Not related,Not related
+402-Mythe,Sub concept,Not related,Not related,Not related
+402-Symbole,Defines,Relates to,Sub concept,Sub concept
+402-Homme,Relates to,Not related,Not related,Relates to
+403-Mythe,Sub concept,Not related,Not related,Not related
+403-Symbole,Defines,Relates to,Defines,Sub concept
+403-Homme,Relates to,Not related,Not related,Not related
+404-Mythe,Sub concept,Not related,Not related,Not related
+404-Symbole,Defines,Relates to,Sub concept,Sub concept
+404-Homme,Sub concept,Not related,Defines,Relates to
+405-Mythe,Sub concept,Relates to,Not related,Relates to
+405-Symbole,Defines,Relates to,Sub concept,Sub concept
+405-Homme,Relates to,Not related,Relates to,Relates to
+406-Mythe,Sub concept,Not related,Not related,Not related
+406-Symbole,Defines,Relates to,Sub concept,Sub concept
+406-Homme,Relates to,Not related,Not related,Not related
+407-Mythe,Relates to,Not related,Not related,Not related
+407-Symbole,Sub concept,Relates to,Sub concept,Sub concept
+407-Homme,Defines,Not related,Relates to,Relates to
+408-Mythe,Sub concept,Relates to,Relates to,Sub concept
+408-Symbole,Defines,Relates to,Sub concept,Sub concept
+408-Homme,Defines,Not related,Not related,Relates to
+409-Mythe,Sub concept,Not related,Not related,Defines
+409-Symbole,Defines,Sub concept,Sub concept,Sub concept
+409-Homme,Sub concept,Not related,Not related,Not related
+410-Mythe,Defines,Defines,Relates to,Sub concept
+410-Symbole,Relates to,Not related,Not related,Not related
+410-Homme,Sub concept,Sub concept,Not related,Relates to
+411-Mythe,Defines,Sub concept,Defines,Relates to
+411-Symbole,Sub concept,Sub concept,Relates to,Relates to
+411-Homme,Relates to,Not related,Not related,Not related
+412-Mythe,Defines,Relates to,Defines,Sub concept
+412-Symbole,Sub concept,Relates to,Sub concept,Relates to
+412-Homme,Sub concept,Sub concept,Relates to,Relates to
+413-Mythe,Defines,Sub concept,Relates to,Relates to
+413-Symbole,Sub concept,Not related,Not related,Not related
+413-Homme,Relates to,Not related,Not related,Not related
+414-Mythe,Defines,Defines,Defines,Defines
+414-Symbole,Sub concept,Not related,Not related,Not related
+414-Homme,Relates to,Not related,Not related,Relates to
+415-Mythe,Defines,Defines,Relates to,Defines
+415-Symbole,Sub concept,Not related,Not related,Not related
+415-Homme,Relates to,Not related,Not related,Not related
+416-Mythe,Sub concept,Sub concept,Relates to,Relates to
+416-Symbole,Defines,Not related,Not related,Not related
+416-Homme,Relates to,Not related,Not related,Not related
+417-Mythe,Defines,Sub concept,Relates to,Relates to
+417-Symbole,Sub concept,Relates to,Relates to,Not related
+417-Homme,Relates to,Not related,Not related,Not related
+418-Mythe,Defines,Relates to,Relates to,Relates to
+418-Symbole,Relates to,Not related,Not related,Not related
+418-Homme,Not related,Not related,Not related,Not related
+419-Mythe,Defines,Relates to,Defines,Relates to
+419-Symbole,Relates to,Not related,Not related,Not related
+419-Homme,Sub concept,Not related,Relates to,Not related
+420-Mythe,Sub concept,Defines,Defines,Defines
+420-Symbole,Defines,Defines,Defines,Defines
+420-Homme,Not related,Not related,Not related,Not related
+421-Mythe,Defines,Sub concept,Defines,Defines
+421-Symbole,Sub concept,Sub concept,Relates to,Relates to
+421-Homme,Not related,Not related,Not related,Not related
+422-Mythe,Relates to,Not related,Not related,Defines
+422-Symbole,Defines,Relates to,Not related,Relates to
+422-Homme,Not related,Not related,Not related,Not related
+423-Mythe,Defines,Relates to,Relates to,Defines
+423-Symbole,Sub concept,Relates to,Relates to,Relates to
+423-Homme,Not related,Not related,Not related,Not related
+424-Mythe,Defines,Defines,Defines,Defines
+424-Symbole,Sub concept,Relates to,Relates to,Relates to
+424-Homme,Not related,Not related,Not related,Not related
+425-Mythe,Defines,Sub concept,Relates to,Defines
+425-Symbole,Sub concept,Not related,Not related,Not related
+425-Homme,Relates to,Not related,Not related,Not related
+426-Mythe,Sub concept,Sub concept,Defines,Defines
+426-Symbole,Defines,Not related,Not related,Not related
+426-Homme,Not related,Not related,Not related,Not related
+427-Mythe,Relates to,Defines,Defines,Defines
+427-Symbole,Defines,Relates to,Relates to,Not related
+427-Homme,Sub concept,Not related,Sub concept,Relates to
+428-Mythe,Defines,Relates to,Relates to,Defines
+428-Symbole,Relates to,Not related,Not related,Not related
+428-Homme,Not related,Not related,Relates to,Relates to
+429-Mythe,Relates to,Relates to,Defines,Defines
+429-Symbole,Defines,Sub concept,Defines,Defines
+429-Homme,Sub concept,Not related,Relates to,Not related
+430-Mythe,Defines,Relates to,Defines,Defines
+430-Symbole,Sub concept,Relates to,Relates to,Defines
+430-Homme,Relates to,Not related,Not related,Not related
+431-Mythe,Defines,Sub concept,Defines,Defines
+431-Symbole,Sub concept,Not related,Relates to,Relates to
+431-Homme,Not related,Not related,Not related,Not related
+432-Mythe,Defines,Relates to,Sub concept,Defines
+432-Symbole,Sub concept,Relates to,Relates to,Not related
+432-Homme,Not related,Not related,Not related,Not related
+433-Mythe,Defines,Defines,Sub concept,Sub concept
+433-Symbole,Sub concept,Relates to,Not related,Not related
+433-Homme,Sub concept,Relates to,Not related,Not related
+434-Mythe,Defines,Not related,Not related,Defines
+434-Symbole,Relates to,Not related,Not related,Not related
+434-Homme,Relates to,Not related,Not related,Not related
+435-Mythe,Defines,Defines,Relates to,Sub concept
+435-Symbole,Relates to,Relates to,Relates to,Relates to
+435-Homme,Relates to,Not related,Not related,Not related
+436-Mythe,Defines,Defines,Relates to,Sub concept
+436-Symbole,Relates to,Relates to,Sub concept,Relates to
+436-Homme,Not related,Not related,Not related,Not related
+437-Mythe,Defines,Relates to,Relates to,Relates to
+437-Symbole,Sub concept,Not related,Not related,Not related
+437-Homme,Relates to,Not related,Not related,Not related
+438-Mythe,Defines,Relates to,Relates to,Defines
+438-Symbole,Relates to,Not related,Not related,Not related
+438-Homme,Sub concept,Not related,Relates to,Not related
+439-Mythe,Defines,Relates to,Relates to,Defines
+439-Symbole,Sub concept,Not related,Not related,Not related
+439-Homme,Sub concept,Not related,Not related,Not related
+440-Mythe,Defines,Relates to,Sub concept,Sub concept
+440-Symbole,Sub concept,Not related,Not related,Not related
+440-Homme,Not related,Not related,Not related,Not related
+441-Mythe,Defines,Relates to,Relates to,Sub concept
+441-Symbole,Relates to,Not related,Not related,Not related
+441-Homme,Sub concept,Not related,Not related,Not related
+442-Mythe,Defines,Sub concept,Sub concept,Sub concept
+442-Symbole,Not related,Not related,Not related,Not related
+442-Homme,Sub concept,Not related,Not related,Not related
+443-Mythe,Defines,Relates to,Relates to,Sub concept
+443-Symbole,Sub concept,Not related,Not related,Not related
+443-Homme,Not related,Not related,Not related,Not related
+1-Mythe,Sub concept,Not related,Not related,Not related
+1-Symbole,Sub concept,Not related,Not related,Not related
+1-Homme,Defines,Sub concept,Relates to,Sub concept
+2-Mythe,Sub concept,Not related,Not related,Not related
+2-Symbole,Defines,Not related,Not related,Not related
+2-Homme,Sub concept,Not related,Relates to,Not related
+3-Mythe,Sub concept,Not related,Not related,Not related
+3-Symbole,Sub concept,Not related,Not related,Not related
+3-Homme,Sub concept,Not related,Relates to,Not related
+4-Mythe,Sub concept,Not related,Not related,Not related
+4-Symbole,Sub concept,Not related,Not related,Not related
+4-Homme,Defines,Sub concept,Relates to,Relates to
+5-Mythe,Sub concept,Not related,Not related,Not related
+5-Symbole,Defines,Not related,Not related,Not related
+5-Homme,Relates to,Relates to,Not related,Not related
+6-Mythe,Relates to,Not related,Not related,Not related
+6-Symbole,Defines,Not related,Not related,Not related
+6-Homme,Sub concept,Relates to,Relates to,Relates to
+7-Mythe,Sub concept,Defines,Defines,Defines
+7-Symbole,Defines,Relates to,Relates to,Defines
+7-Homme,Sub concept,Sub concept,Relates to,Not related
+8-Mythe,Sub concept,Sub concept,Relates to,Sub concept
+8-Symbole,Relates to,Not related,Not related,Not related
+8-Homme,Defines,Sub concept,Relates to,Relates to
+9-Mythe,Sub concept,Relates to,Defines,Sub concept
+9-Symbole,Defines,Not related,Not related,Not related
+9-Homme,Relates to,Not related,Not related,Not related
+10-Mythe,Defines,Sub concept,Sub concept,Sub concept
+10-Symbole,Sub concept,Not related,Relates to,Sub concept
+10-Homme,Sub concept,Not related,Relates to,Sub concept
+11-Mythe,Defines,Relates to,Relates to,Relates to
+11-Symbole,Sub concept,Relates to,Relates to,Relates to
+11-Homme,Relates to,Not related,Not related,Not related
+12-Mythe,Defines,Relates to,Relates to,Relates to
+12-Symbole,Sub concept,Not related,Not related,Not related
+12-Homme,Not related,Not related,Not related,Not related
+13-Mythe,Sub concept,Not related,Not related,Not related
+13-Symbole,Defines,Not related,Not related,Not related
+13-Homme,Relates to,Not related,Not related,Not related
+14-Mythe,Sub concept,Not related,Not related,Not related
+14-Symbole,Defines,Not related,Not related,Not related
+14-Homme,Sub concept,Relates to,Relates to,Not related
+15-Mythe,Not related,Relates to,Sub concept,Not related
+15-Symbole,Defines,Not related,Not related,Not related
+15-Homme,Sub concept,Relates to,Relates to,Not related
+16-Mythe,Sub concept,Not related,Sub concept,Not related
+16-Symbole,Defines,Not related,Not related,Not related
+16-Homme,Relates to,Sub concept,Relates to,Not related
+17-Mythe,Relates to,Not related,Not related,Not related
+17-Symbole,Defines,Relates to,Not related,Not related
+17-Homme,Sub concept,Not related,Not related,Not related
+18-Mythe,Defines,Not related,Not related,Not related
+18-Symbole,Sub concept,Not related,Not related,Not related
+18-Homme,Relates to,Not related,Not related,Not related
+19-Mythe,Sub concept,Not related,Not related,Not related
+19-Symbole,Defines,Not related,Not related,Not related
+19-Homme,Relates to,Not related,Not related,Not related
+20-Mythe,Defines,Relates to,Relates to,Not related
+20-Symbole,Sub concept,Not related,Not related,Not related
+20-Homme,Relates to,Defines,Not related,Not related
+21-Mythe,Defines,Sub concept,Defines,Defines
+21-Symbole,Sub concept,Relates to,Sub concept,Sub concept
+21-Homme,Not related,Sub concept,Not related,Not related
+22-Mythe,Defines,Not related,Relates to,Defines
+22-Symbole,Sub concept,Relates to,Not related,Relates to
+22-Homme,Not related,Not related,Not related,Not related
+23-Mythe,Sub concept,Relates to,Relates to,Relates to
+23-Symbole,Sub concept,Relates to,Relates to,Relates to
+23-Homme,Defines,Relates to,Relates to,Not related
