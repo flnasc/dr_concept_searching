@@ -1,15 +1,7 @@
 """
    Author: Dylan Hayton-Ruffner
    Description: This is the first step in our preprocessing pipeline. This role of this program is to segment the text.
-
-            Query: If the concept-word exsists in the top 4 words of a topic, all the paragraphs associated with that topic and have
-            the concept word are returned
-
-            After each successful query, the results are formated into an excel file and written to the results folder.
-
    Status: Finished
-   NOTES: Concept path and results path are hard-coded
-
 
 """
 
@@ -22,11 +14,11 @@ import csv
 
 def main():
     print("-----SEGMENT EXTRACTION-----")
-    file_lines = open("../../data/soi-meme-full.txt", 'r').readlines()
+    file_lines = open("../data/raw_text/soi-meme-full.txt", 'r').readlines()
     with_pb = add_page_breaks(file_lines)
     combined = combine_split(with_pb)
 
-    with open("../../data/soi-meme-full.csv", "w+") as csvfile:
+    with open("../data/raw_segments/soi-meme-full1.csv", "w+") as csvfile:
         writer = csv.writer(csvfile, delimiter="|")
         for i in range(len(combined)):
             writer.writerow([i, combined[i]])
@@ -40,7 +32,7 @@ def add_page_breaks(file_lines):
 
     :param file_lines: list with all lines in file
     :return: a list of the file's lines with page break markers inserted
-    Description: Detects page breaks in source file and and them explicitly as new lines.
+    Description: Detects page breaks in source file and add them explicitly as new lines.
     Removes footnotes from the
 
     """
@@ -74,14 +66,12 @@ def combine_split(with_pb):
     annomaly = 0
     while i < (len(with_pb) - 3):
         line = with_pb[i].strip()
-        if line.endswith("?") or line.endswith("!") or line.endswith(".") or line.endswith("»"):
+        if line.endswith("?") or line.endswith("!") or line.endswith("."):
             combined.append(line)
             i += 1
         elif line != "page_break":
             if with_pb[i+1] == "page_break":
                 com_count += 1
-                # print("combined:", with_pb[i])
-                # print("with:", with_pb[i + 2])
                 combined.append((with_pb[i] + with_pb[i + 2]).strip())
                 i += 3
             else:

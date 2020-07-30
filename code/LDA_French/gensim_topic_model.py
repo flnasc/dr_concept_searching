@@ -64,13 +64,13 @@ def main():
     # initialize model
     path_to_mallet_binary = "Mallet/bin/mallet"
 
-    mallet_model = LdaMallet(path_to_mallet_binary, corpus=corp, num_topics=14, id2word=id2word, optimize_interval=20,
-                             random_seed=9, iterations=5000)
+    mallet_model = LdaMallet(path_to_mallet_binary, corpus=corp, num_topics=14, id2word=id2word, optimize_interval=1,
+                             random_seed=9, iterations=5)
 
     doc_topics = list(mallet_model.read_doctopics(mallet_model.fdoctopics(), renorm=False))
     topic_word = TopicWord(mallet_model)
     topic_word.get_topic_word()
-    topic_word.write_to_csv("output/topic_" +str(mallet_model.random_seed) + "_" + str(mallet_model.iterations) + "_" + str(mallet_model.num_topics) + ".csv")
+    topic_word.write_to_csv("../output/topic_" +str(mallet_model.random_seed) + "_" + str(mallet_model.iterations) + "_" + str(mallet_model.num_topics) + ".csv")
 
     topic_doc = TopicDoc(mallet_model)
     topic_doc.get_topic_doc()

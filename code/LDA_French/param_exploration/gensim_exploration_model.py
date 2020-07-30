@@ -52,7 +52,7 @@ def topic_model(W, K, N):
     # redirect stdout for capturing LL/token
 
     # initialize model
-    path_to_mallet_binary = "../Mallet/bin/mallet"
+    path_to_mallet_binary = "../mallet_git/bin/mallet"
 
     mallet_model = LdaMallet(path_to_mallet_binary, corpus=corp, num_topics=K, id2word=id2word, optimize_interval=20,
                              random_seed=9, iterations=N)
