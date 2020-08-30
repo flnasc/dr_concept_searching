@@ -1,0 +1,1 @@
+these results use the xlm-r-100langs-bert-base-nli-stsb-mean-tokens from sentence-transformers
